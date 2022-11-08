@@ -23,27 +23,26 @@
       </div>
     </v-container>
     <v-card
-      max-width="95%"
+      max-width="100%"
       class="mx-auto py-6 grey lighten-3"
       light
-      elevation="24"
       style="margin-top: -48px"
       outlined
     >
-      <v-sheet max-width="800px" class="mx-auto" color="transparent">
-        <v-card-title
+      <v-sheet max-width="1200px" class="mx-auto px-6" color="transparent">
+        <!-- <v-card-title
           class="justify-center display-1 font-weight-bold grey--text text--darken-3 text-center"
           >Our Services</v-card-title
-        >
+        > -->
         <!-- <v-divider class="mx-4"></v-divider> -->
         <v-row class="pt-8">
           <v-col
             cols="12"
-            v-for="service in services"
+            v-for="(service, index) in services"
             :key="service.title"
             class="my-3"
           >
-            <product :item="service"></product>
+            <product :item="service" :index="index"></product>
           </v-col>
         </v-row>
         <v-row class="pb-8">
@@ -53,7 +52,21 @@
         </v-row>
       </v-sheet>
     </v-card>
-    <v-container fluid class="text-center my-8">
+    <v-container fluid class="orange pa-16">
+      <div class="d-flex justify-center">
+        <div class="d-flex align-center">
+          <v-card width="440px" height="440px"></v-card>
+        </div>
+        <div>
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+            height="600px"
+            width="480px"
+          ></v-img>
+        </div>
+      </div>
+    </v-container>
+    <!-- <v-container fluid class="text-center my-8">
       <div class="mb-8">
         <h2 class="display-2 font-weight-bold">About us</h2>
       </div>
@@ -70,7 +83,7 @@
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </div>
-    </v-container>
+    </v-container> -->
   </div>
 </template>
 
