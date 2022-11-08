@@ -1,15 +1,6 @@
 <template>
   <div>
-    <v-carousel hide-delimiters interval="4000" height="1080" cycle>
-      <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
-        <v-container fill-height fluid pa-0 ma-0>
-          <v-card class="pa-2 mx-auto" color="transparent" flat>
-            <p class="text-h2 white--text">Make yourself at home</p>
-            <p class="text-h2 white--text text-center">in our hotel</p>
-          </v-card>
-        </v-container>
-      </v-carousel-item>
-    </v-carousel>
+    <carousel :items="items"></carousel>
     <v-container fluid class="text-center my-16">
       <div class="mb-8">
         <h2 class="display-2 font-weight-bold">What We Do?</h2>
@@ -32,7 +23,7 @@
       </div>
     </v-container>
     <v-card
-      max-width="100%"
+      max-width="95%"
       class="mx-auto py-6 grey lighten-3"
       light
       elevation="24"
@@ -55,24 +46,44 @@
             <product :item="service"></product>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="pb-8">
           <v-col cols="4" v-for="os in otherServices" :key="os.title">
             <otherServices :item="os"></otherServices>
           </v-col>
         </v-row>
       </v-sheet>
     </v-card>
+    <v-container fluid class="text-center my-8">
+      <div class="mb-8">
+        <h2 class="display-2 font-weight-bold">About us</h2>
+      </div>
+
+      <div
+        class="font-weight-light mx-auto title mb-16"
+        style="width: 720px; max-width: 720px"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </div>
+    </v-container>
   </div>
 </template>
 
 <script>
 import product from "../components/product.vue";
 import otherServices from "../components/otherservices.vue";
+import carousel from "../components/carousel.vue";
 export default {
   name: "Home",
   components: {
     product,
     otherServices,
+    carousel,
   },
   data() {
     return {
