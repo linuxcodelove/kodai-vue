@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <v-container height="540px" class="orange pa-0">
-      <v-img :src="item.src" height="320px"></v-img>
+  <div class="pb-6">
+    <v-container height="540px" class="primary my-8">
+      <v-img :src="item.src" height="240px"></v-img>
       <div class="pa-4">
-        <h2 class="font-weight-medium mb-3 grey--text text--lighten-3">
+        <h2 class="font-weight-bold mb-3 grey--text text--darken-3">
           {{ item.title }}
         </h2>
-        <div class="font-weight-regular subtitle-2 grey--text text--lighten-3">
+        <div class="font-weight-medium subtitle-1 grey--text text--darken-3">
           {{ item.desc }}
         </div>
       </div>

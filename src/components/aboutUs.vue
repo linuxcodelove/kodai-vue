@@ -1,17 +1,17 @@
 <template>
   <div
-    class="orange pa-16 d-flex justify-center align-center"
+    class="primary pa-16 d-flex justify-center align-center"
     style="position: relative"
   >
     <div style="margin-left: 25%">
       <v-img
-        src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+        src="https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg"
         height="600px"
         width="480px"
       ></v-img>
     </div>
     <div style="position: absolute; margin-right: 25%">
-      <v-card width="440px" height="440px" color="#ffbf00">
+      <v-card width="440px" height="440px" color="secondary">
         <div class="pa-16 aboutleft">
           <h2
             class="display-1 font-weight-regular mb-3 grey--text text--darken-3"
@@ -29,7 +29,7 @@
             text
             class="my-4 white--text"
             width="100px"
-            style="text-decoration: underline; border-bottom: 2px solid #fff"
+            style="border-bottom: 2px solid #fff; border-radius: 0px"
             >Learn more</v-btn
           >
         </div>
@@ -42,4 +42,11 @@
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+.aboutleft {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+</style>

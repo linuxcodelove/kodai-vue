@@ -2,7 +2,7 @@
   <div>
     <v-row v-if="index % 2 == 0" class="px-8">
       <v-col cols="6" class="leftbox px-12">
-        <h1 class="text-left font-weight-medium mb-3 grey--text">
+        <h1 class="text-left font-weight-medium mb-3">
           {{ item.title }}
         </h1>
         <div class="font-weight-light title">
@@ -10,20 +10,20 @@
         </div>
       </v-col>
       <v-col cols="6">
-        <v-container class="orange">
+        <v-container class="primary">
           <v-img :src="item.src"></v-img>
         </v-container>
       </v-col>
-      <v-divider class="mx-4 mt-6 orange"></v-divider>
+      <v-divider class="mx-4 mt-16 primary"></v-divider>
     </v-row>
     <v-row v-else class="px-8">
       <v-col cols="6">
-        <v-container class="orange">
+        <v-container class="primary">
           <v-img :src="item.src"></v-img>
         </v-container>
       </v-col>
       <v-col cols="6" class="leftbox px-12">
-        <h1 class="text-left font-weight-medium mb-3 grey--text">
+        <h1 class="text-left font-weight-medium mb-3">
           {{ item.title }}
         </h1>
         <div class="font-weight-light title">
@@ -31,7 +31,7 @@
         </div>
       </v-col>
 
-      <v-divider class="mx-4 mt-6 orange"></v-divider>
+      <v-divider class="mx-4 mt-16 primary"></v-divider>
     </v-row>
     <!-- <v-card>
       <v-row>

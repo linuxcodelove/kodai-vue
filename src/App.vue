@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="white" flat>
+    <v-app-bar app color="primary" flat>
       <v-btn text
         ><strong class="font-weight-black text-h6">KODAIKANAL</strong> TRAVEL
         PLANNER</v-btn
