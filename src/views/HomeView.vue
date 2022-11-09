@@ -52,61 +52,24 @@
         </v-row>
       </v-sheet>
     </v-card>
-    <div
-      class="orange pa-16 d-flex justify-center align-center"
-      style="position: relative"
-    >
-      <div style="margin-left: 20%">
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-          height="600px"
-          width="480px"
-        ></v-img>
-      </div>
-      <div style="position: absolute; margin-right: 30%">
-        <v-card width="440px" height="440px" color="#ffbf00">
-          <div class="pa-16 aboutleft">
-            <h2
-              class="display-1 font-weight-regular mb-3 grey--text text--darken-3"
-            >
-              ABOUT US
-            </h2>
-            <div
-              class="font-weight-light display-2 white--text text--lighten-2 py-3"
-              style="line-height: 1.2"
-            >
-              Make yourself at home <br />
-              in out hotel
-            </div>
-            <v-btn
-              text
-              class="my-4 white--text"
-              width="100px"
-              style="text-decoration: underline; border-bottom: 2px solid #fff"
-              >Learn more</v-btn
-            >
-          </div>
-        </v-card>
-      </div>
+    <aboutUs></aboutUs>
+    <div class="pa-12 yellow">
+      <v-container>
+        <v-row>
+          <v-col cols="6">
+            <p class="title">Email</p>
+            <p>service@kodaiguide.in</p>
+            <p class="title">Phone</p>
+            <p>+91-9840666992</p>
+            <p class="title">Address</p>
+            <p>
+              327/9E Lawsghat Road, <br />Kodaikanal<br />
+              Pin-624 101
+            </p>
+          </v-col>
+        </v-row>
+      </v-container>
     </div>
-    <!-- <v-container fluid class="text-center my-8">
-      <div class="mb-8">
-        <h2 class="display-2 font-weight-bold">About us</h2>
-      </div>
-
-      <div
-        class="font-weight-light mx-auto title mb-16"
-        style="width: 720px; max-width: 720px"
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </div>
-    </v-container> -->
   </div>
 </template>
 
@@ -114,12 +77,14 @@
 import product from "../components/product.vue";
 import otherServices from "../components/otherservices.vue";
 import carousel from "../components/carousel.vue";
+import aboutUs from "../components/aboutUs.vue";
 export default {
   name: "Home",
   components: {
     product,
     otherServices,
     carousel,
+    aboutUs,
   },
   data() {
     return {
