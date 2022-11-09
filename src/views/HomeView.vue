@@ -52,20 +52,43 @@
         </v-row>
       </v-sheet>
     </v-card>
-    <v-container fluid class="orange pa-16">
-      <div class="d-flex justify-center">
-        <div class="d-flex align-center">
-          <v-card width="440px" height="440px"></v-card>
-        </div>
-        <div>
-          <v-img
-            src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
-            height="600px"
-            width="480px"
-          ></v-img>
-        </div>
+    <div
+      class="orange pa-16 d-flex justify-center align-center"
+      style="position: relative"
+    >
+      <div style="margin-left: 20%">
+        <v-img
+          src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+          height="600px"
+          width="480px"
+        ></v-img>
       </div>
-    </v-container>
+      <div style="position: absolute; margin-right: 30%">
+        <v-card width="440px" height="440px" color="#ffbf00">
+          <div class="pa-16 aboutleft">
+            <h2
+              class="display-1 font-weight-regular mb-3 grey--text text--darken-3"
+            >
+              ABOUT US
+            </h2>
+            <div
+              class="font-weight-light display-2 white--text text--lighten-2 py-3"
+              style="line-height: 1.2"
+            >
+              Make yourself at home <br />
+              in out hotel
+            </div>
+            <v-btn
+              text
+              class="my-4 white--text"
+              width="100px"
+              style="text-decoration: underline; border-bottom: 2px solid #fff"
+              >Learn more</v-btn
+            >
+          </div>
+        </v-card>
+      </div>
+    </div>
     <!-- <v-container fluid class="text-center my-8">
       <div class="mb-8">
         <h2 class="display-2 font-weight-bold">About us</h2>
@@ -155,3 +178,11 @@ export default {
   },
 };
 </script>
+<style>
+.aboutleft {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+</style>
