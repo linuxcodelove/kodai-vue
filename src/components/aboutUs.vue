@@ -23,7 +23,7 @@
             style="line-height: 1.2"
           >
             Make yourself at home <br />
-            in out hotel
+            in our hotel
           </div>
           <v-btn
             text

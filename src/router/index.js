@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import Login from "../views/Login.vue";
 import AdminDashboard from "../views/AdminDashboard.vue";
+import Cottages from "../views/Cottages.vue";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: "/admindashboard",
     name: "adminDashboard",
     component: AdminDashboard,
+  },
+  {
+    path: "/cottages",
+    name: "cottages",
+    component: Cottages,
   },
 ];
 

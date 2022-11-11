@@ -6,8 +6,8 @@
         PLANNER</v-btn
       >
       <v-spacer></v-spacer>
-      <v-btn text>Home</v-btn>
-      <v-btn text>ROOMS</v-btn>
+      <v-btn text @click="$router.push('/')">Home</v-btn>
+      <v-btn text @click="$router.push('/cottages')">Cottages</v-btn>
       <v-btn text>RENTAL CARS</v-btn>
       <v-btn text>REAL ESTATE</v-btn>
       <v-btn text>ABOUT</v-btn>

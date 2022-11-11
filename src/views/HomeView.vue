@@ -4,7 +4,7 @@
     <what-we-do></what-we-do>
     <our-services></our-services>
     <aboutUs></aboutUs>
-    <contact-us></contact-us>
+    <customfooter></customfooter>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import carousel from "../components/carousel.vue";
 import aboutUs from "../components/aboutUs.vue";
 import whatWeDo from "../components/whatWeDo.vue";
 import ourServices from "../components/ourServices.vue";
-import contactUs from "../components/contactUs.vue";
+import customfooter from "../components/footer.vue";
 export default {
   name: "Home",
   components: {
@@ -21,7 +21,7 @@ export default {
     aboutUs,
     whatWeDo,
     ourServices,
-    contactUs,
+    customfooter,
   },
   data() {
     return {
@@ -29,7 +29,6 @@ export default {
         {
           src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg",
         },
-
         {
           src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg",
         },

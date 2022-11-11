@@ -23,7 +23,7 @@
         <v-card-text>
           {{ item.desc }}
         </v-card-text>
-      </div>
+        </div>
     </v-card> -->
   </div>
 </template>
