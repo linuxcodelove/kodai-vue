@@ -31,7 +31,7 @@
             <v-btn
               text
               rounded
-              class="primary caption px-10 py-6 black--text text-darken-2 font-weight-black"
+              class="primary caption px-10 py-6 black--text text--darken-2 font-weight-black"
               >More About Us</v-btn
             >
           </div>
