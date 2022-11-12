@@ -11,7 +11,7 @@
       </v-col>
       <v-col cols="6">
         <v-container class="primary">
-          <v-img :src="item.src"></v-img>
+          <v-img :src="item.src" height="320px"></v-img>
         </v-container>
       </v-col>
       <v-divider class="mx-4 mt-16 primary"></v-divider>
@@ -19,7 +19,7 @@
     <v-row v-else class="px-8">
       <v-col cols="6">
         <v-container class="primary">
-          <v-img :src="item.src"></v-img>
+          <v-img :src="item.src" height="320px"></v-img>
         </v-container>
       </v-col>
       <v-col cols="6" class="leftbox px-12">

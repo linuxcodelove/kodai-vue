@@ -1,6 +1,18 @@
 <template>
-  <div class="pb-6">
-    <v-container height="540px" class="primary my-8">
+  <div>
+    <v-card height="540" width="306" class="primary mx-4 pa-3 rounded-sm">
+      <v-img :src="item.src" height="240px"></v-img>
+      <div class="pa-4">
+        <p class="font-weight-bold mb-3 grey--text text--lighten-2 title">
+          {{ item.title }}
+        </p>
+        <div class="font-weight-medium title-2 grey--text text--darken-3">
+          {{ item.desc }}
+        </div>
+      </div>
+    </v-card>
+
+    <!-- <v-container height="540px" width="302px" class="primary my-8">
       <v-img :src="item.src" height="240px"></v-img>
       <div class="pa-4">
         <h2 class="font-weight-bold mb-3 grey--text text--darken-3">
@@ -10,21 +22,7 @@
           {{ item.desc }}
         </div>
       </div>
-    </v-container>
-    <!-- <v-card class="pb-2" height="480px">
-      <v-img height="180" :src="item.src"></v-img>
-      <div class="py-4">
-        <v-card-title class="subtitle-1 font-weight-bold">{{
-          item.title
-        }}</v-card-title>
-
-        <v-divider class="mx-4"></v-divider>
-
-        <v-card-text>
-          {{ item.desc }}
-        </v-card-text>
-        </div>
-    </v-card> -->
+    </v-container> -->
   </div>
 </template>
 
