@@ -1,6 +1,6 @@
 <template>
   <div
-    class="primary pa-16 d-flex justify-center align-center"
+    class="accent pa-16 d-flex justify-center align-center"
     style="position: relative"
   >
     <div style="margin-left: 25%">

@@ -14,7 +14,7 @@
       <v-col cols="8">
         <v-row class="mx-8">
           <v-col cols="6" v-for="item in sayings" :key="item.text">
-            <v-card class="white rounded-sm pa-2 my-1" height="360px">
+            <v-card class="accent rounded-sm pa-2 my-1" height="360px">
               <v-img :src="item.img" height="200px"></v-img>
               <h3 class="my-10 mx-5 grey--text text--darken-2 text-center">
                 "{{ item.text }}"

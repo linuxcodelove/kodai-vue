@@ -10,13 +10,13 @@ export default new Vuetify({
       light: {
         primary: "#DA9F3F",
         secondary: "#101920",
-        accent: "#FFF",
+        accent: "#F1F3FF",
         error: "#b71c1c",
       },
       dark: {
         primary: "#DA9F3F",
         secondary: "#101920",
-        accent: "#8c9eff",
+        accent: "#F1F3FF",
         error: "#b71c1c",
       },
     },
@@ -26,3 +26,5 @@ export default new Vuetify({
 // #DA9F3F
 // CACE91
 // 101920
+// F3EDD7
+// FAEBEE

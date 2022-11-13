@@ -2,7 +2,7 @@
   <div>
     <carousel :items="items"></carousel>
     <cottages-list></cottages-list>
-    <div class="white">
+    <div class="accent">
       <v-container>
         <div class="text-center mt-12 mb-16 black--text">
           <h2>Discover</h2>
