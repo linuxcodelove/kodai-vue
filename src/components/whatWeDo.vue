@@ -47,7 +47,7 @@
               <h2
                 class="display-2 px-8 font-weight-bold grey--text text--darken-3"
               >
-                What We Do?
+                Who We Are?
               </h2>
               <span style="opacity: 0"> as a Kodaikanal Travel Planner</span>
             </div>

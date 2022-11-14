@@ -33,8 +33,10 @@ export default {
       cottages: [
         {
           name: "Kodai Cottage - 1",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
@@ -45,8 +47,10 @@ export default {
         },
         {
           name: "Kodai Cottage - 2",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
@@ -57,8 +61,10 @@ export default {
         },
         {
           name: "Kodai Cottage - 3",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
@@ -69,8 +75,10 @@ export default {
         },
         {
           name: "Kodai Cottage - 4",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
@@ -81,8 +89,10 @@ export default {
         },
         {
           name: "Kodai Cottage - 5",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
@@ -93,8 +103,10 @@ export default {
         },
         {
           name: "Kodai Cottage - 6",
-          description:
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          location: "27/9E Lawsghat Road, Kodaikanal, 624 101",
+          rooms: "3",
+          personsAllowed: "6",
+          price: "7000",
           images: [
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
             "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",

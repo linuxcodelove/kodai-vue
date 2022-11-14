@@ -9,7 +9,13 @@
       <v-col cols="6" class="leftbox px-12">
         <h1 class="text-left font-weight-medium mb-3">{{ item.name }}</h1>
         <div class="font-weight-light title">
-          {{ item.description }}
+          <h5 class="font-weight-medium">{{ item.location }}</h5>
+          <h5 class="font-weight-medium">No.of Rooms : {{ item.rooms }}</h5>
+          <h5 class="font-weight-medium">
+            Person Allowed : {{ item.personsAllowed }}
+          </h5>
+          <h5 class="font-weight-medium">Price : Rs.{{ item.price }}</h5>
+          <!-- {{ item.description }} -->
         </div>
         <v-btn text outlined color="primary" class="my-8 py-8">Book Now</v-btn>
       </v-col>
