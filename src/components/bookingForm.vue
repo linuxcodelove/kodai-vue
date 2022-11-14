@@ -1,8 +1,8 @@
 <template>
   <v-row class="white--text">
-    <v-form v-model="formValid">
-      <v-col cols="12" class="my-0 pb-0">
-        <p class="title">Book Your Dates</p>
+    <v-form v-model="formValid" class="mx-auto">
+      <v-col cols="12" class="mt-0 mb-4 pb-0">
+        <h2>Book Your Dates</h2>
       </v-col>
       <v-col cols="12" class="my-0 py-0"
         ><p>Drop us your message and we'll get back to you asap.</p></v-col

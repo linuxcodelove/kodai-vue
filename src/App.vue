@@ -11,7 +11,7 @@
       <v-btn text>RENTAL CARS</v-btn>
       <v-btn text>REAL ESTATE</v-btn>
       <v-btn text @click="$router.push('/about')">ABOUT</v-btn>
-      <v-btn text>CONTACT</v-btn>
+      <v-btn text @click="$router.push('/contact')">CONTACT</v-btn>
       <!-- <v-spacer></v-spacer>
       <v-btn color="green">BOOK</v-btn> -->
     </v-app-bar>

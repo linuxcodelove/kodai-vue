@@ -1,7 +1,7 @@
 <template>
   <div>
     <carousel :items="items"></carousel>
-    <what-we-do></what-we-do>
+    <who-we-are></who-we-are>
     <our-services></our-services>
     <aboutUs></aboutUs>
     <customfooter></customfooter>
@@ -11,7 +11,7 @@
 <script>
 import carousel from "../components/carousel.vue";
 import aboutUs from "../components/aboutUs.vue";
-import whatWeDo from "../components/whatWeDo.vue";
+import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
 export default {
@@ -19,7 +19,7 @@ export default {
   components: {
     carousel,
     aboutUs,
-    whatWeDo,
+    whoWeAre,
     ourServices,
     customfooter,
   },

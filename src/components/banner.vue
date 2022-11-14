@@ -4,6 +4,7 @@
       <v-img height="720px" :src="img" class="d-flex align-center">
         <div class="display-2 font-weight-bold">
           <h2 class="text-center">{{ title }}</h2>
+          <h3 v-if="subtitle" class="text-center my-10">{{ subtitle }}</h3>
         </div>
       </v-img>
     </v-card>
@@ -18,6 +19,10 @@ export default {
       default: "",
     },
     title: {
+      type: String,
+      default: "",
+    },
+    subtitle: {
       type: String,
       default: "",
     },
