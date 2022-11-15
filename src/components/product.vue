@@ -1,37 +1,41 @@
 <template>
   <div>
-    <v-row v-if="index % 2 == 0" class="px-8">
-      <v-col cols="6" class="leftbox px-12">
-        <h1 class="text-left font-weight-medium mb-3">
+    <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
+      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+        <h1
+          class="text-left font-weight-medium mb-3 title text-sm-h5 text-xl-h3"
+        >
           {{ item.title }}
         </h1>
-        <div class="font-weight-light title">
+        <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
           {{ item.desc }}
         </div>
       </v-col>
-      <v-col cols="6">
+      <v-col xs="12" sm="6">
         <v-container class="primary">
-          <v-img :src="item.src" height="320px"></v-img>
+          <v-img :src="item.src" :height="imageHeight"></v-img>
         </v-container>
       </v-col>
-      <v-divider class="mx-4 mt-16 primary"></v-divider>
+      <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
     </v-row>
     <v-row v-else class="px-8">
-      <v-col cols="6">
+      <v-col xs="12" sm="6">
         <v-container class="primary">
-          <v-img :src="item.src" height="320px"></v-img>
+          <v-img :src="item.src" :height="imageHeight"></v-img>
         </v-container>
       </v-col>
-      <v-col cols="6" class="leftbox px-12">
-        <h1 class="text-left font-weight-medium mb-3">
+      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+        <h1
+          class="text-left font-weight-medium mb-3 title text-sm-h5 text-xl-h3"
+        >
           {{ item.title }}
         </h1>
-        <div class="font-weight-light title">
+        <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
           {{ item.desc }}
         </div>
       </v-col>
 
-      <v-divider class="mx-4 mt-16 primary"></v-divider>
+      <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
     </v-row>
     <!-- <v-card>
       <v-row>
@@ -62,6 +66,26 @@ export default {
     index: {
       type: Number,
       default: 0,
+    },
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    imageHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "200";
+        case "sm":
+          return "240";
+        case "md":
+          return "320";
+        case "lg":
+          return "320";
+        case "xl":
+          return "320px";
+      }
+      return "320px";
     },
   },
 };

@@ -1,33 +1,36 @@
 <template>
   <div>
-    <v-card
-      max-width="100%"
-      class="mx-auto py-6 secondary"
-      style="margin-top: -48px"
-      outlined
-    >
+    <v-card max-width="100%" class="mx-auto py-2 py-sm-6 secondary" outlined>
       <v-sheet max-width="1200px" class="mx-auto px-6" color="transparent">
         <v-card-title
-          class="justify-center display-1 font-weight-bold text--darken-3 text-center"
+          class="justify-center headline text-sm-h4 text-xl-h2 font-weight-bold text--darken-3 text-center"
           >Our Services</v-card-title
         >
-        <v-divider class="mx-4 mt-6 mb-8 primary"></v-divider>
-        <v-row>
+        <v-divider class="mx-4 my-2 my-sm-8 primary"></v-divider>
+        <v-row class="mb-4 mb-sm-2">
           <v-col
             cols="12"
             v-for="(service, index) in services"
             :key="service.title"
-            class="my-8"
+            class="mt-2 my-sm-6"
           >
             <product :item="service" :index="index"></product>
           </v-col>
         </v-row>
         <div>
-          <h1 class="text-center">Our Cottages</h1>
+          <h1
+            class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
+          >
+            Our Cottages
+          </h1>
           <other-services :items="otherServices"></other-services>
         </div>
         <div>
-          <h1 class="text-center">Our Projects</h1>
+          <h1
+            class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
+          >
+            Our Projects
+          </h1>
           <other-services :items="otherServices"></other-services>
         </div>
         <!-- <v-row>
@@ -77,6 +80,8 @@ export default {
         "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash.jpg",
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4.jpg",
+        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
+        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
         "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
       ],
     };

@@ -1,25 +1,25 @@
 <template>
   <div
-    class="accent pa-16 d-flex justify-center align-center"
+    class="accent pa-16 my-2 my-sm-0 d-flex justify-center align-center"
     style="position: relative"
   >
-    <div style="margin-left: 25%">
+    <div v-if="$vuetify.breakpoint.smAndUp" :style="{ marginLeft: sideMargin }">
       <v-img
         src="https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg"
         height="600px"
         width="480px"
       ></v-img>
     </div>
-    <div style="position: absolute; margin-right: 25%">
-      <v-card width="440px" height="440px" color="secondary">
-        <div class="pa-16 aboutleft">
+    <div :style="{ marginRight: sideMargin, position: position }">
+      <v-card :width="imageWidth" :height="imageHeight" color="secondary">
+        <div class="pa-10 pa-sm-16 aboutleft">
           <h2
-            class="display-1 font-weight-regular mb-3 grey--text text--darken-3"
+            class="text-h6 text-sm-h4 font-weight-regular mb-3 grey--text text--darken-3"
           >
             ABOUT US
           </h2>
           <div
-            class="font-weight-light display-2 white--text text--lighten-2 py-3"
+            class="font-weight-light text-h5 text-sm-h3 white--text text--lighten-2 py-3"
             style="line-height: 1.2"
           >
             Make yourself at home <br />
@@ -39,7 +39,40 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    position() {
+      if (this.$vuetify.breakpoint.xs) return "static";
+      return "absolute";
+    },
+    sideMargin() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "0%";
+        case "sm":
+          return "30%";
+        case "md":
+          return "35%";
+        case "lg":
+          return "25%";
+        case "xl":
+          return "15%";
+      }
+      return "25%";
+    },
+    imageHeight() {
+      if (this.$vuetify.breakpoint.xs) return "300";
+      return "440";
+    },
+    imageWidth() {
+      if (this.$vuetify.breakpoint.xs) return "300";
+      return "440";
+    },
+  },
+};
 </script>
 
 <style scoped>

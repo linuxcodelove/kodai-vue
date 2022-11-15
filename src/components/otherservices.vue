@@ -26,7 +26,7 @@
       hide-delimiters
       :show-arrows="false"
       interval="2000"
-      class="pb-6"
+      class="pb-0 pb-sm-6"
     >
       <template v-for="(item, index) in items">
         <v-carousel-item
@@ -36,7 +36,7 @@
           <v-row class="flex-nowrap" style="height: 100%">
             <template v-for="(n, i) in columns">
               <template v-if="+(index + i) < items.length">
-                <v-col :key="i" cols="4">
+                <v-col :key="i" xs="12" sm="6" md="4">
                   <v-card
                     v-if="+(index + i) < items.length"
                     height="100%"
@@ -51,7 +51,7 @@
         </v-carousel-item>
       </template>
     </v-carousel>
-    <v-divider class="mx-4 mt-12 mb-6 primary"></v-divider>
+    <v-divider class="mx-4 mt-2 mb-4 my-sm-6 primary"></v-divider>
   </div>
 </template>
 
@@ -70,15 +70,15 @@ export default {
   },
   computed: {
     columns() {
-      if (this.$vuetify.breakpoint.xl) {
+      if (this.$vuetify.breakpoint.lgAndUp) {
         return 4;
       }
 
-      if (this.$vuetify.breakpoint.lg) {
+      if (this.$vuetify.breakpoint.md) {
         return 3;
       }
 
-      if (this.$vuetify.breakpoint.md) {
+      if (this.$vuetify.breakpoint.sm) {
         return 2;
       }
 
