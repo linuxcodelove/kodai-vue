@@ -40,7 +40,7 @@
           <v-card class="textright transparent px-8" :height="imageHeight" flat>
             <div>
               <h2
-                class="title-2 text-md-h4 text-lg-h3 px-8 py-4 font-weight-bold grey--text text--darken-3 my-0 text-center"
+                class="title text-md-h4 text-lg-h3 px-8 py-4 font-weight-bold grey--text text--darken-3 my-0 text-center"
               >
                 Who We Are?
               </h2>

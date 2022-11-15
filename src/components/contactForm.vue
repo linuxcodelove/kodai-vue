@@ -1,52 +1,53 @@
 <template>
-  <div style="width: 600px" class="mx-auto my-8">
+  <v-row class="my-4 mx-6 text-center d-flex justify-center">
     <v-form v-model="formValid">
-      <h1 class="my-4">Contact Us</h1>
-      <p class="title">Enquire</p>
-
-      <v-text-field
-        v-model="form.name"
-        label="Your Name"
-        outlined
-        hide-details
-        dark
-        class="my-4"
-      ></v-text-field>
-
-      <v-text-field
-        v-model="form.email"
-        label="Email"
-        outlined
-        hide-details
-        dark
-        class="my-4"
-      >
-      </v-text-field>
-
-      <v-text-field
-        v-model="form.phone"
-        label="Phone"
-        outlined
-        type="number"
-        hide-details
-        dark
-        class="my-4"
-      >
-      </v-text-field>
-
-      <v-textarea
-        label="Your comments"
-        outlined
-        hide-details
-        dark
-        class="my-4"
-      ></v-textarea>
-
-      <v-btn text outlined dark style="border-color: white" class="my-4"
-        >Submit</v-btn
-      >
+      <v-col cols="12" class="my-0 py-0"><h2>Contact Us</h2></v-col>
+      <v-col cols="12" class="my-0 py-0"><p class="title">Enquire</p></v-col>
+      <v-col cols="12">
+        <v-text-field
+          v-model="form.name"
+          label="Your Name"
+          outlined
+          hide-details
+          dark
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12">
+        <v-text-field
+          v-model="form.email"
+          label="Email"
+          outlined
+          hide-details
+          dark
+        >
+        </v-text-field>
+      </v-col>
+      <v-col cols="12">
+        <v-text-field
+          v-model="form.phone"
+          label="Phone"
+          outlined
+          type="number"
+          hide-details
+          dark
+        >
+        </v-text-field>
+      </v-col>
+      <v-col cols="12">
+        <v-textarea
+          label="Your comments"
+          outlined
+          hide-details
+          dark
+        ></v-textarea>
+      </v-col>
+      <v-col cols="12">
+        <v-btn text outlined dark style="border-color: white" class="my-4"
+          >Submit</v-btn
+        >
+      </v-col>
     </v-form>
-  </div>
+  </v-row>
 </template>
 
 <script>

@@ -4,13 +4,13 @@
     <cottages-list></cottages-list>
     <div class="accent">
       <v-container>
-        <div class="text-center mt-12 mb-16 black--text">
+        <div class="text-center mt-2 mt-md-4 mb-2 mb-md-6 black--text">
           <h2>Discover</h2>
           <h1 class="doubleline">NEW ROOMS</h1>
         </div>
-        <div class="black--text my-8">
+        <div class="black--text my-4">
           <v-row>
-            <v-col cols="6"
+            <v-col cols="12 px-12 text-center"
               >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -18,16 +18,16 @@
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.
             </v-col>
-            <v-col cols="6"
+            <!-- <v-col cols="6"
               >Duis aute irure dolor in reprehenderit in voluptate velit esse
               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
               cupidatat non proident, sunt in culpa qui officia deserunt mollit
               anim id est laborum.Excepteur sint occaecat cupidatat non
               proident, sunt in culpa qui officia deserunt mollit anim id est
               laborum.</v-col
-            >
+            > -->
           </v-row>
-          <div class="text-center mt-16 mb-12">
+          <div class="text-center mt-6 mt-md-8 mb-6 mb-md-8">
             <v-btn
               text
               rounded

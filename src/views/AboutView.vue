@@ -8,6 +8,7 @@
     <people-and-stories></people-and-stories>
     <grid-images></grid-images> -->
     <what-we-do></what-we-do>
+    <booking-form></booking-form>
     <custom-footer></custom-footer>
   </div>
 </template>
@@ -16,6 +17,7 @@
 import banner from "../components/banner.vue";
 import customFooter from "../components/footer.vue";
 import whatWeDo from "../components/whatWeDo.vue";
+import bookingForm from "../components/bookingForm.vue";
 
 // import exploreShelter from "../components/exploreShelter.vue";
 // import peopleAndStories from "../components/peopleAndStories.vue";
@@ -25,6 +27,7 @@ export default {
     banner,
     customFooter,
     whatWeDo,
+    bookingForm,
     // exploreShelter,
     // peopleAndStories,
     // gridImages,

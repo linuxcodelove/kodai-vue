@@ -1,11 +1,11 @@
 <template>
   <v-container fill-height fluid pa-0 ma-0>
-    <v-card class="mx-auto" color="transparent" flat height="720px">
-      <v-img height="720px" :src="img" class="d-flex align-center">
-        <div class="display-2 font-weight-bold">
+    <v-card class="mx-auto" color="transparent" flat>
+      <v-img :height="imageHeight" :src="img" class="d-flex align-center">
+        <!-- <div class="display-2 font-weight-bold">
           <h2 class="text-center">{{ title }}</h2>
           <h3 v-if="subtitle" class="text-center my-10">{{ subtitle }}</h3>
-        </div>
+        </div> -->
       </v-img>
     </v-card>
   </v-container>
@@ -25,6 +25,26 @@ export default {
     subtitle: {
       type: String,
       default: "",
+    },
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    imageHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "220";
+        case "sm":
+          return "400";
+        case "md":
+          return "500";
+        case "lg":
+          return "600";
+        case "xl":
+          return "800";
+      }
+      return "800";
     },
   },
 };

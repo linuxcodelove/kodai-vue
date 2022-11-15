@@ -1,11 +1,11 @@
 <template>
-  <v-row class="white--text">
+  <v-row class="white--text mx-6 my-4 text-center">
     <v-form v-model="formValid" class="mx-auto">
-      <v-col cols="12" class="mt-0 mb-4 pb-0">
+      <v-col cols="12" class="mt-0 mb-2 pb-0">
         <h2>Book Your Dates</h2>
       </v-col>
       <v-col cols="12" class="my-0 py-0"
-        ><p>Drop us your message and we'll get back to you asap.</p></v-col
+        ><p>Drop us your message and we'll get back to you asap</p></v-col
       >
       <v-col cols="12" class="white--text"
         ><v-text-field
@@ -13,7 +13,7 @@
           label="Your Name"
           outlined
           hide-details
-          dark
+          color="accent"
         ></v-text-field
       ></v-col>
       <v-col cols="12">
@@ -22,7 +22,6 @@
             <v-menu
               v-model="startDateMenu"
               :close-on-content-click="false"
-              :nudge-right="40"
               transition="scale-transition"
               offset-y
               min-width="auto"
@@ -37,7 +36,7 @@
                   v-bind="attrs"
                   v-on="on"
                   hide-details
-                  dark
+                  color="accent"
                 ></v-text-field>
               </template>
               <v-date-picker
@@ -50,7 +49,6 @@
             <v-menu
               v-model="endDateMenu"
               :close-on-content-click="false"
-              :nudge-right="40"
               transition="scale-transition"
               offset-y
               min-width="auto"
@@ -65,7 +63,7 @@
                   v-bind="attrs"
                   v-on="on"
                   hide-details
-                  dark
+                  color="accent"
                 ></v-text-field>
               </template>
               <v-date-picker
@@ -85,7 +83,7 @@
               type="number"
               outlined
               hide-details
-              dark
+              color="accent"
             >
             </v-text-field>
           </v-col>
@@ -96,7 +94,7 @@
               type="number"
               outlined
               hide-details
-              dark
+              color="accent"
             >
             </v-text-field>
           </v-col>
@@ -109,7 +107,7 @@
           outlined
           type="number"
           hide-details
-          dark
+          color="accent"
         >
         </v-text-field>
       </v-col>
@@ -119,7 +117,7 @@
           label="Email"
           outlined
           hide-details
-          dark
+          color="accent"
         >
         </v-text-field>
       </v-col>
@@ -128,11 +126,18 @@
           label="Your comments"
           outlined
           hide-details
-          dark
+          color="accent"
         ></v-textarea>
       </v-col>
       <v-col cols="12">
-        <v-btn text outlined dark style="border-color: white">Submit</v-btn>
+        <v-btn
+          text
+          outlined
+          color="accent"
+          style="border-color: white"
+          class="mb-3"
+          >Submit</v-btn
+        >
       </v-col>
     </v-form>
   </v-row>

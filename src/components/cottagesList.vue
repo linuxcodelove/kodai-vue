@@ -1,19 +1,19 @@
 <template>
-  <v-card
-    max-width="100%"
-    class="mx-auto py-6 secondary"
-    style="margin-top: -48px"
-    outlined
-  >
+  <v-card max-width="100%" class="mx-auto py-0 py-sm-6 secondary" outlined>
     <v-sheet max-width="1200px" class="mx-auto px-6" color="transparent">
       <v-card-title
-        class="justify-center display-1 font-weight-bold text--darken-3 text-center"
+        class="justify-center headline text-sm-h4 text-xl-h2 font-weight-bold text--darken-3 text-center"
         >Book Your Cottages</v-card-title
       >
-      <v-divider class="mx-4 mt-6 mb-8 primary"></v-divider>
-      <v-row>
-        <div class="cottageList mb-2" style="height: 2078px">
-          <v-col cols="12" v-for="(cottage, index) in cottages" :key="index">
+      <v-divider class="mx-4 mb-2 mb-sm-8 mt-0 mt-sm-6 primary"></v-divider>
+      <v-row class="my-4 my-sm-0">
+        <div class="cottageList mb-0" style="height: 2078px">
+          <v-col
+            cols="12"
+            v-for="(cottage, index) in cottages"
+            :key="index"
+            class="py-0 py-sm-2"
+          >
             <cottage-single :item="cottage"></cottage-single>
           </v-col>
         </div>
