@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import AdminDashboard from "../views/AdminDashboard.vue";
 import Cottages from "../views/Cottages.vue";
 import Contact from "../views/Contact.vue";
+import RentalCars from "../views/RentalCars.vue";
 
 Vue.use(VueRouter);
 
@@ -42,6 +43,11 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: Contact,
+  },
+  {
+    path: "/rentalcars",
+    name: "rentalcars",
+    component: RentalCars,
   },
 ];
 

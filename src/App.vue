@@ -13,7 +13,7 @@
       <v-toolbar-items v-if="!isSmallerDevice">
         <v-btn text @click="$router.push('/')">HOME</v-btn>
         <v-btn text @click="$router.push('/cottages')">COTTAGES</v-btn>
-        <v-btn text>RENTAL CARS</v-btn>
+        <v-btn text @click="$router.push('/rentalcars')">RENTAL CARS</v-btn>
         <v-btn text>REAL ESTATE</v-btn>
         <v-btn text @click="$router.push('/about')">ABOUT</v-btn>
         <v-btn text @click="$router.push('/contact')">CONTACT</v-btn>

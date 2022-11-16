@@ -9,7 +9,7 @@
           label="Your Name"
           outlined
           hide-details
-          dark
+          color="accent"
         ></v-text-field>
       </v-col>
       <v-col cols="12">
@@ -18,7 +18,7 @@
           label="Email"
           outlined
           hide-details
-          dark
+          color="accent"
         >
         </v-text-field>
       </v-col>
@@ -29,7 +29,7 @@
           outlined
           type="number"
           hide-details
-          dark
+          color="accent"
         >
         </v-text-field>
       </v-col>
@@ -38,11 +38,16 @@
           label="Your comments"
           outlined
           hide-details
-          dark
+          color="accent"
         ></v-textarea>
       </v-col>
       <v-col cols="12">
-        <v-btn text outlined dark style="border-color: white" class="my-4"
+        <v-btn
+          text
+          outlined
+          color="accent"
+          style="border-color: accent"
+          class="my-4"
           >Submit</v-btn
         >
       </v-col>

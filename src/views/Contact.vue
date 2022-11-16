@@ -5,9 +5,9 @@
       title="LET'S GET IN TOUCH"
       subtitle="+91-9840666992"
     ></banner>
-    <v-container>
-      <contact-form></contact-form>
-    </v-container>
+
+    <contact-form></contact-form>
+
     <custom-footer></custom-footer>
   </div>
 </template>
