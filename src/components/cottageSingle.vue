@@ -21,8 +21,13 @@
           <h5 class="font-weight-medium">Price : Rs.{{ item.price }}</h5>
           <!-- {{ item.description }} -->
         </div>
-        <v-btn text outlined color="primary" class="mt-4 my-sm-8 py-6 py-sm-8"
-          >Book Now</v-btn
+        <v-btn
+          text
+          outlined
+          color="primary"
+          class="mt-4 my-sm-8 py-6 py-sm-8"
+          @click="save()"
+          >{{ edit ? "Edit" : "Book Now" }}</v-btn
         >
       </v-col>
     </v-row>
@@ -49,6 +54,10 @@ export default {
     item: {
       type: Object,
       default: () => {},
+    },
+    edit: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -80,6 +89,12 @@ export default {
       const img = this.selectedImage;
       this.selectedImage = this.listImages[index];
       this.listImages[index] = img;
+    },
+    save() {
+      if (this.edit) {
+        this.$emit("editItem", this.item);
+        console.log(this.item);
+      }
     },
   },
 };

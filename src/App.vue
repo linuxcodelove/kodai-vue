@@ -34,7 +34,7 @@
           <v-list-item @click="$router.push('/cottages')">
             <v-list-item-title>Cottages</v-list-item-title>
           </v-list-item>
-          <v-list-item>
+          <v-list-item @click="$router.push('/rentalcars')">
             <v-list-item-title>RENTAL CARS</v-list-item-title>
           </v-list-item>
           <v-list-item>

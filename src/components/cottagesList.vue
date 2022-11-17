@@ -14,7 +14,11 @@
             :key="index"
             class="py-0 py-sm-2"
           >
-            <cottage-single :item="cottage"></cottage-single>
+            <cottage-single
+              :item="cottage"
+              :edit="edit"
+              @editItem="editItem"
+            ></cottage-single>
           </v-col>
         </div>
       </v-row>
@@ -27,6 +31,12 @@ import cottageSingle from "../components/cottageSingle.vue";
 export default {
   components: {
     cottageSingle,
+  },
+  props: {
+    edit: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -117,6 +127,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    editItem(item) {
+      this.$emit("editItem", item);
+    },
   },
 };
 </script>

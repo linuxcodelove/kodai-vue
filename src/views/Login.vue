@@ -5,7 +5,7 @@
       height="90vh"
       class="d-flex justify-center align-center"
     >
-      <v-sheet width="480px" class="text-center px-8 py-6">
+      <v-sheet width="480px" class="text-center px-8 py-6 ma-6">
         <v-form ref="form" class="form">
           <v-text-field
             v-model="form.username"
