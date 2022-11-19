@@ -33,6 +33,18 @@ const routes = [
     path: "/admindashboard",
     name: "adminDashboard",
     component: AdminDashboard,
+    meta: {
+      loginAuth: true,
+    },
+    beforeEnter: (to, from, next) => {
+      const authenticatedUser = localStorage.getItem("token");
+      if (authenticatedUser) {
+        next();
+        return;
+      }
+      next("/login");
+      return;
+    },
   },
   {
     path: "/cottages",
