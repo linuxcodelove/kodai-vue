@@ -50,6 +50,7 @@
           color="accent"
           style="border-color: accent"
           class="my-2"
+          @click="sendMail"
           >Submit</v-btn
         >
       </v-col>
@@ -64,6 +65,13 @@ export default {
       formValid: false,
       form: {},
     };
+  },
+  methods: {
+    sendMail() {
+      window.open(
+        `mailto:linuxcodelove@gmail.com?subject=subject&body=${this.form}`
+      );
+    },
   },
 };
 </script>

@@ -137,6 +137,11 @@ export default {
       Promise.all(list)
         .then((res) => {
           payload.images = res;
+          if (payload.id) {
+            return this.$http.put(`api/cottages/${payload.id}`, payload, {
+              "content-type": "application/json",
+            });
+          }
           return this.$http.post("api/cottages", payload, {
             "content-type": "application/json",
           });
@@ -161,11 +166,7 @@ export default {
     },
     editItem(item) {
       this.form = item;
-      this.images = item.images || [];
-      // this.images = item.images.map(
-      //   (item) => "data:image/jpeg;base64" + btoa(item)
-      // );
-      // console.log(this.images);
+      this.images = [];
       this.dialog = true;
     },
   },

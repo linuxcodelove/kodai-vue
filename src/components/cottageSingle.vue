@@ -119,6 +119,7 @@ export default {
     },
     deleteCottage() {
       this.$emit("deleteItem", this.item.id);
+      this.deleteDialog = false;
     },
   },
 };

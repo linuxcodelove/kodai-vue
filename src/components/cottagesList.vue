@@ -54,9 +54,10 @@ export default {
       this.$http.delete(`api/cottages/${id}`).then(() => this.initialise());
     },
     initialise() {
-      this.$http
-        .get("api/cottages")
-        .then((res) => (this.cottages = res.body.data));
+      this.$http.get("api/cottages").then((res) => {
+        this.cottages = res.body.data;
+        // console.log(this.cottages);
+      });
     },
   },
   created() {
