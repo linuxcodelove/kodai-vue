@@ -6,7 +6,11 @@
         ><v-icon>mdi-plus</v-icon>Add</v-btn
       >
     </div>
-    <cottages-list :edit="true" @editItem="editItem"></cottages-list>
+    <cottages-list
+      v-if="refresh"
+      :edit="edit"
+      @editItem="editItem"
+    ></cottages-list>
     <v-dialog v-model="dialog" persistent max-width="600px">
       <v-card>
         <v-card-title>
@@ -46,11 +50,11 @@
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
-                    v-model="form.personsAllowed"
+                    v-model="form.persons_allowed"
                     label="Person Count"
                     type="number"
                     :rules="[
-                      () => !!form.personsAllowed || 'This field is required',
+                      () => !!form.persons_allowed || 'This field is required',
                     ]"
                     outlined
                     hide-details
@@ -65,6 +69,20 @@
                     outlined
                     hide-details
                   ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-file-input
+                    v-model="images"
+                    accept="image/*"
+                    label="choose image"
+                    prepend-icon="mdi-image"
+                    required
+                    small-chips
+                    multiple
+                    outlined
+                    clearable
+                    :rules="[() => !!images.length || 'Image is required']"
+                  ></v-file-input>
                 </v-col>
               </v-row>
             </v-container>
@@ -95,6 +113,9 @@ export default {
     return {
       dialog: false,
       form: {},
+      images: [],
+      refresh: true,
+      edit: true,
     };
   },
   methods: {
@@ -102,8 +123,33 @@ export default {
       if (!this.$refs.form.validate()) {
         return;
       }
-      console.log(this.form);
-      this.cancel();
+      const list = this.images.map((item) => {
+        let fileReader = new FileReader();
+        return new Promise((resolve) => {
+          fileReader.addEventListener("load", (e) => {
+            resolve(e.target.result);
+          });
+          fileReader.readAsDataURL(item);
+        });
+      });
+      const payload = { ...this.form };
+      this.refresh = false;
+      Promise.all(list)
+        .then((res) => {
+          payload.images = res;
+          if (payload.id) {
+            return this.$http.put(`api/cottages/${payload.id}`, payload, {
+              "content-type": "application/json",
+            });
+          }
+          return this.$http.post("api/cottages", payload, {
+            "content-type": "application/json",
+          });
+        })
+        .then(() => {
+          this.refresh = true;
+          this.cancel();
+        });
     },
     resetForm() {
       this.$refs.form.reset();
@@ -116,9 +162,11 @@ export default {
       this.resetValidation();
       this.dialog = false;
       this.form = {};
+      this.images = [];
     },
     editItem(item) {
       this.form = item;
+      this.images = [];
       this.dialog = true;
     },
   },

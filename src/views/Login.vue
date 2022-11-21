@@ -25,6 +25,13 @@
         </v-form>
       </v-sheet>
     </v-card>
+    <v-snackbar v-model="snackbar" timeout="2000" :color="color" top right>
+      {{ text }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -32,14 +39,42 @@
 export default {
   data() {
     return {
-      form: {},
+      form: {
+        username: "",
+        password: "",
+      },
+      snackbar: false,
+      text: "",
+      color: "",
     };
   },
   methods: {
     login() {
       if (!this.$refs.form.validate()) return;
-      console.log("logged in successfully");
-      this.$router.push("/admindashboard");
+      this.$http
+        .post("api/sessions/login", this.form, {
+          "content-type": "application/json",
+        })
+        .then((res) => {
+          console.log(res);
+          if (res.body.result == "success") {
+            localStorage.setItem("token", res.body.token);
+            this.text = "Logged in Successfully";
+            this.color = "green";
+            this.snackbar = true;
+            this.$router.push("/admindashboard");
+          } else {
+            this.invalidDetails();
+          }
+        })
+        .catch(() => {
+          this.invalidDetails();
+        });
+    },
+    invalidDetails() {
+      this.text = "Invalid username or password";
+      this.color = "red";
+      this.snackbar = true;
     },
   },
 };

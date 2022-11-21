@@ -7,16 +7,21 @@
         </v-card>
       </v-col>
       <v-col xs="12" sm="6" class="leftbox px-12 pt-0 pb-4">
-        <h1
-          class="text-left font-weight-medium mb-1 mb-sm-3 title text-sm-h5 text-xl-h3"
-        >
-          {{ item.name }}
-        </h1>
+        <div class="d-flex justify-space-between">
+          <h1
+            class="text-left font-weight-medium mb-1 mb-sm-3 title text-sm-h5 text-xl-h3"
+          >
+            {{ item.name }}
+          </h1>
+          <v-btn v-if="edit" color="red" @click="deleteDialog = true" small icon
+            ><v-icon>mdi-delete</v-icon></v-btn
+          >
+        </div>
         <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
           <h5 class="font-weight-medium">{{ item.location }}</h5>
           <h5 class="font-weight-medium">No.of Rooms : {{ item.rooms }}</h5>
           <h5 class="font-weight-medium">
-            Person Allowed : {{ item.personsAllowed }}
+            Person Allowed : {{ item.persons_allowed }}
           </h5>
           <h5 class="font-weight-medium">Price : Rs.{{ item.price }}</h5>
           <!-- {{ item.description }} -->
@@ -45,6 +50,22 @@
       </v-col>
     </v-row>
     <v-divider class="mt-8 mt-sm-12 mb-0 mb-sm-2 primary"></v-divider>
+    <v-dialog v-model="deleteDialog" persistent max-width="400">
+      <v-card style="border-radius: 8px" class="pa-4">
+        <v-card-title class="d-flex justify-center">
+          <h2 class="title">Are you sure want to delete?</h2>
+        </v-card-title>
+        <v-card-actions class="d-flex justify-center">
+          <v-btn style="border-radius: 8px" @click="deleteCottage">Yes</v-btn>
+          <v-btn
+            color="grey"
+            style="border-radius: 8px"
+            @click="deleteDialog = false"
+            >No</v-btn
+          >
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -64,6 +85,7 @@ export default {
     return {
       selectedImage: "",
       listImages: [],
+      deleteDialog: false,
     };
   },
   computed: {
@@ -93,8 +115,11 @@ export default {
     save() {
       if (this.edit) {
         this.$emit("editItem", this.item);
-        console.log(this.item);
       }
+    },
+    deleteCottage() {
+      this.$emit("deleteItem", this.item.id);
+      this.deleteDialog = false;
     },
   },
 };
