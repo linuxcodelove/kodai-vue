@@ -1,11 +1,39 @@
 <template>
   <v-container fill-height fluid pa-0 ma-0>
-    <v-card class="mx-auto" color="transparent" flat>
-      <v-img :height="imageHeight" :src="img" class="d-flex align-center">
-        <!-- <div class="display-2 font-weight-bold">
-          <h2 class="text-center">{{ title }}</h2>
-          <h3 v-if="subtitle" class="text-center my-10">{{ subtitle }}</h3>
-        </div> -->
+    <v-card color="transparent" flat>
+      <v-img
+        :height="imageHeight"
+        :src="img"
+        width="100%"
+        class="d-flex align-center"
+      >
+        <div>
+          <h3 class="text-center subtitle text-sm-h5 text-md-h4">
+            {{ title }}
+          </h3>
+          <h2
+            class="text-center text-h6 text-sm-h4 text-md-h2 font-weight-bold my-4"
+          >
+            {{ subtitle }}
+          </h2>
+          <div
+            v-if="!$vuetify.breakpoint.xs"
+            class="text-center my-0 my-sm-4 px-16"
+          >
+            <h6 class="caption text-sm-h6 font-weight-regular">
+              {{ description }}
+            </h6>
+            <h6 class="caption text-sm-h6 font-weight-regular">
+              {{ subDesc }}
+            </h6>
+          </div>
+          <div class="d-flex justify-center my-4">
+            <v-btn rounded class="py-6 px-8 primary">Book Now</v-btn>
+          </div>
+
+          <!-- <h2 class="text-center text-h2 font-weight-bold">{{ title }}</h2>
+          <h3 v-if="subtitle" class="text-center my-10">{{ subtitle }}</h3> -->
+        </div>
       </v-img>
     </v-card>
   </v-container>
@@ -23,6 +51,14 @@ export default {
       default: "",
     },
     subtitle: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    subDesc: {
       type: String,
       default: "",
     },

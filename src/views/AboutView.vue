@@ -2,7 +2,7 @@
   <div>
     <banner
       img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
-      title="About Us"
+      subtitle="About Us"
     ></banner>
     <!-- <explore-shelter></explore-shelter>
     <people-and-stories></people-and-stories>

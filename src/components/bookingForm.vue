@@ -19,12 +19,12 @@
       <v-col cols="12">
         <v-row>
           <v-col cols="6">
-            <v-menu
-              v-model="startDateMenu"
-              :close-on-content-click="false"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
+            <v-dialog
+              ref="dialogStartDate"
+              v-model="startDateDialog"
+              :return-value.sync="startDate"
+              persistent
+              width="290px"
             >
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
@@ -39,19 +39,28 @@
                   color="accent"
                 ></v-text-field>
               </template>
-              <v-date-picker
-                v-model="startDate"
-                @input="startDateMenu = false"
-              ></v-date-picker>
-            </v-menu>
+              <v-date-picker v-model="startDate" color="primary"
+                ><v-spacer></v-spacer>
+                <v-btn text color="primary" @click="startDateDialog = false">
+                  Cancel
+                </v-btn>
+                <v-btn
+                  text
+                  color="primary"
+                  @click="$refs.dialogStartDate.save(startDate)"
+                >
+                  OK
+                </v-btn></v-date-picker
+              >
+            </v-dialog>
           </v-col>
           <v-col cols="6">
-            <v-menu
-              v-model="endDateMenu"
-              :close-on-content-click="false"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
+            <v-dialog
+              ref="dialogEndDate"
+              v-model="endDateDialog"
+              :return-value.sync="endDate"
+              persistent
+              width="290px"
             >
               <template v-slot:activator="{ on, attrs }">
                 <v-text-field
@@ -66,11 +75,20 @@
                   color="accent"
                 ></v-text-field>
               </template>
-              <v-date-picker
-                v-model="endDate"
-                @input="endDateMenu = false"
-              ></v-date-picker>
-            </v-menu>
+              <v-date-picker v-model="endDate" color="primary"
+                ><v-spacer></v-spacer>
+                <v-btn text color="primary" @click="endDateDialog = false">
+                  Cancel
+                </v-btn>
+                <v-btn
+                  text
+                  color="primary"
+                  @click="$refs.dialogEndDate.save(endDate)"
+                >
+                  OK
+                </v-btn></v-date-picker
+              >
+            </v-dialog>
           </v-col>
         </v-row>
       </v-col>
@@ -151,6 +169,8 @@ export default {
       form: {},
       startDateMenu: false,
       endDateMenu: false,
+      startDateDialog: false,
+      endDateDialog: false,
       startDate: "",
       endDate: "",
     };
@@ -176,4 +196,9 @@ export default {
 .custom-label-color input {
   color: red !important;
 }
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
 </style>

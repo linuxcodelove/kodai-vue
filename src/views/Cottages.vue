@@ -1,6 +1,12 @@
 <template>
   <div>
-    <carousel :items="items"></carousel>
+    <carousel
+      :items="items"
+      title="welcome to"
+      subtitle="KODAIKANAL TRAVEL PLANNER"
+      description="The Palace is not safe when the"
+      subDesc="Cottage is not happy"
+    ></carousel>
     <cottages-list></cottages-list>
     <div class="accent">
       <v-container>

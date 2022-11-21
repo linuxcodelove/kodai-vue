@@ -2,7 +2,9 @@
   <div>
     <banner
       img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
-      title="Rental Cars"
+      title="welcome to"
+      subtitle="KODAIKANAL TRAVEL PLANNER"
+      description="The cars we drive say a lot about us."
     ></banner>
     <who-we-are></who-we-are>
     <v-container fluid class="my-4 my-sm-8">

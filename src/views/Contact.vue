@@ -1,3 +1,4 @@
+<GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px" />
 <template>
   <div>
     <banner
@@ -7,6 +8,9 @@
     ></banner>
 
     <contact-form></contact-form>
+    <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">
+      <GmapMarker :position="center"></GmapMarker>
+    </GmapMap>
 
     <custom-footer></custom-footer>
   </div>
@@ -22,6 +26,11 @@ export default {
     banner,
     contactForm,
     customFooter,
+  },
+  data() {
+    return {
+      center: { lat: 10.23927, lng: 77.496164 },
+    };
   },
 };
 </script>

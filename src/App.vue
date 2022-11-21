@@ -11,7 +11,7 @@
       >
       <v-spacer></v-spacer>
       <v-toolbar-items v-if="!isSmallerDevice">
-        <v-btn text @click="$router.push('/')">HOME</v-btn>
+        <v-btn text @click="$router.push('/').catch((err) => {})">HOME</v-btn>
         <v-btn text @click="$router.push('/cottages')">COTTAGES</v-btn>
         <v-btn text @click="$router.push('/rentalcars')">RENTAL CARS</v-btn>
         <v-btn text>REAL ESTATE</v-btn>
@@ -19,13 +19,7 @@
         <v-btn text @click="$router.push('/contact')">CONTACT</v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    <v-navigation-drawer
-      v-model="showDrawer"
-      absolute
-      temporary
-      class="primary"
-      dark
-    >
+    <v-navigation-drawer v-model="showDrawer" class="primary" dark fixed>
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item @click="$router.push('/')">
