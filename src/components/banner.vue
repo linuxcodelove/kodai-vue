@@ -27,9 +27,19 @@
               {{ subDesc }}
             </h6>
           </div>
-          <div class="d-flex justify-center my-4">
-            <v-btn rounded class="py-6 px-8 primary">Book Now</v-btn>
+          <div v-if="book" class="d-flex justify-center my-2 my-sm-4">
+            <v-btn
+              rounded
+              class="py-4 px-4 py-sm-6 px-sm-8 primary"
+              :small="$vuetify.breakpoint.xs"
+              >Book Now</v-btn
+            >
           </div>
+          <!-- <div v-if="book" class="d-flex justify-center my-2 my-sm-4">
+            <v-btn rounded class="py-4 px-4 py-sm-6 px-sm-8 primary"
+              >Book Now</v-btn
+            >
+          </div> -->
 
           <!-- <h2 class="text-center text-h2 font-weight-bold">{{ title }}</h2>
           <h3 v-if="subtitle" class="text-center my-10">{{ subtitle }}</h3> -->
@@ -61,6 +71,10 @@ export default {
     subDesc: {
       type: String,
       default: "",
+    },
+    book: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

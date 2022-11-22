@@ -154,6 +154,7 @@
           color="accent"
           style="border-color: white"
           class="mb-3"
+          @click="submitForm"
           >Submit</v-btn
         >
       </v-col>
@@ -174,6 +175,18 @@ export default {
       startDate: "",
       endDate: "",
     };
+  },
+  methods: {
+    submitForm() {
+      window.location = "mailto:nandhusmart456@gmail.com";
+      // const url =
+      //   "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=linuxcodelove@gmail.com";
+      // const a = document.createElement("a");
+      // a.href = url;
+      // a.innerHTML = "Link";
+      // document.body.appendChild(a);
+      // a.click();
+    },
   },
 };
 </script>

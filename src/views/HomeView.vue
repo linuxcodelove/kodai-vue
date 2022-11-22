@@ -11,7 +11,6 @@
     <our-services></our-services>
     <aboutUs></aboutUs>
     <customfooter></customfooter>
-    <chat-with-us></chat-with-us>
   </div>
 </template>
 
@@ -21,7 +20,7 @@ import aboutUs from "../components/aboutUs.vue";
 import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
-import chatWithUs from "../components/chatWithUs.vue";
+
 export default {
   name: "Home",
   components: {
@@ -30,7 +29,6 @@ export default {
     whoWeAre,
     ourServices,
     customfooter,
-    chatWithUs,
   },
   data() {
     return {

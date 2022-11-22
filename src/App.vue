@@ -23,10 +23,10 @@
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item @click="$router.push('/')">
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>HOME</v-list-item-title>
           </v-list-item>
           <v-list-item @click="$router.push('/cottages')">
-            <v-list-item-title>Cottages</v-list-item-title>
+            <v-list-item-title>COTTAGES</v-list-item-title>
           </v-list-item>
           <v-list-item @click="$router.push('/rentalcars')">
             <v-list-item-title>RENTAL CARS</v-list-item-title>
@@ -43,6 +43,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+    <chat-with-us></chat-with-us>
 
     <v-main>
       <router-view />
@@ -51,8 +52,12 @@
 </template>
 
 <script>
+import chatWithUs from "./components/chatWithUs.vue";
 export default {
   name: "App",
+  components: {
+    chatWithUs,
+  },
   data: () => ({
     showDrawer: false,
   }),
