@@ -5,10 +5,10 @@
         v-if="isSmallerDevice"
         @click="showDrawer = true"
       ></v-app-bar-nav-icon>
-      <v-btn text
-        ><strong class="font-weight-black text-h6">KODAIKANAL</strong> TRAVEL
-        PLANNER</v-btn
-      >
+      <div class="px-4 font-weight-medium">
+        <strong class="font-weight-black text-h6">KODAIKANAL</strong> TRAVEL
+        PLANNER
+      </div>
       <v-spacer></v-spacer>
       <v-toolbar-items v-if="!isSmallerDevice">
         <v-btn text @click="$router.push('/').catch((err) => {})">HOME</v-btn>
@@ -68,3 +68,4 @@ export default {
   },
 };
 </script>
+<style scoped></style>

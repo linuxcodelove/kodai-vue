@@ -27,14 +27,14 @@
               {{ subDesc }}
             </h6>
           </div>
-          <div v-if="book" class="d-flex justify-center my-2 my-sm-4">
+          <!-- <div v-if="book" class="d-flex justify-center my-2 my-sm-4">
             <v-btn
               rounded
               class="py-4 px-4 py-sm-6 px-sm-8 primary"
               :small="$vuetify.breakpoint.xs"
               >Book Now</v-btn
             >
-          </div>
+          </div> -->
           <!-- <div v-if="book" class="d-flex justify-center my-2 my-sm-4">
             <v-btn rounded class="py-4 px-4 py-sm-6 px-sm-8 primary"
               >Book Now</v-btn

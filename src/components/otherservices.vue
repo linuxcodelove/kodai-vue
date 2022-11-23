@@ -10,9 +10,9 @@
           {{ item.desc }}
         </div>
       </div>
-    </v-card> -->
+    </v-card>
 
-    <!-- <v-slide-group v-model="model" class="transparent">
+    <v-slide-group v-model="model" class="transparent">
       <v-slide-item v-for="(item, index) in items" :key="index">
         <v-card width="352" class="rounded-sm px-1">
           <v-img :src="item" height="440"></v-img>
@@ -25,24 +25,29 @@
       continuous
       hide-delimiters
       :show-arrows="false"
-      interval="2000"
+      interval="1000"
       class="pb-0 pb-sm-6"
+      :height="imageHeight + 30"
+      :reverse="reverse"
     >
       <template v-for="(item, index) in items">
         <v-carousel-item
           v-if="(index + 1) % columns === 1 || columns === 1"
           :key="index"
         >
-          <v-row class="flex-nowrap" style="height: 100%">
+          <v-row class="flex-nowrap mx-0 px-0">
             <template v-for="(n, i) in columns">
               <template v-if="+(index + i) < items.length">
-                <v-col :key="i" xs="12" sm="6" md="4">
+                <v-col :key="i" cols="4" class="px-1">
                   <v-card
                     v-if="+(index + i) < items.length"
-                    height="100%"
+                    :height="imageHeight"
                     class="rounded-sm"
                   >
-                    <v-img :src="items[+index + i]" height="100%"></v-img>
+                    <v-img
+                      :src="items[+index + i]"
+                      :height="imageHeight"
+                    ></v-img>
                   </v-card>
                 </v-col>
               </template>
@@ -51,7 +56,7 @@
         </v-carousel-item>
       </template>
     </v-carousel>
-    <v-divider class="mx-4 mt-2 mb-4 my-sm-6 primary"></v-divider>
+    <!-- <v-divider class="mx-4 mt-2 mb-4 my-sm-6 primary"></v-divider> -->
   </div>
 </template>
 
@@ -61,6 +66,10 @@ export default {
     items: {
       type: Array,
       default: () => {},
+    },
+    reverse: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
@@ -79,10 +88,24 @@ export default {
       }
 
       if (this.$vuetify.breakpoint.sm) {
-        return 2;
+        return 3;
       }
 
-      return 1;
+      return 3;
+    },
+    imageHeight() {
+      if (this.$vuetify.breakpoint.xs) {
+        return 150;
+      }
+
+      if (this.$vuetify.breakpoint.sm) {
+        return 240;
+      }
+
+      if (this.$vuetify.breakpoint.md) {
+        return 300;
+      }
+      return 320;
     },
   },
   created() {

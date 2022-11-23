@@ -1,16 +1,17 @@
 <template>
-  <!-- <v-container fluid class="text-center primary py-16">
-    <div class="mb-4">
-      <h2 class="display-2 font-weight-bold">What We Do?</h2>
+  <v-container fluid class="text-center primary py-8 py-sm-16">
+    <div class="mb-0 mb-sm-4">
+      <h2 class="headline text-sm-h4 font-weight-bold">What We Do?</h2>
       <span class="font-weight-medium white--text" style="opacity: 0">
         as a Kodaikanal Travel Planner</span
       >
     </div>
 
     <div
-      class="font-weight-light mx-auto title mb-16"
-      style="width: 720px; max-width: 720px"
+      class="font-weight-light mx-auto subtitle text-sm-h6 mb-0 mb-sm-4"
+      :class="{ width: $vuetify.breakpoint.smAndUp }"
     >
+      <!-- :style="{ maxWidth: { '720px': $vuetify.breakpoint.smAndUp } }" -->
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -19,8 +20,8 @@
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </div>
-  </v-container> -->
-  <div class="accent">
+  </v-container>
+  <!-- <div class="accent">
     <v-container class="pa-8 pa-sm-16">
       <v-row>
         <v-col xs="12" sm="6">
@@ -44,9 +45,9 @@
               >
                 Who We Are?
               </h2>
-              <!-- <span style="opacity: 0" class="caption">
-                  as a Kodaikanal Travel Planner</span
-                > -->
+              <span style="opacity: 0" class="caption">
+                as a Kodaikanal Travel Planner</span
+              >
             </div>
             <div
               class="px-8 subtitle-1 text-lg-h5 text-xl-h4 font-weight-regular grey--text text--darken-2 text-center"
@@ -62,7 +63,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -110,5 +111,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.width {
+  width: 720px;
+  max-width: 720px;
 }
 </style>

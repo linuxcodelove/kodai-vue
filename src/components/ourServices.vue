@@ -20,6 +20,7 @@
         <div>
           <h1
             class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
+            style="text-decoration: underLine; text-decoration-color: white"
           >
             Our Cottages
           </h1>
@@ -28,10 +29,14 @@
         <div>
           <h1
             class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
+            style="text-decoration: underLine; text-decoration-color: white"
           >
             Our Projects
           </h1>
-          <other-services :items="otherServices"></other-services>
+          <other-services
+            :items="otherServices"
+            :reverse="true"
+          ></other-services>
         </div>
         <!-- <v-row>
           <v-col cols="4" v-for="os in otherServices" :key="os.title">
@@ -81,8 +86,9 @@ export default {
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4.jpg",
         "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
+        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash.jpg",
+        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
+        "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
       ],
     };
   },
