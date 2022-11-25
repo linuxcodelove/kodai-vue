@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import Login from "../views/Login.vue";
-import AdminDashboard from "../views/AdminDashboard.vue";
+// import Login from "../views/Login.vue";
+// import AdminDashboard from "../views/AdminDashboard.vue";
 import Cottages from "../views/Cottages.vue";
 import Contact from "../views/Contact.vue";
 import RentalCars from "../views/RentalCars.vue";
@@ -24,28 +24,28 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
-  {
-    path: "/login",
-    name: "login",
-    component: Login,
-  },
-  {
-    path: "/admindashboard",
-    name: "adminDashboard",
-    component: AdminDashboard,
-    meta: {
-      loginAuth: true,
-    },
-    beforeEnter: (to, from, next) => {
-      const authenticatedUser = localStorage.getItem("token");
-      if (authenticatedUser) {
-        next();
-        return;
-      }
-      next("/login");
-      return;
-    },
-  },
+  // {
+  //   path: "/login",
+  //   name: "login",
+  //   component: Login,
+  // },
+  // {
+  //   path: "/admindashboard",
+  //   name: "adminDashboard",
+  //   component: AdminDashboard,
+  //   meta: {
+  //     loginAuth: true,
+  //   },
+  //   beforeEnter: (to, from, next) => {
+  //     const authenticatedUser = localStorage.getItem("token");
+  //     if (authenticatedUser) {
+  //       next();
+  //       return;
+  //     }
+  //     next("/login");
+  //     return;
+  //   },
+  // },
   {
     path: "/cottages",
     name: "cottages",

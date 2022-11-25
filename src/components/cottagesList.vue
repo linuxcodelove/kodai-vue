@@ -54,10 +54,13 @@ export default {
       this.$http.delete(`api/cottages/${id}`).then(() => this.initialise());
     },
     initialise() {
-      this.$http.get("api/cottages").then((res) => {
-        this.cottages = res.body.data;
-        // console.log(this.cottages);
-      });
+      this.$http
+        .get("https://projectcottage.000webhostapp.com/cottage.json", {
+          "content-type": "application/json",
+        })
+        .then((res) => {
+          this.cottages = res.body.cottages;
+        });
     },
   },
   created() {

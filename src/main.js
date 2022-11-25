@@ -14,9 +14,11 @@ import VueResource from "vue-resource";
 
 Vue.use(VueResource);
 Vue.config.productionTip = false;
+// Vue.http.headers.common["Access-Control-Allow-Origin"] = "*";
 
-let baseUrl = "http://localhost:4000";
-Vue.http.options.root = baseUrl;
+// let baseUrl = "http://localhost:4000";
+// let baseUrl = "http://";
+// Vue.http.options.root = baseUrl;
 
 new Vue({
   router,
