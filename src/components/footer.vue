@@ -34,10 +34,10 @@
             <v-btn fab small class="mr-1 mr-sm-2"
               ><v-icon>mdi-twitter</v-icon></v-btn
             >
-            <v-btn fab small class="mr-1 mr-sm-2"
+            <v-btn fab small class="mr-1 mr-sm-2" @click="openFb"
               ><v-icon>mdi-facebook</v-icon></v-btn
             >
-            <v-btn fab small class="mr-1 mr-sm-2"
+            <v-btn fab small class="mr-1 mr-sm-2" @click="goToIG"
               ><v-icon>mdi-instagram</v-icon></v-btn
             >
           </div>
@@ -60,23 +60,30 @@
               <v-img height="60" :src="instaImage"></v-img>
             </v-col>
           </v-row>
-          <p class="caption mt-6 mt-sm-8">View More Photos</p>
-          <v-btn text outlined color="primary" class="my-6 my-sm-8 py-8" block
+          <p class="caption mt-6 mt-sm-8" @click="goToIG">View More Photos</p>
+          <v-btn
+            text
+            outlined
+            color="primary"
+            class="my-6 my-sm-8 py-8"
+            block
+            @click="dialog = true"
             >Book Now</v-btn
           >
         </v-col>
       </v-row>
     </v-container>
+    <booking-dialog v-if="dialog" @close="dialog = false"></booking-dialog>
   </div>
 </template>
 
 <script>
-// import bookingForm from "./bookingForm.vue";
+import BookingDialog from "../components/bookingDialog.vue";
 
 export default {
-  // components: {
-  //   bookingForm,
-  // },
+  components: {
+    BookingDialog,
+  },
   data() {
     return {
       instaImages: [
@@ -87,7 +94,25 @@ export default {
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4.jpg",
       ],
+      instaUrl: "https://instagram.com/muthumk05?utm_medium=copy_link",
+      dialog: false,
     };
+  },
+  methods: {
+    goToIG() {
+      var link = document.createElement("a");
+      link.href = this.instaUrl;
+      document.body.appendChild(link);
+      link.click();
+    },
+    openFb() {
+      // window.open(
+      //   `fb://faceweb/f?href=${encodeURI(
+      //     `https://www.facebook.com/Muthu%20Mk`
+      //   )}`,
+      //   "_blank"
+      // );
+    },
   },
 };
 </script>

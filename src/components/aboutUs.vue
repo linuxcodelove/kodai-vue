@@ -30,6 +30,7 @@
             class="my-4 white--text"
             width="100px"
             style="border-bottom: 2px solid #fff; border-radius: 0px"
+            @click="$router.push('/about')"
             >Learn more</v-btn
           >
         </div>
