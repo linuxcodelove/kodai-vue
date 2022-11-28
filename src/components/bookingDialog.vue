@@ -2,7 +2,7 @@
   <v-dialog v-model="dialog" persistent max-width="600">
     <v-card style="border-radius: 8px" class="pa-4">
       <v-form ref="form" v-model="formValid" class="mx-auto">
-        <v-row class="white--text mx-6 my-4 text-center">
+        <v-row class="white--text mx-6 text-center">
           <v-col cols="12" class="mt-0 mb-2 pb-0">
             <h2>Book Your Dates</h2>
           </v-col>
@@ -15,6 +15,7 @@
               label="Your Name"
               outlined
               hide-details
+              :dense="isMobile"
               color="accent"
               :rules="[() => !!form.name || 'Name is required']"
             ></v-text-field
@@ -39,6 +40,7 @@
                       v-bind="attrs"
                       v-on="on"
                       hide-details
+                      :dense="isMobile"
                       color="accent"
                       :rules="[() => !!startDate || 'Start Date is required']"
                     ></v-text-field>
@@ -80,6 +82,7 @@
                       v-bind="attrs"
                       v-on="on"
                       hide-details
+                      :dense="isMobile"
                       color="accent"
                       :rules="[() => !!endDate || 'End Date is required']"
                     ></v-text-field>
@@ -110,6 +113,7 @@
                   type="number"
                   outlined
                   hide-details
+                  :dense="isMobile"
                   color="accent"
                   :rules="[() => !!form.adults || 'Adults is required']"
                 >
@@ -122,6 +126,7 @@
                   type="number"
                   outlined
                   hide-details
+                  :dense="isMobile"
                   color="accent"
                   :rules="[() => !!form.children || 'Children is required']"
                 >
@@ -136,6 +141,7 @@
               outlined
               type="number"
               hide-details
+              :dense="isMobile"
               color="accent"
               :rules="[() => !!form.phone || 'Phone is required']"
             >
@@ -147,6 +153,7 @@
               label="Email"
               outlined
               hide-details
+              :dense="isMobile"
               color="accent"
               :rules="[() => !!form.email || 'Email is required']"
             >
@@ -158,6 +165,7 @@
               label="Your comments"
               outlined
               hide-details
+              :dense="isMobile"
               color="accent"
             ></v-textarea>
           </v-col>
@@ -190,6 +198,12 @@ export default {
       endDate: "",
       dialog: true,
     };
+  },
+  computed: {
+    isMobile() {
+      if (this.$vuetify.breakpoint.xs) return true;
+      return false;
+    },
   },
   methods: {
     save() {
