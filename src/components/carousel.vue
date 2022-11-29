@@ -85,4 +85,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.word {
+  font-family: "EBGaramond", Arial, Helvetica, sans-serif;
+}
+</style>

@@ -68,4 +68,10 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style>
+@font-face {
+  font-family: "EBGaramond";
+  src: local("EBGaramond"),
+    url(./fonts/EBGaramond-Regular.ttf) format("truetype");
+}
+</style>
