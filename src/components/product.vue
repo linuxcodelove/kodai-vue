@@ -1,7 +1,11 @@
 <template>
   <div>
     <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
-      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+      <v-col
+        xs="12"
+        sm="6"
+        class="leftbox px-4 px-sm-12 animate__animated animate__fadeInLeft"
+      >
         <h1
           class="text-left font-weight-medium mb-3 title text-sm-h5 text-xl-h3"
         >
@@ -57,6 +61,7 @@
 </template>
 
 <script>
+import "animate.css";
 export default {
   props: {
     item: {

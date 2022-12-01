@@ -13,21 +13,15 @@
         Our Site Seeing Packages
       </h2>
       <v-row class="mt-2 mt-sm-6 mx-2">
-        <v-col :cols="columns" v-for="pack in packages" :key="pack.title">
-          <v-card class="secondary py-8 px-5">
+        <v-col :cols="columns" v-for="img in images" :key="img">
+          <v-card class="secondary">
+            <v-img :src="img"></v-img>
+          </v-card>
+          <!-- <v-card class="secondary py-8 px-5">
             <h4 class="text-center text-h5" style="text-decoration: underline">
               {{ pack.title }}
             </h4>
             <div class="my-4 my-sm-6 mx-6 d-flex justify-center">
-              <!-- <v-timeline dense dark>
-                <v-timeline-item
-                  v-for="place in pack.places"
-                  :key="place"
-                  class="caption font-weight-light"
-                  small
-                  >{{ place }}</v-timeline-item
-                >
-              </v-timeline> -->
               <ul>
                 <li
                   v-for="place in pack.places"
@@ -52,7 +46,7 @@
                 Above 10 people: {{ pack.price.aboveTen }}
               </p>
             </div>
-          </v-card>
+          </v-card> -->
         </v-col>
       </v-row>
     </v-container>
@@ -73,71 +67,76 @@ export default {
   },
   data() {
     return {
-      packages: [
-        {
-          title: "Village Tour",
-          places: [
-            "Pine Tree Forest",
-            "Palani Hill View",
-            "Mahalakshmi Temple",
-            "Poombarai village View",
-            "3000 Years Old Temple",
-            "Sheep Farm",
-            "Rabbit Farm",
-            "Mannamanur Lake",
-            "Rose Garden",
-            "Upper Lake View",
-          ],
-          price: {
-            fourPeople: "Rs.3000 ",
-            sevenPeople: "Rs.3500 ",
-            tenPeople: "Rs.4500 ",
-            aboveTen: "Enquire Us",
-          },
-        },
-        {
-          title: "Picnic Tour",
-          places: [
-            "Vattakanal Water Fall",
-            "Lion Cave",
-            "Mountain Beauty",
-            "Dolphins Nose",
-            "Echo Rock",
-            "500 Years Old Tree",
-            "Liril Water Fall",
-          ],
-          price: {
-            fourPeople: "Rs.2500 ",
-            sevenPeople: "Rs.2800 ",
-            tenPeople: "Rs.3000 ",
-            aboveTen: "Enquire Us",
-          },
-        },
-        {
-          title: "Valley Tour",
-          places: [
-            "Coakers Walk",
-            "La Salette Church",
-            "Moir Point",
-            "Pine Tree Forest",
-            "Guna Cave",
-            "Pillar Rocks",
-            "Green Valley View",
-            "Pambar Falls",
-            "Bryant Park",
-            "Kodaikanal Lake",
-            "500 Year Old Tree",
-            "Upper Lake View",
-            "Golf Course",
-          ],
-          price: {
-            fourPeople: "Rs.2500 ",
-            sevenPeople: "Rs.3000 ",
-            tenPeople: "Rs.3500 ",
-            aboveTen: "Enquire Us",
-          },
-        },
+      images: [
+        "https://projectcottage.000webhostapp.com/packages/village.jpeg",
+        "https://projectcottage.000webhostapp.com/packages/picnic.jpeg",
+        "https://projectcottage.000webhostapp.com/packages/valley.jpeg",
       ],
+      // packages: [
+      //   {
+      //     title: "Village Tour",
+      //     places: [
+      //       "Pine Tree Forest",
+      //       "Palani Hill View",
+      //       "Mahalakshmi Temple",
+      //       "Poombarai village View",
+      //       "3000 Years Old Temple",
+      //       "Sheep Farm",
+      //       "Rabbit Farm",
+      //       "Mannamanur Lake",
+      //       "Rose Garden",
+      //       "Upper Lake View",
+      //     ],
+      //     price: {
+      //       fourPeople: "Rs.3000 ",
+      //       sevenPeople: "Rs.3500 ",
+      //       tenPeople: "Rs.4500 ",
+      //       aboveTen: "Enquire Us",
+      //     },
+      //   },
+      //   {
+      //     title: "Picnic Tour",
+      //     places: [
+      //       "Vattakanal Water Fall",
+      //       "Lion Cave",
+      //       "Mountain Beauty",
+      //       "Dolphins Nose",
+      //       "Echo Rock",
+      //       "500 Years Old Tree",
+      //       "Liril Water Fall",
+      //     ],
+      //     price: {
+      //       fourPeople: "Rs.2500 ",
+      //       sevenPeople: "Rs.2800 ",
+      //       tenPeople: "Rs.3000 ",
+      //       aboveTen: "Enquire Us",
+      //     },
+      //   },
+      //   {
+      //     title: "Valley Tour",
+      //     places: [
+      //       "Coakers Walk",
+      //       "La Salette Church",
+      //       "Moir Point",
+      //       "Pine Tree Forest",
+      //       "Guna Cave",
+      //       "Pillar Rocks",
+      //       "Green Valley View",
+      //       "Pambar Falls",
+      //       "Bryant Park",
+      //       "Kodaikanal Lake",
+      //       "500 Year Old Tree",
+      //       "Upper Lake View",
+      //       "Golf Course",
+      //     ],
+      //     price: {
+      //       fourPeople: "Rs.2500 ",
+      //       sevenPeople: "Rs.3000 ",
+      //       tenPeople: "Rs.3500 ",
+      //       aboveTen: "Enquire Us",
+      //     },
+      //   },
+      // ],
     };
   },
   computed: {
