@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" flat>
+    <v-app-bar app color="secondary" elevation="24">
       <v-app-bar-nav-icon
         v-if="isSmallerDevice"
         @click="showDrawer = true"
       ></v-app-bar-nav-icon>
       <div class="px-4 font-weight-medium">
-        <strong class="font-weight-black text-h6">KODAIKANAL</strong> TRAVEL
-        PLANNER
+        <strong class="font-weight-black text-h6">KODAIKANAL</strong> TRIP
+        ADVISOR
       </div>
       <v-spacer></v-spacer>
       <v-toolbar-items v-if="!isSmallerDevice">

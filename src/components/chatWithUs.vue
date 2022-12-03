@@ -103,7 +103,7 @@ export default {
       menu: false,
       message: false,
       hints: true,
-      phone: "7299655732",
+      phone: "9840666992",
       text: "",
       apilink: "",
     };

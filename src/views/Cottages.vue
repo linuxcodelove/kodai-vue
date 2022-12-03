@@ -17,21 +17,13 @@
         <div class="black--text my-4">
           <v-row>
             <v-col cols="12 px-12 text-center"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              >Treat yourself to an overnight stay somewhere special. It’s your
+              chance to discover Kodaikanal and all it has to offer. We provide
+              various types of stays such as Individual cottages, Service
+              apartments, Villa’s, Home stays, Tent stays, Wood houses, Tree
+              houses, Forest bungalows, Star category resorts and Hotel rooms.
+              Please view our 100+ cottages and resorts to book your space.
             </v-col>
-            <!-- <v-col cols="6"
-              >Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.Excepteur sint occaecat cupidatat non
-              proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.</v-col
-            > -->
           </v-row>
           <div class="text-center mt-6 mt-md-8 mb-6 mb-md-8">
             <v-btn
@@ -63,13 +55,16 @@ export default {
     return {
       items: [
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner1.jpg",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner2.jpg",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/logistic.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner3.jpg",
+        },
+        {
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner4.jpg",
         },
       ],
     };

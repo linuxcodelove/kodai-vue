@@ -7,7 +7,16 @@
       description="The Palace is not safe when the"
       subDesc="Cottage is not happy"
     ></carousel>
-    <who-we-are></who-we-are>
+    <who-we-are
+      title="What We Do?"
+      subtitle="as a Kodaikanal Travel Planner"
+      desc="Kodaikanal is the city of authenticity where real fun and adventure are at
+      the door step. As a Kodaikanal Tripadvisor we offer tourism and investment
+      related services regarding travel arrangements, stay, food, live guidance
+      in assisting to visit top site seeing spots in kodaikanal. We also provide
+      investment and construction related services in kodaikanal to make your
+      dreams come with unimaginable returns."
+    ></who-we-are>
     <our-services></our-services>
     <aboutUs></aboutUs>
     <customfooter></customfooter>
@@ -34,13 +43,16 @@ export default {
     return {
       items: [
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner1.jpg",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner2.jpg",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/logistic.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner3.jpg",
+        },
+        {
+          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner4.jpg",
         },
       ],
     };

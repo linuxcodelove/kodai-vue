@@ -5,12 +5,14 @@
   >
     <div v-if="$vuetify.breakpoint.smAndUp" :style="{ marginLeft: sideMargin }">
       <v-img
-        src="https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg"
+        src="https://projectcottage.000webhostapp.com/images/home/aboutus.jpg"
         height="600px"
         width="480px"
       ></v-img>
     </div>
     <div :style="{ marginRight: sideMargin, position: position }">
+      <!-- data-aos="fade-up"
+      data-aos-duration="800" -->
       <v-card :width="imageWidth" :height="imageHeight" color="secondary">
         <div class="pa-10 pa-sm-16 aboutleft">
           <h2

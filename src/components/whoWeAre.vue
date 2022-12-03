@@ -1,24 +1,24 @@
 <template>
-  <v-container fluid class="text-center primary py-8 py-sm-16">
+  <v-container fluid class="text-center primary py-6 py-sm-14">
     <div class="mb-0 mb-sm-4">
-      <h2 class="headline text-sm-h4 font-weight-bold">What We Do?</h2>
-      <span class="font-weight-medium white--text" style="opacity: 0">
-        as a Kodaikanal Travel Planner</span
-      >
+      <h2 v-if="subtitle" class="headline text-sm-h4 font-weight-bold">
+        {{ title }}
+      </h2>
+      <h2 v-else class="headline text-sm-h4 font-weight-bold pb-4">
+        {{ title }}
+      </h2>
+
+      <span class="font-weight-medium white--text caption" style="opacity: 0">
+        {{ subtitle }}
+      </span>
     </div>
 
+    <!-- :style="{ maxWidth: { '720px': $vuetify.breakpoint.smAndUp } }" -->
     <div
       class="font-weight-light mx-auto subtitle text-sm-h6 mb-0 mb-sm-4"
       :class="{ width: $vuetify.breakpoint.smAndUp }"
     >
-      <!-- :style="{ maxWidth: { '720px': $vuetify.breakpoint.smAndUp } }" -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      {{ desc }}
     </div>
   </v-container>
   <!-- <div class="accent">
@@ -68,6 +68,20 @@
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    subtitle: {
+      type: String,
+      default: "",
+    },
+    desc: {
+      type: String,
+      default: "",
+    },
+  },
   data() {
     return {};
   },

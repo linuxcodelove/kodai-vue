@@ -31,7 +31,7 @@
           <h4 class="subtitle-2 mb-2 mb-sm-5">+91-9840666992</h4>
           <h4 class="subtitle-2 mb-2 mb-sm-5">+91-9840666992</h4>
           <div class="mt-2 mt-sm-8">
-            <v-btn fab small class="mr-1 mr-sm-2"
+            <v-btn fab small class="mr-1 mr-sm-2" @click="openTwitter"
               ><v-icon>mdi-twitter</v-icon></v-btn
             >
             <v-btn fab small class="mr-1 mr-sm-2" @click="openFb"
@@ -45,12 +45,18 @@
         <v-col xs="6" sm="3" lg="4">
           <h2 class="mb-6 mb-md-12">NAVIGATION</h2>
           <div class="subtitle-2">
-            <h4 class="mb-2 mb-sm-5">Home</h4>
-            <h4 class="mb-2 mb-sm-5">Cottages</h4>
-            <h4 class="mb-2 mb-sm-5">Rental Cars</h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/')">Home</h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/cottages')">
+              Cottages
+            </h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/rentalcars')">
+              Rental Cars
+            </h4>
             <h4 class="mb-2 mb-sm-5">Real Estate</h4>
-            <h4 class="mb-2 mb-sm-5">About</h4>
-            <h4 class="mb-2 mb-sm-5">Contact</h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/about')">About</h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/contact')">
+              Contact
+            </h4>
           </div>
         </v-col>
         <v-col xs="12" sm="6" lg="4">
@@ -94,24 +100,24 @@ export default {
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
         "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4.jpg",
       ],
-      instaUrl: "https://instagram.com/muthumk05?utm_medium=copy_link",
+      // instaUrl: "https://instagram.com/muthumk05?utm_medium=copy_link",
+      instaUrl: "https://www.instagram.com/kodaikanal_tripadvisor/",
       dialog: false,
     };
   },
   methods: {
     goToIG() {
-      var link = document.createElement("a");
-      link.href = this.instaUrl;
-      document.body.appendChild(link);
-      link.click();
+      // var link = document.createElement("a");
+      // link.href = this.instaUrl;
+      // document.body.appendChild(link);
+      // link.click();
+      window.open(this.instaUrl);
     },
     openFb() {
-      // window.open(
-      //   `fb://faceweb/f?href=${encodeURI(
-      //     `https://www.facebook.com/Muthu%20Mk`
-      //   )}`,
-      //   "_blank"
-      // );
+      window.open("https://www.facebook.com/profile.php?id=100063902779362");
+    },
+    openTwitter() {
+      window.open("https://twitter.com/KodaikanalTrip");
     },
   },
 };

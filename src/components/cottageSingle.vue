@@ -3,10 +3,14 @@
     <v-row class="px-8">
       <v-col xs="12" sm="6">
         <v-card class="primary pa-1 pa-sm-2">
-          <v-img :height="imageHeight" :src="selectedImage"></v-img>
+          <v-img
+            :height="imageHeight"
+            :src="selectedImage"
+            :lazy-src="selectedImage"
+          ></v-img>
         </v-card>
       </v-col>
-      <v-col xs="12" sm="6" class="leftbox px-12 pt-0 pb-4">
+      <v-col xs="12" sm="6" class="leftbox px-3 px-md-12 pt-0 pb-4">
         <div class="d-flex justify-space-between">
           <h1
             class="text-left font-weight-medium mb-1 mb-sm-3 title text-sm-h5 text-xl-h3"
@@ -15,12 +19,30 @@
           </h1>
         </div>
         <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
-          <h5 class="font-weight-medium">{{ item.location }}</h5>
-          <h5 class="font-weight-medium">No.of Rooms : {{ item.rooms }}</h5>
-          <h5 class="font-weight-medium">
-            Person Allowed : {{ item.persons_allowed }}
+          <h5 class="font-weight-bold primary--text text--darken-1">
+            Location:
+            <span class="accent--text font-weight-medium">{{
+              item.location
+            }}</span>
           </h5>
-          <h5 class="font-weight-medium">Price : Rs.{{ item.price }}</h5>
+          <h5 class="font-weight-bold primary--text text--darken-1">
+            No.of Rooms :
+            <span class="accent--text font-weight-medium">{{
+              item.rooms
+            }}</span>
+          </h5>
+          <h5 class="font-weight-bold primary--text text--darken-1">
+            Person Allowed :
+            <span class="accent--text font-weight-medium">{{
+              item.persons_allowed
+            }}</span>
+          </h5>
+          <h5 class="font-weight-bold primary--text text--darken-1">
+            Price :
+            <span class="accent--text font-weight-medium">{{
+              item.price
+            }}</span>
+          </h5>
         </div>
         <v-btn
           text
@@ -28,7 +50,7 @@
           color="primary"
           class="mt-4 my-sm-8 py-6 py-sm-8"
           @click="dialog = true"
-          >Book Now</v-btn
+          >Book</v-btn
         >
       </v-col>
     </v-row>
@@ -41,7 +63,11 @@
         class="pa-1 pa-sm-3"
       >
         <v-card class="primary pa-1">
-          <v-img :height="subImageHeight" :src="image"></v-img>
+          <v-img
+            :height="subImageHeight"
+            :src="image"
+            :lazy-src="image"
+          ></v-img>
         </v-card>
       </v-col>
     </v-row>

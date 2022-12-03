@@ -24,7 +24,7 @@
           >
             Our Cottages
           </h1>
-          <other-services :items="otherServices"></other-services>
+          <other-services :items="ourCottages"></other-services>
         </div>
         <div>
           <h1
@@ -33,10 +33,7 @@
           >
             Our Projects
           </h1>
-          <other-services
-            :items="otherServices"
-            :reverse="true"
-          ></other-services>
+          <other-services :items="ourCottages" :reverse="true"></other-services>
         </div>
         <!-- <v-row>
           <v-col cols="4" v-for="os in otherServices" :key="os.title">
@@ -61,36 +58,32 @@ export default {
       model: null,
       services: [
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg",
-          title: "Resort & Cottage",
-          desc: "Book budget and luxury hotels at best price. Whether you are a honeymooner, unmarried couples, solo traveler or with friends and family we provide wide range of services",
+          src: "https://projectcottage.000webhostapp.com/images/home/resorts.jpeg",
+          title: "Resorts & Cottages",
+          desc: "Our cottages and stay arrangements in kodaikanal will make you to feel the delight of being at home with more luxurious and safe, We provide various types of stays such as Individual cottages, Service apartments, Villa’s, Home stays, Tent stays, Wood houses, Tree houses, Forest bungalows, Star category resorts and Hotel rooms. Please view our 100+ cottages and resorts to book your space.",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/rental_cars.jpg",
           title: "Rental Cars & Tour Packages",
-          desc: "Catering is the most important part of any trip. To make you feel more comfortable, we provide you delicious cuisine by experts. We cater all varieties of food Such as Indian , Chinese etc.",
+          desc: "We have exhaustive list of vehicles available for rent in kodaikanal. We arrange Inner City, Outer City, One way and Round trip travel services in and around kodaikanal. Our tour packages includes Stay arrangements, rental vehicles for site seeing, activities such as Trekking, Jeep Safari, Jungle Ride, Off Roading, Camp fire with music, Cycling, Boating and Horse riding. We offers various packages for Honey Moon Couples, Family Vacation, Group Stay and Solo Travelers. ",
         },
         {
-          src: "https://lexgloballogistics.com/wp-content/uploads/2018/02/logistic.jpg",
+          src: "https://projectcottage.000webhostapp.com/images/home/investment.jpg",
           title: "Investment Opportunities",
-          desc: "We arrange a qualified staff to accompany and who can get access to the place, explain the importance of the place, support, and guide the participants through the entire visit.",
+          desc: "Imagine waking up to a scenic view of hills while taking in a breath of fresh air every morning. Well, having a property in Kodaikanal can make this dream come true in means Buying/Building property in Kodaiknal. We also help you to get your property registered for home stay or resorts which make your property yielding very high return. ",
         },
       ],
-      otherServices: [
-        "https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg",
-        "https://lexgloballogistics.com/wp-content/uploads/2018/02/Truck-2.jpg",
-        "https://lexgloballogistics.com/wp-content/uploads/2018/02/logistic.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash.jpg",
-        "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
-        "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e31c49a14202638e8840_p-4.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbaf49a14257198e81cb_6.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafcf26d38b797ab7a8_julian-hochgesang-795082-unsplash.jpg",
-        "https://assets.website-files.com/5bd86c52b7abc5114b2ed43c/5bd8dbafef82dc4bd8245d41_nathan-fertig-249917-unsplash.jpg",
-        "https://assets.website-files.com/5bd8adf923983b6ef049c9fe/5bd8e3f6cf26d34b0b7ac10a_p-2.jpg",
-      ],
+      ourCottages: [],
     };
+  },
+  created() {
+    this.ourCottages = Array.from(
+      { length: 21 },
+      (_item, index) =>
+        `https://projectcottage.000webhostapp.com/images/home/cottages/${
+          index + 1
+        }.jpg`
+    );
   },
 };
 </script>

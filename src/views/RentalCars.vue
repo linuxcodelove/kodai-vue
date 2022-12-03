@@ -2,17 +2,20 @@
   <div>
     <banner
       img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
-      title="welcome to"
-      subtitle="KODAIKANAL TRAVEL PLANNER"
-      description="The cars we drive say a lot about us."
+      title=""
+      subtitle=""
+      description=""
       :book="true"
     ></banner>
-    <who-we-are></who-we-are>
-    <v-container fluid class="my-4 my-sm-8">
+    <who-we-are
+      title="Our Services"
+      desc="We have exhaustive list of vehicles available for rent in kodaikanal. We arrange Inner City, Outer City, One way and Round trip travel services in and around kodaikanal. Our tour packages includes Stay arrangements, rental vehicles for site seeing, activities such as Trekking, Jeep Safari, Jungle Ride, Off Roading, Camp fire with music, Cycling, Boating and Horse riding. We offers various packages for Honey Moon Couples, Family Vacation, Group Stay and Solo Travelers. "
+    ></who-we-are>
+    <v-container fluid class="bg py-4 py-sm-8">
       <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">
         Our Site Seeing Packages
       </h2>
-      <v-row class="mt-2 mt-sm-6 mx-2">
+      <v-row class="my-2 my-sm-6 mx-2">
         <v-col :cols="columns" v-for="img in images" :key="img">
           <v-card class="secondary">
             <v-img :src="img"></v-img>
@@ -72,76 +75,11 @@ export default {
         "https://projectcottage.000webhostapp.com/packages/picnic.jpeg",
         "https://projectcottage.000webhostapp.com/packages/valley.jpeg",
       ],
-      // packages: [
-      //   {
-      //     title: "Village Tour",
-      //     places: [
-      //       "Pine Tree Forest",
-      //       "Palani Hill View",
-      //       "Mahalakshmi Temple",
-      //       "Poombarai village View",
-      //       "3000 Years Old Temple",
-      //       "Sheep Farm",
-      //       "Rabbit Farm",
-      //       "Mannamanur Lake",
-      //       "Rose Garden",
-      //       "Upper Lake View",
-      //     ],
-      //     price: {
-      //       fourPeople: "Rs.3000 ",
-      //       sevenPeople: "Rs.3500 ",
-      //       tenPeople: "Rs.4500 ",
-      //       aboveTen: "Enquire Us",
-      //     },
-      //   },
-      //   {
-      //     title: "Picnic Tour",
-      //     places: [
-      //       "Vattakanal Water Fall",
-      //       "Lion Cave",
-      //       "Mountain Beauty",
-      //       "Dolphins Nose",
-      //       "Echo Rock",
-      //       "500 Years Old Tree",
-      //       "Liril Water Fall",
-      //     ],
-      //     price: {
-      //       fourPeople: "Rs.2500 ",
-      //       sevenPeople: "Rs.2800 ",
-      //       tenPeople: "Rs.3000 ",
-      //       aboveTen: "Enquire Us",
-      //     },
-      //   },
-      //   {
-      //     title: "Valley Tour",
-      //     places: [
-      //       "Coakers Walk",
-      //       "La Salette Church",
-      //       "Moir Point",
-      //       "Pine Tree Forest",
-      //       "Guna Cave",
-      //       "Pillar Rocks",
-      //       "Green Valley View",
-      //       "Pambar Falls",
-      //       "Bryant Park",
-      //       "Kodaikanal Lake",
-      //       "500 Year Old Tree",
-      //       "Upper Lake View",
-      //       "Golf Course",
-      //     ],
-      //     price: {
-      //       fourPeople: "Rs.2500 ",
-      //       sevenPeople: "Rs.3000 ",
-      //       tenPeople: "Rs.3500 ",
-      //       aboveTen: "Enquire Us",
-      //     },
-      //   },
-      // ],
     };
   },
   computed: {
     columns() {
-      if (this.$vuetify.breakpoint.xs || this.$vuetify.breakpoint.sm) return 12;
+      if (this.$vuetify.breakpoint.xs) return 12;
       return 4;
     },
   },

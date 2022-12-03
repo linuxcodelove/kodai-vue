@@ -1,17 +1,15 @@
 <template>
   <div>
     <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
-      <v-col
-        xs="12"
-        sm="6"
-        class="leftbox px-4 px-sm-12 animate__animated animate__fadeInLeft"
-      >
+      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+        <!-- data-aos="fade-left"
+        data-aos-duration="800" -->
         <h1
-          class="text-left font-weight-medium mb-3 title text-sm-h5 text-xl-h3"
+          class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
         >
           {{ item.title }}
         </h1>
-        <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
+        <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
           {{ item.desc }}
         </div>
       </v-col>
@@ -30,11 +28,11 @@
       </v-col>
       <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
         <h1
-          class="text-left font-weight-medium mb-3 title text-sm-h5 text-xl-h3"
+          class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
         >
           {{ item.title }}
         </h1>
-        <div class="font-weight-light body-1 text-md-h6 text-xl-h5">
+        <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
           {{ item.desc }}
         </div>
       </v-col>
@@ -61,7 +59,6 @@
 </template>
 
 <script>
-import "animate.css";
 export default {
   props: {
     item: {
