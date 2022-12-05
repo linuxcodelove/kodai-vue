@@ -60,7 +60,7 @@ export default {
     },
     initialise() {
       this.$http
-        .get("https://projectcottage.000webhostapp.com/cottagelist.json", {
+        .get("https://kodaiproject.000webhostapp.com/cottagelist.json", {
           "content-type": "application/json",
         })
         .then((res) => {
