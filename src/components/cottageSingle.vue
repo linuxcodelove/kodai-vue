@@ -5,8 +5,8 @@
         <v-card class="primary pa-1 pa-sm-2">
           <v-img
             :height="imageHeight"
-            :src="selectedImage"
-            :lazy-src="selectedImage"
+            :lazy-src="require(`../assets/cottages/${selectedImage}`)"
+            :src="require(`../assets/cottages/${selectedImage}`)"
           ></v-img>
         </v-card>
       </v-col>
@@ -65,8 +65,8 @@
         <v-card class="primary pa-1">
           <v-img
             :height="subImageHeight"
-            :src="image"
-            :lazy-src="image"
+            :src="require(`../assets/cottages/${image}`)"
+            :lazy-src="require(`../assets/cottages/${image}`)"
           ></v-img>
         </v-card>
       </v-col>

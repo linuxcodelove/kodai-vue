@@ -55,16 +55,16 @@ export default {
     return {
       items: [
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner1.jpg",
+          src: "banner1",
         },
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner2.jpg",
+          src: "banner2",
         },
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner3.jpg",
+          src: "banner3",
         },
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/carousel/banner4.jpg",
+          src: "banner4",
         },
       ],
     };

@@ -1,7 +1,7 @@
 <template>
   <div>
     <banner
-      img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
+      img="rentalcars/thar"
       title=""
       subtitle=""
       description=""
@@ -18,7 +18,9 @@
       <v-row class="my-2 my-sm-6 mx-2">
         <v-col :cols="columns" v-for="img in images" :key="img">
           <v-card class="secondary">
-            <v-img :src="img"></v-img>
+            <v-img
+              :src="require(`../assets/rentalcars/packages/${img}.jpg`)"
+            ></v-img>
           </v-card>
           <!-- <v-card class="secondary py-8 px-5">
             <h4 class="text-center text-h5" style="text-decoration: underline">
@@ -70,11 +72,7 @@ export default {
   },
   data() {
     return {
-      images: [
-        "https://projectcottage.000webhostapp.com/packages/village.jpeg",
-        "https://projectcottage.000webhostapp.com/packages/picnic.jpeg",
-        "https://projectcottage.000webhostapp.com/packages/valley.jpeg",
-      ],
+      images: ["village", "picnic", "valley"],
     };
   },
   computed: {

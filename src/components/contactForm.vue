@@ -1,6 +1,6 @@
 <template>
-  <div class="primary">
-    <v-row class="py-4 mx-6 text-center">
+  <div class="secondary">
+    <v-row class="py-8 mx-6 text-center">
       <v-form v-model="formValid" class="mx-auto">
         <v-col cols="12" class="my-2 py-0"><h2>Contact Us</h2></v-col>
         <v-col cols="12" class="my-2 py-0"

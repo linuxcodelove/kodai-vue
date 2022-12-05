@@ -1,11 +1,7 @@
 <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px" />
 <template>
   <div>
-    <banner
-      img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
-      title="LET'S GET IN TOUCH"
-      subtitle="+91-9840666992"
-    ></banner>
+    <banner img="contact" title="" subtitle=""></banner>
 
     <contact-form></contact-form>
     <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">

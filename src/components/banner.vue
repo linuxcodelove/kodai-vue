@@ -3,9 +3,10 @@
     <v-card color="transparent" flat>
       <v-img
         :height="imageHeight"
-        :src="img"
+        :src="require(`../assets/${img}.jpg`)"
         width="100%"
         class="d-flex align-center"
+        dark
       >
         <div>
           <h3 class="text-center subtitle text-sm-h5 text-md-h4">

@@ -1,5 +1,10 @@
 <template>
-  <v-card max-width="100%" class="mx-auto py-0 py-sm-6 secondary" outlined>
+  <v-card
+    v-if="cottages.length"
+    max-width="100%"
+    class="mx-auto py-0 py-sm-6 secondary"
+    outlined
+  >
     <v-sheet max-width="1200px" class="mx-auto px-6" color="transparent">
       <v-card-title
         class="justify-center headline text-sm-h4 text-xl-h2 font-weight-bold text--darken-3 text-center"
@@ -55,7 +60,7 @@ export default {
     },
     initialise() {
       this.$http
-        .get("https://projectcottage.000webhostapp.com/cottage.json", {
+        .get("https://projectcottage.000webhostapp.com/cottagelist.json", {
           "content-type": "application/json",
         })
         .then((res) => {

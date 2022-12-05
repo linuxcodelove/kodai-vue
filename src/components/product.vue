@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="$router.push(item.to)">
     <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
       <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
         <!-- data-aos="fade-left"
@@ -15,7 +15,10 @@
       </v-col>
       <v-col xs="12" sm="6">
         <v-container class="primary">
-          <v-img :src="item.src" :height="imageHeight"></v-img>
+          <v-img
+            :src="require(`../assets/home/services/${item.src}.jpg`)"
+            :height="imageHeight"
+          ></v-img>
         </v-container>
       </v-col>
       <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
@@ -23,7 +26,10 @@
     <v-row v-else class="px-8">
       <v-col xs="12" sm="6">
         <v-container class="primary">
-          <v-img :src="item.src" :height="imageHeight"></v-img>
+          <v-img
+            :src="require(`../assets/home/services/${item.src}.jpg`)"
+            :height="imageHeight"
+          ></v-img>
         </v-container>
       </v-col>
       <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">

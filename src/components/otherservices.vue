@@ -45,7 +45,11 @@
                     class="rounded-sm"
                   >
                     <v-img
-                      :src="items[+index + i]"
+                      :src="
+                        require(`../assets/home/cottages/${
+                          items[+index + i]
+                        }.jpg`)
+                      "
                       :height="imageHeight"
                     ></v-img>
                   </v-card>

@@ -1,5 +1,5 @@
 <template>
-  <div class="primary">
+  <div class="bg">
     <v-row class="white--text mx-6 py-4 text-center">
       <v-form v-model="formValid" class="mx-auto">
         <v-col cols="12" class="mt-0 mb-2 pb-0">

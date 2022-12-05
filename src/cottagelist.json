@@ -1,0 +1,915 @@
+{
+  "cottages": [
+    {
+      "name": "Advo 6 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot )",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "advo6/1.jpg",
+        "advo6/2.jpg",
+        "advo6/3.jpg",
+        "advo6/4.jpg",
+        "advo6/5.jpg"
+      ]
+    },
+    {
+      "name": "Anil Bungalow 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "18 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "anil_bungalow4/1.jpg",
+        "anil_bungalow4/2.jpg",
+        "anil_bungalow4/3.jpg",
+        "anil_bungalow4/4.jpg",
+        "anil_bungalow4/5.jpg"
+      ]
+    },
+    {
+      "name": "Aric Wood House 1 BHK",
+      "location": "1 km from Lake (City Centre)",
+      "rooms": "1 (One Room, Hall)",
+      "persons_allowed": "2 to 4",
+      "price": "Enquire Us",
+      "images": [
+        "aric_wood1/1.jpg",
+        "aric_wood1/2.jpg",
+        "aric_wood1/3.jpg",
+        "aric_wood1/4.jpg",
+        "aric_wood1/5.jpg"
+      ]
+    },
+    {
+      "name": "Astes 2 BHK Cottage",
+      "location": "1.5 km from Lake (City Centre)",
+      "rooms": "3",
+      "persons_allowed": "4 to 7",
+      "price": "Enquire Us",
+      "images": [
+        "astes2/1.jpg",
+        "astes2/2.jpg",
+        "astes2/3.jpg",
+        "astes2/4.jpg",
+        "astes2/5.jpg"
+      ]
+    },
+    {
+      "name": "Buhari 4 BHK Cottage",
+      "location": "2.5 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 12",
+      "price": "Enquire Us",
+      "images": [
+        "buhari4/1.jpg",
+        "buhari4/2.jpg",
+        "buhari4/3.jpg",
+        "buhari4/4.jpg",
+        "buhari4/5.jpg"
+      ]
+    },
+    {
+      "name": "Camping Site Package",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "5 (5 Glamps)",
+      "persons_allowed": "2 to 25",
+      "price": "Enquire Us",
+      "images": [
+        "camping_site/1.jpg",
+        "camping_site/2.jpg",
+        "camping_site/3.jpg",
+        "camping_site/4.jpg",
+        "camping_site/5.jpg"
+      ]
+    },
+    {
+      "name": "Cherry Blossom Resort",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "12 (Twelve Rooms, Restaurant, Play Area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "cherry_blossom_resort/1.jpg",
+        "cherry_blossom_resort/2.jpg",
+        "cherry_blossom_resort/3.jpg",
+        "cherry_blossom_resort/4.jpg",
+        "cherry_blossom_resort/5.jpg"
+      ]
+    },
+    {
+      "name": "Clifton Resort",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "20 (Twenty rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 100",
+      "price": "Enquire Us",
+      "images": [
+        "clifton_resort/1.jpg",
+        "clifton_resort/2.jpg",
+        "clifton_resort/3.jpg",
+        "clifton_resort/4.jpg",
+        "clifton_resort/5.jpg"
+      ]
+    },
+    {
+      "name": "Dhana 5 BHK",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "5 (Five Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "dhana5/1.jpg",
+        "dhana5/2.jpg",
+        "dhana5/3.jpg",
+        "dhana5/4.jpg",
+        "dhana5/5.jpg"
+      ]
+    },
+    {
+      "name": "Garden 2 BHK Cottage-1",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "2 (Two Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 6",
+      "price": "Enquire Us",
+      "images": [
+        "garden2_1/1.jpg",
+        "garden2_1/2.jpg",
+        "garden2_1/3.jpg",
+        "garden2_1/4.jpg",
+        "garden2_1/5.jpg"
+      ]
+    },
+    {
+      "name": "Garden 2 BHK Cottage-2",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "2 (Two Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 6",
+      "price": "Enquire Us",
+      "images": [
+        "garden2_2/1.jpg",
+        "garden2_2/2.jpg",
+        "garden2_2/3.jpg",
+        "garden2_2/4.jpg",
+        "garden2_2/5.jpg"
+      ]
+    },
+    {
+      "name": "Garden 3 BHK Cottage-1",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "garden3_1/1.jpg",
+        "garden3_1/2.jpg",
+        "garden3_1/3.jpg",
+        "garden3_1/4.jpg",
+        "garden3_1/5.jpg"
+      ]
+    },
+    {
+      "name": "Garden 4 BHK Cottage-1",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 12",
+      "price": "Enquire Us",
+      "images": [
+        "garden4_1/1.jpg",
+        "garden4_1/2.jpg",
+        "garden4_1/3.jpg",
+        "garden4_1/4.jpg",
+        "garden4_1/5.jpg"
+      ]
+    },
+    {
+      "name": "Gem Valley Resort",
+      "location": "10 km from Lake (City Centre)",
+      "rooms": "20 (Twenty rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 100",
+      "price": "Enquire Us",
+      "images": [
+        "gem_valley_resort/1.jpg",
+        "gem_valley_resort/2.jpg",
+        "gem_valley_resort/3.jpg",
+        "gem_valley_resort/4.jpg",
+        "gem_valley_resort/5.jpg"
+      ]
+    },
+    {
+      "name": "Green Garden 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 16",
+      "price": "Enquire Us",
+      "images": [
+        "green_garden4/1.jpg",
+        "green_garden4/2.jpg",
+        "green_garden4/3.jpg",
+        "green_garden4/4.jpg",
+        "green_garden4/5.jpg"
+      ]
+    },
+    {
+      "name": "Green Valley Resort",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "20 (Twenty rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 100",
+      "price": "Enquire Us",
+      "images": [
+        "green_valley_resort/1.jpg",
+        "green_valley_resort/2.jpg",
+        "green_valley_resort/3.jpg",
+        "green_valley_resort/4.jpg",
+        "green_valley_resort/5.jpg"
+      ]
+    },
+    {
+      "name": "GTR 3 BHK Cottage",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "gtr3/1.jpg",
+        "gtr3/2.jpg",
+        "gtr3/3.jpg",
+        "gtr3/4.jpg",
+        "gtr3/5.jpg"
+      ]
+    },
+    {
+      "name": "Hotel Carnival",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "30 (Thirty rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 150",
+      "price": "Enquire Us",
+      "images": [
+        "hotel_carnival/1.jpg",
+        "hotel_carnival/2.jpg",
+        "hotel_carnival/3.jpg",
+        "hotel_carnival/4.jpg",
+        "hotel_carnival/5.jpg"
+      ]
+    },
+    {
+      "name": "Hotel Gill Crest",
+      "location": "1 km from Lake (City Centre)",
+      "rooms": "12 (Twelve rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "hotel_gill_crest/1.jpg",
+        "hotel_gill_crest/2.jpg",
+        "hotel_gill_crest/3.jpg",
+        "hotel_gill_crest/4.jpg",
+        "hotel_gill_crest/5.jpg"
+      ]
+    },
+    {
+      "name": "Hotel Silver Valley Spring",
+      "location": "1 km from Lake (City Centre)",
+      "rooms": "12 (Twelve rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "hotel_silver_valley_spring/1.jpg",
+        "hotel_silver_valley_spring/2.jpg",
+        "hotel_silver_valley_spring/3.jpg",
+        "hotel_silver_valley_spring/4.jpg",
+        "hotel_silver_valley_spring/5.jpg"
+      ]
+    },
+    {
+      "name": "Hotel SRM",
+      "location": "1 km from Lake (City Centre)",
+      "rooms": "12 (Twelve rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "hotel_srm/1.jpg",
+        "hotel_srm/2.jpg",
+        "hotel_srm/3.jpg",
+        "hotel_srm/4.jpg",
+        "hotel_srm/5.jpg"
+      ]
+    },
+    {
+      "name": "Hotel Wood Palace",
+      "location": "10 km from Lake (City Centre)",
+      "rooms": "20 (Twenty rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 100",
+      "price": "Enquire Us",
+      "images": [
+        "hotel_wood_palace/1.jpg",
+        "hotel_wood_palace/2.jpg",
+        "hotel_wood_palace/3.jpg",
+        "hotel_wood_palace/4.jpg",
+        "hotel_wood_palace/5.jpg"
+      ]
+    },
+    {
+      "name": "IG Valleyb 3 BHK Cottage",
+      "location": "6 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "ig_valley3/1.jpg",
+        "ig_valley3/2.jpg",
+        "ig_valley3/3.jpg",
+        "ig_valley3/4.jpg",
+        "ig_valley3/5.jpg"
+      ]
+    },
+    {
+      "name": "Kurusadi 6 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "6 (Three Rooms, Hall, Kitchen)",
+      "persons_allowed": "6 to 18",
+      "price": "Enquire Us",
+      "images": [
+        "kurusadi6/1.jpg",
+        "kurusadi6/2.jpg",
+        "kurusadi6/3.jpg",
+        "kurusadi6/4.jpg",
+        "kurusadi6/5.jpg"
+      ]
+    },
+    {
+      "name": "Lilly Valley Resort",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "12 (Twelve rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "lilly_valley_resort/1.jpg",
+        "lilly_valley_resort/2.jpg",
+        "lilly_valley_resort/3.jpg",
+        "lilly_valley_resort/4.jpg",
+        "lilly_valley_resort/5.jpg"
+      ]
+    },
+    {
+      "name": "Lord Bangalow 4 BHK Cottage",
+      "location": "0.5 km from Lake (City Centre)",
+      "rooms": "5 (Five Rooms, Hall, Kitchen, Campfire Spot, Play Area)",
+      "persons_allowed": "10 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "lord_bangalow4/1.jpg",
+        "lord_bangalow4/2.jpg",
+        "lord_bangalow4/3.jpg",
+        "lord_bangalow4/4.jpg",
+        "lord_bangalow4/5.jpg"
+      ]
+    },
+    {
+      "name": "Mannan 3 BHK Cottage",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "mannan3/1.jpg",
+        "mannan3/2.jpg",
+        "mannan3/3.jpg",
+        "mannan3/4.jpg",
+        "mannan3/5.jpg"
+      ]
+    },
+    {
+      "name": "Misty Mountain 6 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "misty_mountain6/1.jpg",
+        "misty_mountain6/2.jpg",
+        "misty_mountain6/3.jpg",
+        "misty_mountain6/4.jpg",
+        "misty_mountain6/5.jpg"
+      ]
+    },
+    {
+      "name": "Muthu Wood House",
+      "location": "2.5 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "muthu_wood_house/1.jpg",
+        "muthu_wood_house/2.jpg",
+        "muthu_wood_house/3.jpg",
+        "muthu_wood_house/4.jpg",
+        "muthu_wood_house/5.jpg"
+      ]
+    },
+    {
+      "name": "Naidu 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "naidu4/1.jpg",
+        "naidu4/2.jpg",
+        "naidu4/3.jpg",
+        "naidu4/4.jpg",
+        "naidu4/5.jpg"
+      ]
+    },
+    {
+      "name": "Ooty Bungalow 4 BHK",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 16",
+      "price": "Enquire Us",
+      "images": [
+        "ooty_bungalow/1.jpg",
+        "ooty_bungalow/2.jpg",
+        "ooty_bungalow/3.jpg",
+        "ooty_bungalow/4.jpg",
+        "ooty_bungalow/5.jpg"
+      ]
+    },
+    {
+      "name": "Palani 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 16",
+      "price": "Enquire Us",
+      "images": [
+        "palani4/1.jpg",
+        "palani4/2.jpg",
+        "palani4/3.jpg",
+        "palani4/4.jpg",
+        "palani4/5.jpg"
+      ]
+    },
+
+    {
+      "name": "Palani 4 BHK Cottage - 1",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "palani4_1/1.jpg",
+        "palani4_1/2.jpg",
+        "palani4_1/3.jpg",
+        "palani4_1/4.jpg",
+        "palani4_1/5.jpg"
+      ]
+    },
+    {
+      "name": "Pallangi 4 BHK Villa",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "pallangi4/1.jpg",
+        "pallangi4/2.jpg",
+        "pallangi4/3.jpg",
+        "pallangi4/4.jpg",
+        "pallangi4/5.jpg"
+      ]
+    },
+    {
+      "name": "Parama 8 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "8 (8 Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "2 to 25",
+      "price": "Enquire Us",
+      "images": [
+        "parama8/1.jpg",
+        "parama8/2.jpg",
+        "parama8/3.jpg",
+        "parama8/4.jpg",
+        "parama8/5.jpg"
+      ]
+    },
+    {
+      "name": "Paramu Nature Stay",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "2 (Two Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 6",
+      "price": "Enquire Us",
+      "images": [
+        "paramu_nature_stay/1.jpg",
+        "paramu_nature_stay/2.jpg",
+        "paramu_nature_stay/3.jpg",
+        "paramu_nature_stay/4.jpg",
+        "paramu_nature_stay/5.jpg"
+      ]
+    },
+    {
+      "name": "Pears Garden Home Stay",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "10 (Ten Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "4 to 30",
+      "price": "Enquire Us",
+      "images": [
+        "pears_garden_home_stay/1.jpg",
+        "pears_garden_home_stay/2.jpg",
+        "pears_garden_home_stay/3.jpg",
+        "pears_garden_home_stay/4.jpg",
+        "pears_garden_home_stay/5.jpg"
+      ]
+    },
+    {
+      "name": "Pethu Rani Bungalow",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "pethu_rani_bungalow/1.jpg",
+        "pethu_rani_bungalow/2.jpg",
+        "pethu_rani_bungalow/3.jpg",
+        "pethu_rani_bungalow/4.jpg",
+        "pethu_rani_bungalow/5.jpg"
+      ]
+    },
+    {
+      "name": "Poomparai Wood House",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "8 (8 Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "2 to 25",
+      "price": "Enquire Us",
+      "images": [
+        "poomparai_wood_house/1.jpg",
+        "poomparai_wood_house/2.jpg",
+        "poomparai_wood_house/3.jpg",
+        "poomparai_wood_house/4.jpg",
+        "poomparai_wood_house/5.jpg"
+      ]
+    },
+    {
+      "name": "Praba 3 BHK Cottage",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "praba3/1.jpg",
+        "praba3/2.jpg",
+        "praba3/3.jpg",
+        "praba3/4.jpg",
+        "praba3/5.jpg"
+      ]
+    },
+    {
+      "name": "Ramesh 3 BHK Cottage",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "ramesh3/1.jpg",
+        "ramesh3/2.jpg",
+        "ramesh3/3.jpg",
+        "ramesh3/4.jpg",
+        "ramesh3/5.jpg"
+      ]
+    },
+    {
+      "name": "Reemas Wood Stay",
+      "location": "12 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "reemas_wood_stay/1.jpg",
+        "reemas_wood_stay/2.jpg",
+        "reemas_wood_stay/3.jpg",
+        "reemas_wood_stay/4.jpg",
+        "reemas_wood_stay/5.jpg"
+      ]
+    },
+    {
+      "name": "Riyaz 5 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "5 (Five Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "riyaz5/1.jpg",
+        "riyaz5/2.jpg",
+        "riyaz5/3.jpg",
+        "riyaz5/4.jpg",
+        "riyaz5/5.jpg"
+      ]
+    },
+    {
+      "name": "RJ IN Hotel",
+      "location": "1 km from Lake (City Centre)",
+      "rooms": "12 (Twelve rooms, restaurant, garden, play area)",
+      "persons_allowed": "2 to 35",
+      "price": "Enquire Us",
+      "images": [
+        "rj_in_hotel/1.jpg",
+        "rj_in_hotel/2.jpg",
+        "rj_in_hotel/3.jpg",
+        "rj_in_hotel/4.jpg",
+        "rj_in_hotel/5.jpg"
+      ]
+    },
+    {
+      "name": "Safa Classic Wood House",
+      "location": "7 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "safa_classic_wood_house/1.jpg",
+        "safa_classic_wood_house/2.jpg",
+        "safa_classic_wood_house/3.jpg",
+        "safa_classic_wood_house/4.jpg",
+        "safa_classic_wood_house/5.jpg"
+      ]
+    },
+    {
+      "name": "Safa Premium Wood House",
+      "location": "7 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "safa_premium_wood_house/1.jpg",
+        "safa_premium_wood_house/2.jpg",
+        "safa_premium_wood_house/3.jpg",
+        "safa_premium_wood_house/4.jpg",
+        "safa_premium_wood_house/5.jpg"
+      ]
+    },
+    {
+      "name": "Senba VGP 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "senba_vgp4/1.jpg",
+        "senba_vgp4/2.jpg",
+        "senba_vgp4/3.jpg",
+        "senba_vgp4/4.jpg",
+        "senba_vgp4/5.jpg"
+      ]
+    },
+    {
+      "name": "Sendhil 5 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "5 (Five Rooms, Hall, Kitchen, Campfire Spot )",
+      "persons_allowed": "10 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "sendhil5/1.jpg",
+        "sendhil5/2.jpg",
+        "sendhil5/3.jpg",
+        "sendhil5/4.jpg",
+        "sendhil5/5.jpg"
+      ]
+    },
+    {
+      "name": "Sendhil 6 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "sendhil6/1.jpg",
+        "sendhil6/2.jpg",
+        "sendhil6/3.jpg",
+        "sendhil6/4.jpg",
+        "sendhil6/5.jpg"
+      ]
+    },
+    {
+      "name": "Sendhil 8 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "8 (Eight Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 25",
+      "price": "Enquire Us",
+      "images": [
+        "sendhil8/1.jpg",
+        "sendhil8/2.jpg",
+        "sendhil8/3.jpg",
+        "sendhil8/4.jpg",
+        "sendhil8/5.jpg"
+      ]
+    },
+    {
+      "name": "Sendhil Premium Villa",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "sendhil_premium_villa/1.jpg",
+        "sendhil_premium_villa/2.jpg",
+        "sendhil_premium_villa/3.jpg",
+        "sendhil_premium_villa/4.jpg",
+        "sendhil_premium_villa/5.jpg"
+      ]
+    },
+    {
+      "name": "Sesons Kodai 6 BHK Cottage",
+      "location": "5 km from Lake (City Centre)",
+      "rooms": "6 (Six Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 20",
+      "price": "Enquire Us",
+      "images": [
+        "sesons_kodai6/1.jpg",
+        "sesons_kodai6/2.jpg",
+        "sesons_kodai6/3.jpg",
+        "sesons_kodai6/4.jpg",
+        "sesons_kodai6/5.jpg"
+      ]
+    },
+    {
+      "name": "Sivandi 4 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "sivandi4/1.jpg",
+        "sivandi4/2.jpg",
+        "sivandi4/3.jpg",
+        "sivandi4/4.jpg",
+        "sivandi4/5.jpg"
+      ]
+    },
+    {
+      "name": "SRM Wood House",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "srm_wood_house/1.jpg",
+        "srm_wood_house/2.jpg",
+        "srm_wood_house/3.jpg",
+        "srm_wood_house/4.jpg",
+        "srm_wood_house/5.jpg"
+      ]
+    },
+    {
+      "name": "Stone 2 BHK Villa",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "2 (Two Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "2 to 6",
+      "price": "Enquire Us",
+      "images": [
+        "stone2/1.jpg",
+        "stone2/2.jpg",
+        "stone2/3.jpg",
+        "stone2/4.jpg",
+        "stone2/5.jpg"
+      ]
+    },
+    {
+      "name": "Stone Bangalow 3 BHK",
+      "location": "2 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "stonebangalow3/1.jpg",
+        "stonebangalow3/2.jpg",
+        "stonebangalow3/3.jpg",
+        "stonebangalow3/4.jpg",
+        "stonebangalow3/5.jpg"
+      ]
+    },
+    {
+      "name": "Valley Visit Luxury 3 BHK Cottage",
+      "location": "5 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "valley_visit_luxury3/1.jpg",
+        "valley_visit_luxury3/2.jpg",
+        "valley_visit_luxury3/3.jpg",
+        "valley_visit_luxury3/4.jpg",
+        "valley_visit_luxury3/5.jpg"
+      ]
+    },
+    {
+      "name": "Vatakanal Wood House 1",
+      "location": "7 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "vatakanal_wood_house1/1.jpg",
+        "vatakanal_wood_house1/2.jpg",
+        "vatakanal_wood_house1/3.jpg",
+        "vatakanal_wood_house1/4.jpg",
+        "vatakanal_wood_house1/5.jpg"
+      ]
+    },
+    {
+      "name": "Vatakanal Wood House 2",
+      "location": "7 km from Lake (City Centre)",
+      "rooms": "5 (Five Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "10 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vatakanal_wood_house2/1.jpg",
+        "vatakanal_wood_house2/2.jpg",
+        "vatakanal_wood_house2/3.jpg",
+        "vatakanal_wood_house2/4.jpg",
+        "vatakanal_wood_house2/5.jpg"
+      ]
+    },
+    {
+      "name": "VGP Observ 3 BHK Cottage",
+      "location": "3 km from Lake (City Centre)",
+      "rooms": "3 (Three Rooms, Hall, Kitchen, Campfire Spot)",
+      "persons_allowed": "6 to 10",
+      "price": "Enquire Us",
+      "images": [
+        "vgp_observ3/1.jpg",
+        "vgp_observ3/2.jpg",
+        "vgp_observ3/3.jpg",
+        "vgp_observ3/4.jpg",
+        "vgp_observ3/5.jpg"
+      ]
+    },
+    {
+      "name": "Vilpu 4 BHK Cottage",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vilpu4/1.jpg",
+        "vilpu4/2.jpg",
+        "vilpu4/3.jpg",
+        "vilpu4/4.jpg",
+        "vilpu4/5.jpg"
+      ]
+    },
+    {
+      "name": "Vilpu 4 BHK Villa",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vilpu4_Villa/1.jpg",
+        "vilpu4_Villa/2.jpg",
+        "vilpu4_Villa/3.jpg",
+        "vilpu4_Villa/4.jpg",
+        "vilpu4_Villa/5.jpg"
+      ]
+    },
+    {
+      "name": "Vilpu 4 BHK Villa 2",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vilpu4_villa2/1.jpg",
+        "vilpu4_villa2/2.jpg",
+        "vilpu4_villa2/3.jpg",
+        "vilpu4_villa2/4.jpg",
+        "vilpu4_villa2/5.jpg"
+      ]
+    },
+    {
+      "name": "Vilpu 4 BHK Villa 3",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vilpu4_villa3/1.jpg",
+        "vilpu4_villa3/2.jpg",
+        "vilpu4_villa3/3.jpg",
+        "vilpu4_villa3/4.jpg",
+        "vilpu4_villa3/5.jpg"
+      ]
+    },
+    {
+      "name": "Vilpu Scenic 4 BHK Villa",
+      "location": "4 km from Lake (City Centre)",
+      "rooms": "4 (Four Rooms, Hall, Kitchen, Play Area)",
+      "persons_allowed": "8 to 15",
+      "price": "Enquire Us",
+      "images": [
+        "vilpu_scenic4_Villa/1.jpg",
+        "vilpu_scenic4_Villa/2.jpg",
+        "vilpu_scenic4_Villa/3.jpg",
+        "vilpu_scenic4_Villa/4.jpg",
+        "vilpu_scenic4_Villa/5.jpg"
+      ]
+    }
+  ]
+}

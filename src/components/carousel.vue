@@ -1,6 +1,10 @@
 <template>
   <v-carousel hide-delimiters interval="4000" :height="imageHeight" cycle>
-    <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+    <v-carousel-item
+      v-for="(item, i) in items"
+      :key="i"
+      :src="require(`../assets/home/carousel/${item.src}.jpg`)"
+    >
       <!-- <v-container fill-height fluid pa-0 ma-0>
         <v-card class="pa-2 mx-auto" color="transparent" flat>
           <div>

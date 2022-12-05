@@ -58,18 +58,21 @@ export default {
       model: null,
       services: [
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/resorts.jpeg",
+          src: "resorts",
           title: "Resorts & Cottages",
+          to: "/cottages",
           desc: "Our cottages and stay arrangements in kodaikanal will make you to feel the delight of being at home with more luxurious and safe, We provide various types of stays such as Individual cottages, Service apartments, Villa’s, Home stays, Tent stays, Wood houses, Tree houses, Forest bungalows, Star category resorts and Hotel rooms. Please view our 100+ cottages and resorts to book your space.",
         },
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/rental_cars.jpg",
+          src: "rental_cars",
           title: "Rental Cars & Tour Packages",
+          to: "/rentalcars",
           desc: "We have exhaustive list of vehicles available for rent in kodaikanal. We arrange Inner City, Outer City, One way and Round trip travel services in and around kodaikanal. Our tour packages includes Stay arrangements, rental vehicles for site seeing, activities such as Trekking, Jeep Safari, Jungle Ride, Off Roading, Camp fire with music, Cycling, Boating and Horse riding. We offers various packages for Honey Moon Couples, Family Vacation, Group Stay and Solo Travelers. ",
         },
         {
-          src: "https://projectcottage.000webhostapp.com/images/home/investment.jpg",
+          src: "investment",
           title: "Investment Opportunities",
+          to: "",
           desc: "Imagine waking up to a scenic view of hills while taking in a breath of fresh air every morning. Well, having a property in Kodaikanal can make this dream come true in means Buying/Building property in Kodaiknal. We also help you to get your property registered for home stay or resorts which make your property yielding very high return. ",
         },
       ],
@@ -79,10 +82,7 @@ export default {
   created() {
     this.ourCottages = Array.from(
       { length: 21 },
-      (_item, index) =>
-        `https://projectcottage.000webhostapp.com/images/home/cottages/${
-          index + 1
-        }.jpg`
+      (_item, index) => `${index + 1}`
     );
   },
 };

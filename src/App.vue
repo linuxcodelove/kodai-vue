@@ -5,9 +5,11 @@
         v-if="isSmallerDevice"
         @click="showDrawer = true"
       ></v-app-bar-nav-icon>
-      <div class="px-4 font-weight-medium">
-        <strong class="font-weight-black text-h6">KODAIKANAL</strong> TRIP
-        ADVISOR
+      <div class="px-4 font-weight-medium red--text">
+        <strong class="font-weight-black text-h6 white--text"
+          >KODAIKANAL</strong
+        >
+        TRIP ADVISOR
       </div>
       <v-spacer></v-spacer>
       <v-toolbar-items v-if="!isSmallerDevice">

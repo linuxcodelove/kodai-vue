@@ -5,7 +5,7 @@
   >
     <div v-if="$vuetify.breakpoint.smAndUp" :style="{ marginLeft: sideMargin }">
       <v-img
-        src="https://projectcottage.000webhostapp.com/images/home/aboutus.jpg"
+        :src="require('../assets/home/aboutus.jpg')"
         height="600px"
         width="480px"
       ></v-img>

@@ -1,9 +1,6 @@
 <template>
   <div>
-    <banner
-      img="https://lexgloballogistics.com/wp-content/uploads/2018/02/ed-1.jpg"
-      subtitle="About Us"
-    ></banner>
+    <banner img="about" subtitle=""></banner>
     <!-- <explore-shelter></explore-shelter>
     <people-and-stories></people-and-stories>
     <grid-images></grid-images> -->
