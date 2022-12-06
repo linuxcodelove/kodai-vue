@@ -69,6 +69,7 @@
                   dense
                   rounded
                   hide-details
+                  light
                 ></v-text-field>
               </v-col>
               <v-col cols="1" class="mx-0 px-0">
@@ -103,7 +104,7 @@ export default {
       menu: false,
       message: false,
       hints: true,
-      phone: "9840666992",
+      phone: "8754236533",
       text: "",
       apilink: "",
     };

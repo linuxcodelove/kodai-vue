@@ -1,14 +1,14 @@
 <template>
   <div class="accent">
     <v-container>
-      <div class="text-center my-4 my-sm-10 mx-8 mx-sm-12 my-xl-16">
+      <div class="my-4 my-sm-10 mx-8 mx-sm-12 my-xl-16">
         <h3
-          class="body-2 text-sm-h6 text-lg-h5 text-xl-h4 font-weight-regular grey--text text--darken-3"
+          class="body-2 text-sm-h6 text-lg-h5 text-xl-h4 font-weight-regular grey--text text--darken-3 text-center"
         >
           Planning an exciting trip? We are here to help you!!!!!
         </h3>
         <h4
-          class="text-h5 text-sm-h4 text-xl-h2 my-6 my-xl-10 grey--text text--darken-3"
+          class="text-h5 text-sm-h4 text-xl-h2 my-6 my-xl-10 grey--text text--darken-3 text-center"
         >
           What we Do?
         </h4>

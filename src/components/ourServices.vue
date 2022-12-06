@@ -24,7 +24,7 @@
           >
             Our Cottages
           </h1>
-          <other-services :items="ourCottages"></other-services>
+          <other-services :items="ourCottages" to="/cottages"></other-services>
         </div>
         <div>
           <h1
@@ -33,7 +33,11 @@
           >
             Our Projects
           </h1>
-          <other-services :items="ourCottages" :reverse="true"></other-services>
+          <other-services
+            :items="ourCottages"
+            to="/rentalcars"
+            :reverse="true"
+          ></other-services>
         </div>
         <!-- <v-row>
           <v-col cols="4" v-for="os in otherServices" :key="os.title">

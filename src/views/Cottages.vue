@@ -10,13 +10,13 @@
     <cottages-list></cottages-list>
     <div class="accent">
       <v-container>
-        <div class="text-center mt-2 mt-md-4 mb-2 mb-md-6 black--text">
-          <h2>Discover</h2>
-          <h1 class="doubleline">NEW ROOMS</h1>
+        <div class="mt-2 mt-md-4 mb-2 mb-md-6 black--text">
+          <h2 class="text-center">Discover</h2>
+          <h1 class="doubleline text-center">NEW ROOMS</h1>
         </div>
         <div class="black--text my-4">
           <v-row>
-            <v-col cols="12 px-12 text-center"
+            <v-col cols="12 px-12 "
               >Treat yourself to an overnight stay somewhere special. It’s your
               chance to discover Kodaikanal and all it has to offer. We provide
               various types of stays such as Individual cottages, Service

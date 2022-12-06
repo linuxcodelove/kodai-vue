@@ -1,5 +1,5 @@
 <template>
-  <div @click="$router.push(item.to)">
+  <div>
     <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
       <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
         <!-- data-aos="fade-left"
@@ -12,6 +12,25 @@
         <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
           {{ item.desc }}
         </div>
+        <div>
+          <span
+            v-if="!$vuetify.breakpoint.xs"
+            class="red--text caption"
+            @click="$router.push(item.to)"
+          >
+            Read More...</span
+          >
+        </div>
+        <v-btn
+          v-if="$vuetify.breakpoint.xs"
+          text
+          outlined
+          color="primary"
+          class="mt-4 mt-sm-4 py-6"
+          block
+          @click="$router.push(item.to)"
+          >Read More</v-btn
+        >
       </v-col>
       <v-col xs="12" sm="6">
         <v-container class="primary">
@@ -41,6 +60,25 @@
         <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
           {{ item.desc }}
         </div>
+        <div>
+          <span
+            v-if="!$vuetify.breakpoint.xs"
+            class="red--text caption"
+            @click="$router.push(item.to)"
+          >
+            Read More...</span
+          >
+        </div>
+        <v-btn
+          v-if="$vuetify.breakpoint.xs"
+          text
+          outlined
+          color="primary"
+          class="mt-4 mt-sm-4 py-6"
+          block
+          @click="$router.push(item.to)"
+          >Read More</v-btn
+        >
       </v-col>
 
       <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>

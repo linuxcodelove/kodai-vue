@@ -21,11 +21,11 @@
     </v-slide-group> -->
 
     <v-carousel
-      cycle
+      :cycle="cycle"
       continuous
       hide-delimiters
       :show-arrows="false"
-      interval="1000"
+      interval="1800"
       class="pb-0 pb-sm-6"
       :height="imageHeight + 30"
       :reverse="reverse"
@@ -34,6 +34,9 @@
         <v-carousel-item
           v-if="(index + 1) % columns === 1 || columns === 1"
           :key="index"
+          @mouseover="cycle = false"
+          @mouseleave="cycle = true"
+          @click="$router.push(to)"
         >
           <v-row class="flex-nowrap mx-0 px-0">
             <template v-for="(n, i) in columns">
@@ -75,10 +78,15 @@ export default {
       type: Boolean,
       default: false,
     },
+    to: {
+      type: String,
+      default: "/",
+    },
   },
   data() {
     return {
       model: 0,
+      cycle: true,
     };
   },
   computed: {
@@ -115,6 +123,7 @@ export default {
   created() {
     // this.interval = setInterval(() => this.model++, 2000);
   },
+  methods: {},
 };
 </script>
 
