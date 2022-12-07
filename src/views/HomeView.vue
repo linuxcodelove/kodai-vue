@@ -19,6 +19,7 @@
     ></who-we-are>
     <our-services></our-services>
     <aboutUs></aboutUs>
+    <comments></comments>
     <customfooter></customfooter>
   </div>
 </template>
@@ -29,6 +30,7 @@ import aboutUs from "../components/aboutUs.vue";
 import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
+import comments from "../components/comments.vue";
 
 export default {
   name: "Home",
@@ -38,6 +40,7 @@ export default {
     whoWeAre,
     ourServices,
     customfooter,
+    comments,
   },
   data() {
     return {
@@ -59,4 +62,4 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped></style>
