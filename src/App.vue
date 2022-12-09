@@ -6,6 +6,9 @@
         @click="showDrawer = true"
       ></v-app-bar-nav-icon>
       <div class="px-4 font-weight-medium red--text">
+        <v-avatar size="30" class="mr-2 mb-1">
+          <v-img :src="require('./assets/kodailogo.jpg')"></v-img>
+        </v-avatar>
         <strong class="font-weight-black text-h6 white--text"
           >KODAIKANAL</strong
         >

@@ -1,4 +1,3 @@
-<GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px" />
 <template>
   <div>
     <banner img="contact" title="" subtitle=""></banner>
@@ -11,10 +10,10 @@
         >
           <v-row>
             <v-col cols="12 px-12"
-              >Treat yourself to an overnight stay somewhere special. It’s your
+              >Treat yourself to an overnight stay somewhere special. It's your
               chance to discover Kodaikanal and all it has to offer. We provide
               various types of stays such as Individual cottages, Service
-              apartments, Villa’s, Home stays, Tent stays, Wood houses, Tree
+              apartments, Villa's, Home stays, Tent stays, Wood houses, Tree
               houses, Forest bungalows, Star category resorts and Hotel rooms.
               Please view our 100+ cottages and resorts to book your space.
             </v-col>
@@ -33,7 +32,10 @@
 
     <contact-form></contact-form>
     <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">
-      <GmapMarker :position="center"></GmapMarker>
+      <GmapMarker
+        :position="center"
+        label="Kodaikanal Trip Advisor"
+      ></GmapMarker>
     </GmapMap>
 
     <custom-footer></custom-footer>
@@ -53,7 +55,7 @@ export default {
   },
   data() {
     return {
-      center: { lat: 10.23927, lng: 77.496164 },
+      center: { lat: 10.239457, lng: 77.498056 },
     };
   },
 };

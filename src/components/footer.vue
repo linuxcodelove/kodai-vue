@@ -1,23 +1,5 @@
 <template>
   <div class="px-6 px-sm-12 pt-4 pt-sm-12 secondary white--text">
-    <!-- <v-container>
-      <v-row>
-        <v-col cols="6">
-          <p class="title">Email</p>
-          <p>service@kodaiguide.in</p>
-          <p class="title">Phone</p>
-          <p>+91-9840666992</p>
-          <p class="title">Address</p>
-          <p>
-            327/9E Lawsghat Road, <br />Kodaikanal<br />
-            Pin-624 101
-          </p>
-        </v-col>
-        <v-col cols="6">
-          <booking-form></booking-form>
-        </v-col>
-      </v-row>
-    </v-container> -->
     <v-container>
       <v-row>
         <v-col xs="6" sm="3" lg="4">
@@ -57,6 +39,7 @@
             <h4 class="mb-2 mb-sm-5" @click="$router.push('/contact')">
               Contact
             </h4>
+            <h4 class="mb-2 mb-sm-5" @click="$router.push('/faq')">FAQ</h4>
           </div>
         </v-col>
         <v-col xs="12" sm="6" lg="4">

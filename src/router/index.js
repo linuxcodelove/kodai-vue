@@ -6,6 +6,7 @@ import HomeView from "../views/HomeView.vue";
 import Cottages from "../views/Cottages.vue";
 import Contact from "../views/Contact.vue";
 import RentalCars from "../views/RentalCars.vue";
+import Faq from "../views/Faq.vue";
 
 Vue.use(VueRouter);
 
@@ -60,6 +61,11 @@ const routes = [
     path: "/rentalcars",
     name: "rentalcars",
     component: RentalCars,
+  },
+  {
+    path: "/faq",
+    name: "faq",
+    component: Faq,
   },
 ];
 
