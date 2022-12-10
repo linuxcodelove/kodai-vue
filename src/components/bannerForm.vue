@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!$vuetify.breakpoint.xs">
+    <div v-if="!$vuetify.breakpoint.xs && !this.userData">
       <v-form
         ref="form"
         v-model="formValid"
@@ -101,7 +101,7 @@
       </v-form>
     </div>
     <div
-      v-if="$vuetify.breakpoint.xs && !showMobileForm"
+      v-if="$vuetify.breakpoint.xs && !showMobileForm && !this.userData"
       @click="showMobileForm = true"
     >
       <v-form
@@ -365,6 +365,11 @@ export default {
   components: {
     BookingDialog,
   },
+  computed: {
+    userData() {
+      return JSON.parse(localStorage.getItem("user"));
+    },
+  },
   methods: {
     save() {
       if (!this.formValid) {
@@ -377,7 +382,15 @@ export default {
         startDate: this.startDate,
         endDate: this.endDate,
       };
-      console.log(payload);
+      localStorage.setItem("user", JSON.stringify(payload));
+      this.$emit(
+        "snackbar",
+        "Your Request has been sent. We will reach you asap!",
+        "green"
+      );
+      setTimeout(() => {
+        location.reload();
+      }, 500);
     },
     saveMobileForm() {
       if (
@@ -397,8 +410,16 @@ export default {
         startDate: this.startDate,
         endDate: this.endDate,
       };
-      console.log(payload);
+      localStorage.setItem("user", JSON.stringify(payload));
       this.showMobileForm = false;
+      this.$emit(
+        "snackbar",
+        "Your Request has been sent. We will reach you asap!",
+        "green"
+      );
+      setTimeout(() => {
+        location.reload();
+      }, 500);
     },
   },
 };

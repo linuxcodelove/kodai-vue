@@ -59,13 +59,20 @@
             color="primary"
             class="my-6 my-sm-8 py-8"
             block
-            @click="dialog = true"
+            @click="bookForm"
             >Book Now</v-btn
           >
         </v-col>
       </v-row>
     </v-container>
-    <booking-dialog v-if="dialog" @close="dialog = false"></booking-dialog>
+    <booking-dialog v-if="dialog" @close="snackbarMessage"></booking-dialog>
+    <v-snackbar v-model="snackbar" timeout="2000" color="green" top right>
+      {{ message }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -82,7 +89,14 @@ export default {
       // instaUrl: "https://instagram.com/muthumk05?utm_medium=copy_link",
       instaUrl: "https://www.instagram.com/kodaikanal_tripadvisor/",
       dialog: false,
+      snackbar: false,
+      message: "You already sent us a message. We will get back you soon!",
     };
+  },
+  computed: {
+    userData() {
+      return JSON.parse(localStorage.getItem("user"));
+    },
   },
   methods: {
     goToIG() {
@@ -97,6 +111,21 @@ export default {
     },
     openTwitter() {
       window.open("https://twitter.com/KodaikanalTrip");
+    },
+    bookForm() {
+      if (localStorage.getItem("user")) {
+        this.snackbar = true;
+        return;
+      }
+      this.dialog = true;
+    },
+    snackbarMessage(msg) {
+      console.log(msg);
+      if (msg) {
+        this.message = msg;
+        this.snackbar = true;
+      }
+      this.dialog = false;
     },
   },
 };

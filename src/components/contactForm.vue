@@ -64,9 +64,9 @@
         class="desc text-left"
       >
         <v-container fluid>
-          <div class="body-1 text-md-body-1">
+          <div class="caption text-md-body-1">
             Visiting a hill station requires plenty of detailed planning based
-            on the amenity’s availability. We will ease your efforts in finding
+            on the amenity's availability. We will ease your efforts in finding
             suitable cottages for visitors. Our cottages in Kodaikanal are
             classic, premium, and super deluxe cottages. We provide a huge range
             of cottages with different experiences and views. Each of our

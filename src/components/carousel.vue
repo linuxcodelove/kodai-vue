@@ -17,12 +17,12 @@
         class="carouselform"
       >
         <v-container fill-height fluid class="d-flex justify-center">
-          <banner-form @snackbar="snackbar = true"></banner-form>
+          <banner-form @snackbar="snackbarMessage"></banner-form>
         </v-container>
       </v-carousel-item>
     </v-carousel>
-    <v-snackbar v-model="snackbar" timeout="2000" color="red" top right>
-      Please fill up all fields
+    <v-snackbar v-model="snackbar" timeout="2000" :color="color" top right>
+      {{ message }}
 
       <template v-slot:action="{ attrs }">
         <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
@@ -60,6 +60,8 @@ export default {
     return {
       cycle: true,
       snackbar: false,
+      message: "",
+      color: "red",
     };
   },
   components: {
@@ -89,6 +91,11 @@ export default {
     },
     hello() {
       console.log("hello");
+    },
+    snackbarMessage(msg, color) {
+      this.snackbar = true;
+      this.message = msg || "Please fill up All Fields";
+      this.color = color || "red";
     },
   },
 };
