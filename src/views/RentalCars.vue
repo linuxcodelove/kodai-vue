@@ -11,7 +11,7 @@
       title="Our Services"
       desc="We have exhaustive list of vehicles available for rent in kodaikanal. We arrange Inner City, Outer City, One way and Round trip travel services in and around kodaikanal. Our tour packages includes Stay arrangements, rental vehicles for site seeing, activities such as Trekking, Jeep Safari, Jungle Ride, Off Roading, Camp fire with music, Cycling, Boating and Horse riding. We offers various packages for Honey Moon Couples, Family Vacation, Group Stay and Solo Travelers. "
     ></who-we-are>
-    <v-container fluid class="bg py-4 py-sm-8">
+    <v-container fluid class="py-4 py-sm-8">
       <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">
         Our Site Seeing Packages
       </h2>

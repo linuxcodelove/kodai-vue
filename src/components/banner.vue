@@ -1,6 +1,6 @@
 <template>
   <v-container fill-height fluid pa-0 ma-0>
-    <v-card color="transparent" flat width="100%">
+    <v-card color="transparent" width="100%" elevation="12" tile dark>
       <v-img
         :height="imageHeight"
         :src="require(`../assets/${img}.jpg`)"

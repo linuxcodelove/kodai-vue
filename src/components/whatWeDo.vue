@@ -8,12 +8,12 @@
           Planning an exciting trip? We are here to help you!!!!!
         </h3>
         <h4
-          class="text-h5 text-sm-h4 text-xl-h2 my-6 my-xl-10 grey--text text--darken-3 text-center"
+          class="text-h5 text-sm-h4 text-xl-h2 my-3 my-sm-6 my-xl-10 grey--text text--darken-3 text-center"
         >
           What we Do?
         </h4>
         <p
-          class="body text-lg-h6 text-xl-h4 font-weight-light grey--text text--darken-3"
+          class="body text-lg-h6 text-xl-h4 font-weight-regular grey--text text--darken-3"
         >
           Kodaikanal welcomes you warmly with cool embrace and aromatic
           fragrance. The beautiful mountain landscapes will leave you with a
@@ -23,7 +23,7 @@
           which makes it an ideal place for everyone.
         </p>
         <p
-          class="body text-lg-h6 text-xl-h4 font-weight-light grey--text text--darken-3"
+          class="body text-lg-h6 text-xl-h4 font-weight-regular grey--text text--darken-3 pb-3"
         >
           We Guarantee you with our best packages for holiday tours & travels in
           kodaikanal. Our team spends their major focus on giving safe & secured

@@ -6,7 +6,7 @@
         <!-- <div class="mt-2 mt-md-4 mb-2 mb-md-6 black--text"></div> -->
         <div
           v-if="$vuetify.breakpoint.xs"
-          class="black--text my-4 mb-8 mb-md-8"
+          class="grey--text text--darken-3 my-4 mb-8 mb-md-8"
         >
           <v-row>
             <v-col cols="12 px-12"

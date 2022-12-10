@@ -15,7 +15,7 @@
         <div>
           <span
             v-if="!$vuetify.breakpoint.xs"
-            class="red--text caption"
+            class="primary--text caption"
             @click="$router.push(item.to)"
           >
             Read More...</span
@@ -63,7 +63,7 @@
         <div>
           <span
             v-if="!$vuetify.breakpoint.xs"
-            class="red--text caption"
+            class="primary--text caption"
             @click="$router.push(item.to)"
           >
             Read More...</span

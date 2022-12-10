@@ -28,22 +28,34 @@
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item @click="$router.push('/')">
-            <v-list-item-title>HOME</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >HOME</v-list-item-title
+            >
           </v-list-item>
           <v-list-item @click="$router.push('/cottages')">
-            <v-list-item-title>COTTAGES</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >COTTAGES</v-list-item-title
+            >
           </v-list-item>
           <v-list-item @click="$router.push('/rentalcars')">
-            <v-list-item-title>RENTAL CARS</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >RENTAL CARS</v-list-item-title
+            >
           </v-list-item>
           <v-list-item>
-            <v-list-item-title>REAL ESTATE</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >REAL ESTATE</v-list-item-title
+            >
           </v-list-item>
           <v-list-item @click="$router.push('/about')">
-            <v-list-item-title>ABOUT</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >ABOUT</v-list-item-title
+            >
           </v-list-item>
           <v-list-item @click="$router.push('/contact')">
-            <v-list-item-title>CONTACT</v-list-item-title>
+            <v-list-item-title class="grey--text text--darken-2"
+              >CONTACT</v-list-item-title
+            >
           </v-list-item>
         </v-list-item-group>
       </v-list>

@@ -1,13 +1,16 @@
 <template>
-  <v-container fluid class="primary py-6 py-sm-14 px-6">
+  <v-container fluid class="primary py-6 py-sm-12 px-12">
     <div class="mb-0 mb-sm-4">
       <h2
         v-if="subtitle"
-        class="headline text-sm-h4 font-weight-bold text-center"
+        class="headline text-sm-h4 font-weight-bold text-center greycol--text text--lighten-1"
       >
         {{ title }}
       </h2>
-      <h2 v-else class="headline text-sm-h4 font-weight-bold pb-4 text-center">
+      <h2
+        v-else
+        class="headline text-sm-h4 font-weight-bold pb-4 text-center greycol--text text--lighten-1"
+      >
         {{ title }}
       </h2>
 
@@ -18,7 +21,7 @@
 
     <!-- :style="{ maxWidth: { '720px': $vuetify.breakpoint.smAndUp } }" -->
     <div
-      class="font-weight-light mx-auto subtitle text-sm-h6 mb-0 mb-sm-4"
+      class="font-weight-medium mx-auto subtitle text-sm-h6 mb-4 grey--text text--darken-3"
       :class="{ width: $vuetify.breakpoint.smAndUp }"
     >
       {{ desc }}

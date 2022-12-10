@@ -16,11 +16,11 @@
         </div>
         <div class="black--text my-4">
           <v-row>
-            <v-col cols="12 px-12 "
-              >Treat yourself to an overnight stay somewhere special. It’s your
+            <v-col cols="12 px-12 text-xl-h5"
+              >Treat yourself to an overnight stay somewhere special. It's your
               chance to discover Kodaikanal and all it has to offer. We provide
               various types of stays such as Individual cottages, Service
-              apartments, Villa’s, Home stays, Tent stays, Wood houses, Tree
+              apartments, Villa's, Home stays, Tent stays, Wood houses, Tree
               houses, Forest bungalows, Star category resorts and Hotel rooms.
               Please view our 100+ cottages and resorts to book your space.
             </v-col>
@@ -30,6 +30,7 @@
               text
               rounded
               class="primary caption px-10 py-6 black--text text--darken-2 font-weight-black"
+              @click="$router.push('/about')"
               >More About Us</v-btn
             >
           </div>

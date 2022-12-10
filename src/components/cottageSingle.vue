@@ -91,7 +91,10 @@
           </v-card>
         </v-col>
       </v-row>
-      <v-divider class="mt-8 mt-sm-12 mb-0 mb-sm-2 primary"></v-divider>
+      <v-divider
+        class="mt-8 mt-sm-12 mb-2 mb-sm-2 mx-auto primary"
+        width="200"
+      ></v-divider>
       <booking-dialog v-if="dialog" @close="dialog = false"></booking-dialog>
     </v-container>
   </div>

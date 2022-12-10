@@ -91,7 +91,10 @@
           </v-col>
         </v-row>
         <div class="d-flex justify-center my-2 my-sm-4">
-          <v-btn class="py-2 px-2 py-sm-4 px-sm-5 primary" small @click="save"
+          <v-btn
+            class="py-2 px-2 py-sm-4 px-sm-5 primary greycol--text text--darken-2 font-weight-bold"
+            small
+            @click="save"
             >Book Now</v-btn
           >
         </div>
@@ -155,7 +158,9 @@
           </v-col>
         </v-row>
         <div class="d-flex justify-center my-2 my-sm-4">
-          <v-btn class="py-2 px-2 py-sm-4 px-sm-5 primary" small
+          <v-btn
+            class="py-2 px-2 py-sm-4 px-sm-5 primary greycol--text text--darken-2 font-weight-bold"
+            small
             >Book Now</v-btn
           >
         </div>
