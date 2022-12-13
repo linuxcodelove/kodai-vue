@@ -93,7 +93,8 @@ export default {
       console.log("hello");
     },
     snackbarMessage(msg, color) {
-      this.snackbar = true;
+      console.log(msg, color);
+      if (!this.$vuetify.breakpoint.xs) this.snackbar = true;
       this.message = msg || "Please fill up All Fields";
       this.color = color || "red";
     },

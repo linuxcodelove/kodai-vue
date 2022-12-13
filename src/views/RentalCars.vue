@@ -1,7 +1,7 @@
 <template>
   <div>
     <banner
-      img="rentalcars/thar"
+      img="rentalcars/carrental"
       title=""
       subtitle=""
       description=""
@@ -11,7 +11,7 @@
       title="Our Services"
       desc="We have exhaustive list of vehicles available for rent in kodaikanal. We arrange Inner City, Outer City, One way and Round trip travel services in and around kodaikanal. Our tour packages includes Stay arrangements, rental vehicles for site seeing, activities such as Trekking, Jeep Safari, Jungle Ride, Off Roading, Camp fire with music, Cycling, Boating and Horse riding. We offers various packages for Honey Moon Couples, Family Vacation, Group Stay and Solo Travelers. "
     ></who-we-are>
-    <v-container fluid class="py-4 py-sm-8">
+    <v-container fluid class="pt-4 pt-sm-8 my-0">
       <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">
         Our Site Seeing Packages
       </h2>
@@ -22,36 +22,48 @@
               :src="require(`../assets/rentalcars/packages/${img}.jpg`)"
             ></v-img>
           </v-card>
-          <!-- <v-card class="secondary py-8 px-5">
-            <h4 class="text-center text-h5" style="text-decoration: underline">
-              {{ pack.title }}
-            </h4>
-            <div class="my-4 my-sm-6 mx-6 d-flex justify-center">
-              <ul>
-                <li
-                  v-for="place in pack.places"
-                  :key="place"
-                  class="my-2 body font-weight-medium"
-                >
-                  {{ place }}
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p class="text-center">
-                Upto 4 people: {{ pack.price.fourPeople }}
-              </p>
-              <p class="text-center">
-                Upto 7 people: {{ pack.price.sevenPeople }}
-              </p>
-              <p class="text-center">
-                Upto 10 people: {{ pack.price.tenPeople }}
-              </p>
-              <p class="text-center">
-                Above 10 people: {{ pack.price.aboveTen }}
-              </p>
-            </div>
-          </v-card> -->
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid class="py-0">
+      <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">
+        Camping Packages
+      </h2>
+      <v-row class="my-2 my-sm-6 mx-2">
+        <v-col>
+          <v-card class="secondary">
+            <v-img
+              :src="
+                require(`../assets/rentalcars/packages/camping/camping.jpg`)
+              "
+            ></v-img>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid class="py-0">
+      <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">Couple Packages</h2>
+      <v-row class="my-2 my-sm-6 mx-2">
+        <v-col :cols="columns" v-for="n in 3" :key="n">
+          <v-card class="secondary">
+            <v-img
+              :src="require(`../assets/rentalcars/packages/couple/${n}.jpg`)"
+            ></v-img>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid class="pb-4 pb-sm-8">
+      <h2 class="text-center text-h5 text-sm-h4 text-xl-h3">
+        Group Stay Packages
+      </h2>
+      <v-row class="my-2 my-sm-6 mx-2">
+        <v-col>
+          <v-card class="secondary">
+            <v-img
+              :src="require(`../assets/rentalcars/packages/group/group1.jpg`)"
+            ></v-img>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>

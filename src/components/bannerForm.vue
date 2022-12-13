@@ -1,12 +1,8 @@
 <template>
   <div>
     <div v-if="!$vuetify.breakpoint.xs && !this.userData">
-      <v-form
-        ref="form"
-        v-model="formValid"
-        class="mx-1 mx-sm-16"
-        style="opacity: 0.85"
-      >
+      <v-form ref="form" v-model="formValid" class="mx-1 mx-sm-16">
+        <!-- style="opacity: 0.85" -->
         <v-row class="mx-0 mx-sm-16 my-0 pa-0 white">
           <v-col cols="2" class="pa-0"
             ><v-text-field
@@ -100,16 +96,9 @@
         </div>
       </v-form>
     </div>
-    <div
-      v-if="$vuetify.breakpoint.xs && !showMobileForm && !this.userData"
-      @click="showMobileForm = true"
-    >
-      <v-form
-        ref="form"
-        v-model="formValid"
-        class="mx-1 mx-sm-16"
-        style="opacity: 0.85"
-      >
+    <div v-if="$vuetify.breakpoint.xs && !this.userData" @click="dialog = true">
+      <v-form ref="form" v-model="formValid" class="mx-1 mx-sm-16">
+        <!-- style="opacity: 0.85" -->
         <v-row class="mx-0 mx-sm-16 my-0 pa-0 white">
           <v-col cols="3" class="pa-0">
             <v-text-field
@@ -166,7 +155,7 @@
         </div>
       </v-form>
     </div>
-    <div v-if="showMobileForm">
+    <!-- <div v-if="showMobileForm">
       <v-card
         class="mx-auto"
         width="300"
@@ -284,8 +273,8 @@
           </v-btn>
         </v-card-actions>
       </v-card>
-    </div>
-    <booking-dialog v-if="dialog" @close="dialog = false"></booking-dialog>
+    </div> -->
+    <booking-dialog v-if="dialog" @close="saveData"></booking-dialog>
     <v-dialog
       ref="dialogStartDate"
       v-model="startDateDialog"
@@ -359,7 +348,7 @@ export default {
       endDate: "",
       dialog: false,
       step: 1,
-      showMobileForm: false,
+      // showMobileForm: false,
     };
   },
   components: {
@@ -392,35 +381,39 @@ export default {
         location.reload();
       }, 500);
     },
-    saveMobileForm() {
-      if (
-        !this.form.name ||
-        !this.startDate ||
-        !this.endDate ||
-        !this.form.adults ||
-        !this.form.phone ||
-        !this.form.email
-      ) {
-        this.$emit("snackbar");
-
-        return;
-      }
-      const payload = {
-        ...this.form,
-        startDate: this.startDate,
-        endDate: this.endDate,
-      };
-      localStorage.setItem("user", JSON.stringify(payload));
-      this.showMobileForm = false;
-      this.$emit(
-        "snackbar",
-        "Your Request has been sent. We will reach you asap!",
-        "green"
-      );
-      setTimeout(() => {
-        location.reload();
-      }, 500);
+    saveData(msg) {
+      this.dialog = false;
+      this.$emit("snackbar", msg, "green");
     },
+    // saveMobileForm() {
+    //   if (
+    //     !this.form.name ||
+    //     !this.startDate ||
+    //     !this.endDate ||
+    //     !this.form.adults ||
+    //     !this.form.phone ||
+    //     !this.form.email
+    //   ) {
+    //     this.$emit("snackbar");
+
+    //     return;
+    //   }
+    //   const payload = {
+    //     ...this.form,
+    //     startDate: this.startDate,
+    //     endDate: this.endDate,
+    //   };
+    //   localStorage.setItem("user", JSON.stringify(payload));
+    //   // this.showMobileForm = false;
+    //   this.$emit(
+    //     "snackbar",
+    //     "Your Request has been sent. We will reach you asap!",
+    //     "green"
+    //   );
+    //   setTimeout(() => {
+    //     location.reload();
+    //   }, 500);
+    // },
   },
 };
 </script>

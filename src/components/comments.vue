@@ -10,8 +10,10 @@
                 class="rounded-sm mx-12 px-6 comments caption text-sm-body-1"
                 color="transparent"
               >
-                <v-avatar size="120" class="mb-8">
-                  <v-img :src="comment.img"></v-img>
+                <v-avatar size="80" class="mb-8">
+                  <v-img
+                    :src="require(`../assets/home/comments/${comment.img}.jpg`)"
+                  ></v-img>
                 </v-avatar>
                 "{{ comment.comment }}"
               </v-card>
@@ -29,19 +31,29 @@ export default {
     return {
       comments: [
         {
-          img: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          img: "comment1",
           comment:
-            "Comparing to other major players in the market I got customised packages and selective rooms from these people. Since I went with my family I was so concerned about the safety and other needs, but honestly it was a perfect choice to book cottages from here!",
+            "The best trip advisors! Had a great and memorable experience in kodaikanal! From room bookings to sightseeing and all other facilities we needed through out the trip, this team really did a great job especially Rameeze bro! He was so humble, gentle and responsible throughout the trip! Thank you team!",
         },
         {
-          img: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          img: "comment2",
           comment:
-            "market I got customised packages and selective rooms from these people. Since I went with my family I was so concerned about the safety and other needs, but honestly it was a perfect choice to book cottages from here!",
+            "They are really best! Even in this COVID situation those people provide as every help as they can and specially wanna thanks rameez rahuman bro without him this trip cannot be the best. If any one wanna visit kodaikanal for the first time and wanna best experience this people will for sure make it best ❤",
         },
         {
-          img: "https://cdn.vuetifyjs.com/images/lists/2.jpg",
+          img: "comment3",
           comment:
-            "packages and selective rooms from these people. Since I went with my family I was so concerned about the safety and other needs, but honestly it was a perfect choice to book cottages from here!",
+            "Homestay was extremely good. There was a cook in the stay who prepared tasty food. This was another best thing. But food delivery wasn't provided as agreed.",
+        },
+        {
+          img: "comment4",
+          comment:
+            "Super and Unforgettable memories....entha corona time la kuda nalla help pannanga.....oru trip ku vantha travelers mari avanga guide pannala nalla frnd mari pathukitanga...thank you so much bro ❤",
+        },
+        {
+          img: "comment5",
+          comment:
+            "We had a great time over all ... Services and facilities are good.. best recommended travel planner for kodai.",
         },
       ],
     };

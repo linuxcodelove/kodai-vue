@@ -18,7 +18,7 @@
       dreams come with unimaginable returns."
     ></who-we-are>
     <our-services></our-services>
-    <aboutUs></aboutUs>
+    <!-- <aboutUs></aboutUs> -->
     <comments></comments>
     <customfooter></customfooter>
   </div>
@@ -26,7 +26,7 @@
 
 <script>
 import carousel from "../components/carousel.vue";
-import aboutUs from "../components/aboutUs.vue";
+// import aboutUs from "../components/aboutUs.vue";
 import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
@@ -36,7 +36,7 @@ export default {
   name: "Home",
   components: {
     carousel,
-    aboutUs,
+    // aboutUs,
     whoWeAre,
     ourServices,
     customfooter,

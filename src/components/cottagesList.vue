@@ -7,10 +7,14 @@
   >
     <v-sheet max-width="1200px" class="mx-auto px-6" color="transparent">
       <v-card-title
+        v-if="showtitle"
         class="justify-center headline text-sm-h4 text-xl-h2 font-weight-bold text--darken-3 text-center"
         >Book Your Cottages</v-card-title
       >
-      <v-divider class="mx-4 mb-2 mb-sm-8 mt-0 mt-sm-6 primary"></v-divider>
+      <v-divider
+        v-if="showtitle"
+        class="mx-4 mb-2 mb-sm-8 mt-0 mt-sm-6 primary"
+      ></v-divider>
       <v-row class="my-4 my-sm-0">
         <div class="cottageList mb-0" style="max-height: 2078px">
           <v-col
@@ -42,6 +46,10 @@ export default {
     edit: {
       type: Boolean,
       default: false,
+    },
+    showtitle: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
