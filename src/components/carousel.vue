@@ -39,22 +39,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    title: {
-      type: String,
-      default: "",
-    },
-    subtitle: {
-      type: String,
-      default: "",
-    },
-    description: {
-      type: String,
-      default: "",
-    },
-    subDesc: {
-      type: String,
-      default: "",
-    },
   },
   data() {
     return {
@@ -86,14 +70,7 @@ export default {
     },
   },
   methods: {
-    cycleValue(val) {
-      this.cycle = val;
-    },
-    hello() {
-      console.log("hello");
-    },
     snackbarMessage(msg, color) {
-      console.log(msg, color);
       if (!this.$vuetify.breakpoint.xs) this.snackbar = true;
       this.message = msg || "Please fill up All Fields";
       this.color = color || "red";

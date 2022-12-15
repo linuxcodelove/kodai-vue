@@ -63,12 +63,11 @@ export default {
     },
 
     deleteItem(id) {
-      console.log(id);
       this.$http.delete(`api/cottages/${id}`).then(() => this.initialise());
     },
     initialise() {
       this.$http
-        .get("https://kodaiproject.000webhostapp.com/cottagelist.json", {
+        .get("https://kodaiguide.in/cottagelist.json", {
           "content-type": "application/json",
         })
         .then((res) => {

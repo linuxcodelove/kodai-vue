@@ -1,12 +1,6 @@
 <template>
   <div>
-    <carousel
-      :items="items"
-      title="welcome to"
-      subtitle="KODAIKANAL TRAVEL PLANNER"
-      description="The Palace is not safe when the"
-      subDesc="Cottage is not happy"
-    ></carousel>
+    <carousel :items="items"></carousel>
     <who-we-are
       title="What We Do?"
       subtitle="as a Kodaikanal Travel Planner"

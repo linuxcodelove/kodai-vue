@@ -120,7 +120,6 @@ export default {
       this.dialog = true;
     },
     snackbarMessage(msg) {
-      console.log(msg);
       if (msg) {
         this.message = msg;
         this.snackbar = true;
