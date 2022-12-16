@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <loader></loader> -->
     <carousel :items="items"></carousel>
     <who-we-are
       title="What We Do?"
@@ -36,6 +37,7 @@ import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
 import comments from "../components/comments.vue";
 import cottagesList from "../components/cottagesList.vue";
+// import loader from "../components/loader.vue";
 
 export default {
   name: "Home",
@@ -47,6 +49,7 @@ export default {
     customfooter,
     comments,
     cottagesList,
+    // loader,
   },
   data() {
     return {
@@ -64,6 +67,14 @@ export default {
           src: "banner4",
         },
       ],
+      // isLoaded: false,
+    };
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        console.log("home page fully loaded");
+      }
     };
   },
 };

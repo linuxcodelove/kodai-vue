@@ -83,6 +83,9 @@ export default {
       return this.$vuetify.breakpoint.smAndDown;
     },
   },
+  mounted() {
+    console.log(this.$store.state.name);
+  },
 };
 </script>
 <style>

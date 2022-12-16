@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <loader></loader> -->
     <carousel
       :items="items"
       title="welcome to"
@@ -45,12 +46,14 @@
 import carousel from "../components/carousel.vue";
 import cottagesList from "../components/cottagesList.vue";
 import customfooter from "../components/footer.vue";
+// import loader from "../components/loader.vue";
 
 export default {
   components: {
     carousel,
     cottagesList,
     customfooter,
+    // loader,
   },
   data() {
     return {
@@ -68,6 +71,14 @@ export default {
           src: "banner4",
         },
       ],
+    };
+  },
+  mounted() {
+    console.log(document.readyState, "cottages");
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        console.log("cottage page fully loaded");
+      }
     };
   },
 };

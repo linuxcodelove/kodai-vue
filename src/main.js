@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import store from "./store";
 // import AOS from "aos";
 import "aos/dist/aos.css";
 import * as VueGoogleMaps from "vue2-google-maps";
@@ -15,6 +16,7 @@ import vuetify from "./plugins/vuetify";
 import VueResource from "vue-resource";
 
 Vue.use(VueResource);
+
 Vue.config.productionTip = false;
 // Vue.http.headers.common["Access-Control-Allow-Origin"] = "*";
 
@@ -24,6 +26,7 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
+  store,
   vuetify,
   render: (h) => h(App),
   // mounted() {
