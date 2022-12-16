@@ -1,104 +1,132 @@
 <template>
   <div>
-    <v-row v-if="index % 2 == 0 || $vuetify.breakpoint.xs" class="px-8">
-      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
-        <!-- data-aos="fade-left"
+    <div v-if="!$vuetify.breakpoint.xs">
+      <v-row v-if="index % 2 == 0" class="px-8">
+        <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+          <!-- data-aos="fade-left"
         data-aos-duration="800" -->
-        <h1
-          class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
-        >
-          {{ item.title }}
-        </h1>
-        <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
-          {{ item.desc }}
-        </div>
-        <div>
-          <span
-            v-if="!$vuetify.breakpoint.xs"
-            class="primary--text caption"
-            @click="$router.push(item.to)"
+          <h1
+            class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
           >
-            Read More...</span
-          >
-        </div>
-        <v-btn
-          v-if="$vuetify.breakpoint.xs"
-          text
-          outlined
-          color="primary"
-          class="mt-4 mt-sm-4 py-6"
-          block
-          @click="$router.push(item.to)"
-          >Read More</v-btn
-        >
-      </v-col>
-      <v-col xs="12" sm="6">
-        <v-container class="primary">
-          <v-img
-            :src="require(`../assets/home/services/${item.src}.jpg`)"
-            :height="imageHeight"
-          ></v-img>
-        </v-container>
-      </v-col>
-      <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
-    </v-row>
-    <v-row v-else class="px-8">
-      <v-col xs="12" sm="6">
-        <v-container class="primary">
-          <v-img
-            :src="require(`../assets/home/services/${item.src}.jpg`)"
-            :height="imageHeight"
-          ></v-img>
-        </v-container>
-      </v-col>
-      <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
-        <h1
-          class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
-        >
-          {{ item.title }}
-        </h1>
-        <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
-          {{ item.desc }}
-        </div>
-        <div>
-          <span
-            v-if="!$vuetify.breakpoint.xs"
-            class="primary--text caption"
-            @click="$router.push(item.to)"
-          >
-            Read More...</span
-          >
-        </div>
-        <v-btn
-          v-if="$vuetify.breakpoint.xs"
-          text
-          outlined
-          color="primary"
-          class="mt-4 mt-sm-4 py-6"
-          block
-          @click="$router.push(item.to)"
-          >Read More</v-btn
-        >
-      </v-col>
-
-      <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
-    </v-row>
-    <!-- <v-card>
-      <v-row>
-        <v-col cols="4" class="py-0"
-          ><v-img height="250" width="250" :src="item.src" dark></v-img
-        ></v-col>
-        <v-col cols="8" class="py-8">
-          <v-card-title>{{ item.title }}</v-card-title>
-
-          <v-divider class="mx-4"></v-divider>
-
-          <v-card-text class="font-weight-light title-2">
+            {{ item.title }}
+          </h1>
+          <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
             {{ item.desc }}
-          </v-card-text>
+          </div>
+          <div>
+            <span
+              v-if="!$vuetify.breakpoint.xs"
+              class="primary--text caption"
+              @click="$router.push(item.to)"
+            >
+              Read More...</span
+            >
+          </div>
+          <v-btn
+            v-if="$vuetify.breakpoint.xs"
+            text
+            outlined
+            color="primary"
+            class="mt-4 mt-sm-4 py-6"
+            block
+            @click="$router.push(item.to)"
+            >Read More</v-btn
+          >
+        </v-col>
+        <v-col xs="12" sm="6">
+          <v-container class="primary">
+            <v-img
+              :src="require(`../assets/home/services/${item.src}.jpg`)"
+              :height="imageHeight"
+            ></v-img>
+          </v-container>
+        </v-col>
+        <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
+      </v-row>
+      <v-row v-else class="px-8">
+        <v-col xs="12" sm="6">
+          <v-container class="primary">
+            <v-img
+              :src="require(`../assets/home/services/${item.src}.jpg`)"
+              :height="imageHeight"
+            ></v-img>
+          </v-container>
+        </v-col>
+        <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+          <h1
+            class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
+          >
+            {{ item.title }}
+          </h1>
+          <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
+            {{ item.desc }}
+          </div>
+          <div>
+            <span
+              v-if="!$vuetify.breakpoint.xs"
+              class="primary--text caption"
+              @click="$router.push(item.to)"
+            >
+              Read More...</span
+            >
+          </div>
+          <v-btn
+            v-if="$vuetify.breakpoint.xs"
+            text
+            outlined
+            color="primary"
+            class="mt-4 mt-sm-4 py-6"
+            block
+            @click="$router.push(item.to)"
+            >Read More</v-btn
+          >
+        </v-col>
+
+        <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
+      </v-row>
+    </div>
+    <div v-else>
+      <v-row class="px-8">
+        <v-col xs="12" sm="6">
+          <v-container class="primary">
+            <v-img
+              :src="require(`../assets/home/services/${item.src}.jpg`)"
+              :height="imageHeight"
+            ></v-img>
+          </v-container>
+        </v-col>
+        <v-col xs="12" sm="6" class="leftbox px-4 px-sm-12">
+          <h1
+            class="text-left font-weight-medium mb-3 title text-sm-h6 text-xl-h4"
+          >
+            {{ item.title }}
+          </h1>
+          <div class="font-weight-light caption text-md-subtitle-1 text-xl-h6">
+            {{ item.desc }}
+          </div>
+          <div>
+            <span
+              v-if="!$vuetify.breakpoint.xs"
+              class="primary--text caption"
+              @click="$router.push(item.to)"
+            >
+              Read More...</span
+            >
+          </div>
+          <v-btn
+            v-if="$vuetify.breakpoint.xs"
+            text
+            outlined
+            color="primary"
+            class="mt-4 mt-sm-4 py-6"
+            block
+            @click="$router.push(item.to)"
+            >Read More</v-btn
+          >
+          <v-divider class="mx-4 mt-6 mt-sm-12 primary"></v-divider>
         </v-col>
       </v-row>
-    </v-card> -->
+    </div>
   </div>
 </template>
 

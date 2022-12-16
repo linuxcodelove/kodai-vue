@@ -12,6 +12,16 @@
       dreams come with unimaginable returns."
     ></who-we-are>
     <our-services></our-services>
+    <div class="secondary">
+      <h1
+        class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
+        style="text-decoration: underLine; text-decoration-color: white"
+      >
+        Our Cottages
+      </h1>
+      <cottages-list :showtitle="false"></cottages-list>
+    </div>
+
     <!-- <aboutUs></aboutUs> -->
     <comments></comments>
     <customfooter></customfooter>
@@ -25,6 +35,7 @@ import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
 import comments from "../components/comments.vue";
+import cottagesList from "../components/cottagesList.vue";
 
 export default {
   name: "Home",
@@ -35,6 +46,7 @@ export default {
     ourServices,
     customfooter,
     comments,
+    cottagesList,
   },
   data() {
     return {

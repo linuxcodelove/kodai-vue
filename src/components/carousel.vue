@@ -16,7 +16,7 @@
         @mouseleave="cycle = true"
         class="carouselform"
       >
-        <v-container fill-height fluid class="d-flex justify-center">
+        <v-container fill-height fluid class="d-flex align-end">
           <banner-form @snackbar="snackbarMessage"></banner-form>
         </v-container>
       </v-carousel-item>

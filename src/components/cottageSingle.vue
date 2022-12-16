@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-row class="px-8">
+      <v-row class="px-2 px-sm-8">
         <v-col xs="12" sm="6">
           <v-card class="primary pa-1 pa-sm-2">
             <v-img

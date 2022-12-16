@@ -19,7 +19,7 @@
         <v-btn text @click="$router.push('/').catch((err) => {})">HOME</v-btn>
         <v-btn text @click="$router.push('/cottages')">COTTAGES</v-btn>
         <v-btn text @click="$router.push('/rentalcars')">RENTAL CARS</v-btn>
-        <v-btn text>REAL ESTATE</v-btn>
+        <v-btn text @click="$router.push('/')">REAL ESTATE</v-btn>
         <v-btn text @click="$router.push('/about')">ABOUT</v-btn>
         <v-btn text @click="$router.push('/contact')">CONTACT</v-btn>
       </v-toolbar-items>
@@ -42,7 +42,7 @@
               >RENTAL CARS</v-list-item-title
             >
           </v-list-item>
-          <v-list-item>
+          <v-list-item @click="$router.push('/')">
             <v-list-item-title class="grey--text text--darken-2"
               >REAL ESTATE</v-list-item-title
             >

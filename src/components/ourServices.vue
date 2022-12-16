@@ -17,15 +17,14 @@
             <product :item="service" :index="index"></product>
           </v-col>
         </v-row>
-        <div>
+        <!-- <div>
           <h1
             class="text-center justify-center headline text-sm-h5 text-lg-h4 text-xl-h3 font-weight-bold text--darken-3 pb-0 pb-sm-2"
             style="text-decoration: underLine; text-decoration-color: white"
           >
             Our Cottages
-          </h1>
-          <cottages-list :showtitle="false"></cottages-list>
-          <!-- <other-services :items="ourCottages" to="/cottages"></other-services>
+          </h1> -->
+        <!-- <other-services :items="ourCottages" to="/cottages"></other-services>
         </div>
         <div>
           <h1
@@ -34,12 +33,12 @@
           >
             Our Projects
           </h1> -->
-          <!-- <other-services
+        <!-- <other-services
             :items="ourCottages"
             to="/rentalcars"
             :reverse="true"
           ></other-services> -->
-        </div>
+        <!-- </div> -->
         <!-- <v-row>
           <v-col cols="4" v-for="os in otherServices" :key="os.title">
             <otherServices :item="os"></otherServices>
@@ -53,13 +52,13 @@
 <script>
 import product from "../components/product.vue";
 // import otherServices from "../components/otherservices.vue";
-import cottagesList from "../components/cottagesList.vue";
+// import cottagesList from "../components/cottagesList.vue";
 
 export default {
   components: {
     product,
     // otherServices,
-    cottagesList,
+    // cottagesList,
   },
   data() {
     return {
