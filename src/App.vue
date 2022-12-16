@@ -70,6 +70,7 @@
 
 <script>
 import chatWithUs from "./components/chatWithUs.vue";
+import { mapMutations } from "vuex";
 export default {
   name: "App",
   components: {
@@ -83,8 +84,11 @@ export default {
       return this.$vuetify.breakpoint.smAndDown;
     },
   },
+  methods: {
+    ...mapMutations(["updateMobile"]),
+  },
   mounted() {
-    console.log(this.$store.state.name);
+    this.updateMobile(this.$vuetify.breakpoint.xs);
   },
 };
 </script>

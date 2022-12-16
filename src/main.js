@@ -26,8 +26,8 @@ Vue.config.productionTip = false;
 
 new Vue({
   router,
-  store,
   vuetify,
+  store,
   render: (h) => h(App),
   // mounted() {
   //   AOS.init();
