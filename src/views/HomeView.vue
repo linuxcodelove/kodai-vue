@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <loader></loader> -->
+    <loader v-if="!isLoaded"></loader>
     <carousel :items="items"></carousel>
     <who-we-are
       title="What We Do?"
@@ -23,7 +23,6 @@
       <cottages-list :showtitle="false"></cottages-list>
     </div>
 
-    <!-- <aboutUs></aboutUs> -->
     <comments></comments>
     <customfooter></customfooter>
   </div>
@@ -31,25 +30,23 @@
 
 <script>
 import carousel from "../components/carousel.vue";
-// import aboutUs from "../components/aboutUs.vue";
 import whoWeAre from "../components/whoWeAre.vue";
 import ourServices from "../components/ourServices.vue";
 import customfooter from "../components/footer.vue";
 import comments from "../components/comments.vue";
 import cottagesList from "../components/cottagesList.vue";
-// import loader from "../components/loader.vue";
+import loader from "../components/loader.vue";
 
 export default {
   name: "Home",
   components: {
     carousel,
-    // aboutUs,
     whoWeAre,
     ourServices,
     customfooter,
     comments,
     cottagesList,
-    // loader,
+    loader,
   },
   data() {
     return {
@@ -67,15 +64,18 @@ export default {
           src: "banner4",
         },
       ],
-      // isLoaded: false,
+      isLoaded: false,
     };
   },
   mounted() {
-    document.onreadystatechange = () => {
-      if (document.readyState === "complete") {
-        console.log("home page fully loaded");
-      }
-    };
+    // document.onreadystatechange = () => {
+    //   if (document.readyState === "complete") {
+    //     this.isLoaded = true;
+    //   }
+    // };
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 2000);
   },
 };
 </script>

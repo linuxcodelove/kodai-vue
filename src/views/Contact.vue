@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loader v-if="!isLoaded"></loader>
     <banner img="contact" title="" subtitle=""></banner>
     <div class="accent" v-if="$vuetify.breakpoint.xs">
       <v-container>
@@ -34,17 +35,25 @@
 import banner from "../components/banner.vue";
 import contactForm from "../components/contactForm.vue";
 import customFooter from "../components/footer.vue";
+import loader from "../components/loader.vue";
 
 export default {
   components: {
     banner,
     contactForm,
     customFooter,
+    loader,
   },
   data() {
     return {
       center: { lat: 10.239457, lng: 77.498056 },
+      isLoaded: false,
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 2000);
   },
 };
 </script>

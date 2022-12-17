@@ -1,5 +1,7 @@
 <template>
   <div>
+    <loader v-if="!isLoaded"></loader>
+
     <banner img="about" subtitle=""></banner>
     <!-- <explore-shelter></explore-shelter>
     <people-and-stories></people-and-stories>
@@ -15,6 +17,7 @@ import banner from "../components/banner.vue";
 import customFooter from "../components/footer.vue";
 import whatWeDo from "../components/whatWeDo.vue";
 import bookingForm from "../components/bookingForm.vue";
+import loader from "../components/loader.vue";
 
 // import exploreShelter from "../components/exploreShelter.vue";
 // import peopleAndStories from "../components/peopleAndStories.vue";
@@ -25,12 +28,20 @@ export default {
     customFooter,
     whatWeDo,
     bookingForm,
+    loader,
     // exploreShelter,
     // peopleAndStories,
     // gridImages,
   },
   data() {
-    return {};
+    return {
+      isLoaded: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 1000);
   },
 };
 </script>

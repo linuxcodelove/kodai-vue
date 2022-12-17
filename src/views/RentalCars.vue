@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loader v-if="!isLoaded"></loader>
     <banner
       img="rentalcars/carrental"
       title=""
@@ -75,16 +76,19 @@
 import banner from "../components/banner.vue";
 import whoWeAre from "../components/whoWeAre.vue";
 import customFooter from "../components/footer.vue";
+import loader from "../components/loader.vue";
 
 export default {
   components: {
     banner,
     whoWeAre,
     customFooter,
+    loader,
   },
   data() {
     return {
       images: ["village", "picnic", "valley"],
+      isLoaded: false,
     };
   },
   computed: {
@@ -92,6 +96,11 @@ export default {
       if (this.$vuetify.breakpoint.xs) return 12;
       return 4;
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 1000);
   },
 };
 </script>

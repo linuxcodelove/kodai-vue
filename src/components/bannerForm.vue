@@ -2,7 +2,6 @@
   <div>
     <div v-if="!$vuetify.breakpoint.xs && !this.userData">
       <v-form ref="form" v-model="formValid" class="mx-1 mx-sm-16">
-        <!-- style="opacity: 0.85" -->
         <v-row class="mx-0 mx-sm-16 my-0 pa-0 white">
           <v-col cols="2" class="pa-0"
             ><v-text-field

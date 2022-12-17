@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <loader></loader> -->
+    <loader v-if="!isLoaded"></loader>
     <carousel
       :items="items"
       title="welcome to"
@@ -46,14 +46,14 @@
 import carousel from "../components/carousel.vue";
 import cottagesList from "../components/cottagesList.vue";
 import customfooter from "../components/footer.vue";
-// import loader from "../components/loader.vue";
+import loader from "../components/loader.vue";
 
 export default {
   components: {
     carousel,
     cottagesList,
     customfooter,
-    // loader,
+    loader,
   },
   data() {
     return {
@@ -71,15 +71,13 @@ export default {
           src: "banner4",
         },
       ],
+      isLoaded: false,
     };
   },
   mounted() {
-    console.log(document.readyState, "cottages");
-    document.onreadystatechange = () => {
-      if (document.readyState === "complete") {
-        console.log("cottage page fully loaded");
-      }
-    };
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 1000);
   },
 };
 </script>
