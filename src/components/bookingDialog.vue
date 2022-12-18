@@ -2,7 +2,7 @@
   <div>
     <v-dialog v-model="dialog" persistent max-width="600">
       <v-card style="border-radius: 8px" class="pa-4">
-        <v-form ref="form" v-model="formValid" class="mx-auto">
+        <v-form id="form" ref="form" v-model="formValid" class="mx-auto">
           <v-row class="white--text mx-6 text-center">
             <v-col cols="12" class="mt-0 mb-2 pb-0">
               <h2>Book Your Dates</h2>
@@ -27,13 +27,13 @@
                   <v-dialog
                     ref="dialogStartDate"
                     v-model="startDateDialog"
-                    :return-value.sync="startDate"
+                    :return-value.sync="form.startDate"
                     persistent
                     width="290px"
                   >
                     <template v-slot:activator="{ on, attrs }">
                       <v-text-field
-                        v-model="startDate"
+                        v-model="form.startDate"
                         label="Start Date"
                         append-icon="mdi-calendar"
                         readonly
@@ -43,10 +43,12 @@
                         hide-details
                         :dense="isMobile"
                         color="accent"
-                        :rules="[() => !!startDate || 'Start Date is required']"
+                        :rules="[
+                          () => !!form.startDate || 'Start Date is required',
+                        ]"
                       ></v-text-field>
                     </template>
-                    <v-date-picker v-model="startDate" color="primary"
+                    <v-date-picker v-model="form.startDate" color="primary"
                       ><v-spacer></v-spacer>
                       <v-btn
                         text
@@ -58,7 +60,7 @@
                       <v-btn
                         text
                         color="primary"
-                        @click="$refs.dialogStartDate.save(startDate)"
+                        @click="$refs.dialogStartDate.save(form.startDate)"
                       >
                         OK
                       </v-btn></v-date-picker
@@ -69,13 +71,13 @@
                   <v-dialog
                     ref="dialogEndDate"
                     v-model="endDateDialog"
-                    :return-value.sync="endDate"
+                    :return-value.sync="form.endDate"
                     persistent
                     width="290px"
                   >
                     <template v-slot:activator="{ on, attrs }">
                       <v-text-field
-                        v-model="endDate"
+                        v-model="form.endDate"
                         label="End Date"
                         append-icon="mdi-calendar"
                         readonly
@@ -85,10 +87,12 @@
                         hide-details
                         :dense="isMobile"
                         color="accent"
-                        :rules="[() => !!endDate || 'End Date is required']"
+                        :rules="[
+                          () => !!form.endDate || 'End Date is required',
+                        ]"
                       ></v-text-field>
                     </template>
-                    <v-date-picker v-model="endDate" color="primary"
+                    <v-date-picker v-model="form.endDate" color="primary"
                       ><v-spacer></v-spacer>
                       <v-btn
                         text
@@ -100,7 +104,7 @@
                       <v-btn
                         text
                         color="primary"
-                        @click="$refs.dialogEndDate.save(endDate)"
+                        @click="$refs.dialogEndDate.save(form.endDate)"
                       >
                         OK
                       </v-btn></v-date-picker
@@ -178,8 +182,10 @@
           <v-card-actions class="d-flex justify-center">
             <v-btn
               style="border-radius: 8px"
-              @click="save"
+              @click.prevent="save"
               :disabled="!formValid"
+              type="submit"
+              value="Send"
               >Submit</v-btn
             >
             <v-btn style="border-radius: 8px" @click="$emit('close')"
@@ -193,6 +199,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 export default {
   props: {},
   data() {
@@ -203,8 +210,6 @@ export default {
       endDateMenu: false,
       startDateDialog: false,
       endDateDialog: false,
-      startDate: "",
-      endDate: "",
       dialog: true,
     };
   },
@@ -219,22 +224,60 @@ export default {
       if (!this.$refs.form.validate()) {
         return;
       }
-      const payload = {
-        ...this.form,
-        start_date: this.startDate,
-        end_date: this.endDate,
-      };
-      localStorage.setItem("user", JSON.stringify(payload));
-      this.form = {};
+      localStorage.setItem("user", JSON.stringify(this.form));
+
+      this.sendEmail();
+      console.log(this.form);
+      // this.form = {};
       this.$emit(
         "close",
         "Your message has been submitted!. We will get back you asap!"
       );
-      setTimeout(() => {
-        location.reload();
-      }, 500);
+      // setTimeout(() => {
+      //   location.reload();
+      // }, 500);
+    },
+    sendEmail() {
+      emailjs
+        .sendForm(
+          "service_7zit69u",
+          "template_oxnjled",
+          "#form",
+          "W2_xDyn07cep4duwG",
+          JSON.stringify({
+            name: this.form.name,
+            email: this.form.email,
+            message: { ...this.form },
+          })
+        )
+        .then(
+          (result) => {
+            console.log(result, "success");
+          },
+          (error) => {
+            console.log(error.text, "failed");
+          }
+        );
     },
   },
+  // sendEmail() {
+  //   try {
+  //     emailjs.sendForm(
+  //       "service_7zit69u",
+  //       "template_oxnjled",
+  //       "#form",
+  //       "W2_xDyn07cep4duwG",
+  //       {
+  //         name: this.form.name,
+  //         email: this.form.email,
+  //         message: { ...this.form },
+  //       }
+  //     );
+  //     console.log("message sent");
+  //   } catch (error) {
+  //     console.log(error, "error");
+  //   }
+  // },
 };
 </script>
 
