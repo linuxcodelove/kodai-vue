@@ -68,7 +68,11 @@
               type="number"
               hide-details
               color="accent"
-              :rules="[() => !!form.phone || 'Phone is required']"
+              :rules="[
+                () => !!form.phone || 'Phone is required',
+                rules.validPhone,
+                rules.phonelength,
+              ]"
             >
             </v-text-field>
           </v-col>
@@ -81,7 +85,10 @@
               solo
               hide-details
               color="accent"
-              :rules="[() => !!form.email || 'Email is required']"
+              :rules="[
+                () => !!form.email || 'Email is required',
+                rules.emailrules,
+              ]"
             >
             </v-text-field>
           </v-col>
@@ -346,6 +353,18 @@ export default {
       endDateDialog: false,
       dialog: false,
       step: 1,
+      rules: {
+        validPhone: (value) => !String(value).includes(".") || "Invalid",
+        phonelength: (value) => {
+          return value?.length == 10 || "Phone number must be 10 digits.";
+        },
+        emailrules: (value) => {
+          const pattern =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return pattern.test(value) || "Email must be valid.";
+        },
+      },
+
       // showMobileForm: false,
     };
   },

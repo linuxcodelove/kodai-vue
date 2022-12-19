@@ -83,7 +83,7 @@ export default {
   methods: {
     snackbarMessage(msg, color) {
       this.snackbar = true;
-      this.message = msg || "Please fill up All Fields";
+      this.message = msg || "Please fill up All Fields or Invalid data";
       this.color = color || "red";
     },
   },
