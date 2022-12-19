@@ -7,8 +7,15 @@
     <people-and-stories></people-and-stories>
     <grid-images></grid-images> -->
     <what-we-do></what-we-do>
-    <booking-form></booking-form>
+    <booking-form @close="snackbarMessage"></booking-form>
     <custom-footer></custom-footer>
+    <v-snackbar v-model="snackbar" timeout="2000" :color="color" top right>
+      {{ message }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -36,12 +43,22 @@ export default {
   data() {
     return {
       isLoaded: false,
+      snackbar: false,
+      message: "",
+      color: "red",
     };
   },
   mounted() {
     setTimeout(() => {
       this.isLoaded = true;
     }, 1000);
+  },
+  methods: {
+    snackbarMessage(msg, color) {
+      this.message = msg || "Please fill up All Fields";
+      this.color = color || "red";
+      this.snackbar = true;
+    },
   },
 };
 </script>

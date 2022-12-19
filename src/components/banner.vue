@@ -5,11 +5,10 @@
         :height="imageHeight"
         :src="require(`../assets/${img}.jpg`)"
         width="100%"
-        class="d-flex align-center"
         dark
       >
-        <v-container fill-height fluid class="d-flex justify-center">
-          <banner-form @snackbar="snackbarMessage"></banner-form>
+        <v-container fill-height fluid class="d-flex justify-center align-end">
+          <banner-form @close="snackbarMessage"></banner-form>
         </v-container>
       </v-img>
     </v-card>

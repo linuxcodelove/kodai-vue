@@ -2,7 +2,7 @@
   <div class="bg">
     <v-row class="white--text mx-6 py-4 text-center">
       <v-col :cols="columns">
-        <v-form v-model="formValid" class="mx-auto">
+        <v-form ref="form" v-model="formValid" class="mx-auto">
           <v-col cols="12" class="mt-0 mb-2 pb-0">
             <h2>Book Your Dates</h2>
           </v-col>
@@ -16,6 +16,7 @@
               outlined
               hide-details
               color="accent"
+              :rules="[() => !!form.name || 'Name is required']"
             ></v-text-field
           ></v-col>
           <v-col cols="12">
@@ -24,13 +25,13 @@
                 <v-dialog
                   ref="dialogStartDate"
                   v-model="startDateDialog"
-                  :return-value.sync="startDate"
+                  :return-value.sync="form.startDate"
                   persistent
                   width="290px"
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                      v-model="startDate"
+                      v-model="form.startDate"
                       label="Start Date"
                       append-icon="mdi-calendar"
                       readonly
@@ -39,9 +40,12 @@
                       v-on="on"
                       hide-details
                       color="accent"
+                      :rules="[
+                        () => !!form.startDate || 'Start Date is required',
+                      ]"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="startDate" color="primary"
+                  <v-date-picker v-model="form.startDate" color="primary"
                     ><v-spacer></v-spacer>
                     <v-btn
                       text
@@ -53,7 +57,7 @@
                     <v-btn
                       text
                       color="primary"
-                      @click="$refs.dialogStartDate.save(startDate)"
+                      @click="$refs.dialogStartDate.save(form.startDate)"
                     >
                       OK
                     </v-btn></v-date-picker
@@ -64,13 +68,13 @@
                 <v-dialog
                   ref="dialogEndDate"
                   v-model="endDateDialog"
-                  :return-value.sync="endDate"
+                  :return-value.sync="form.endDate"
                   persistent
                   width="290px"
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                      v-model="endDate"
+                      v-model="form.endDate"
                       label="End Date"
                       append-icon="mdi-calendar"
                       readonly
@@ -79,9 +83,10 @@
                       v-on="on"
                       hide-details
                       color="accent"
+                      :rules="[() => !!form.endDate || 'End Date is required']"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="endDate" color="primary"
+                  <v-date-picker v-model="form.endDate" color="primary"
                     ><v-spacer></v-spacer>
                     <v-btn text color="primary" @click="endDateDialog = false">
                       Cancel
@@ -89,7 +94,7 @@
                     <v-btn
                       text
                       color="primary"
-                      @click="$refs.dialogEndDate.save(endDate)"
+                      @click="$refs.dialogEndDate.save(form.endDate)"
                     >
                       OK
                     </v-btn></v-date-picker
@@ -108,6 +113,7 @@
                   outlined
                   hide-details
                   color="accent"
+                  :rules="[() => !!form.adults || 'Adults is required']"
                 >
                 </v-text-field>
               </v-col>
@@ -119,6 +125,7 @@
                   outlined
                   hide-details
                   color="accent"
+                  :rules="[() => !!form.children || 'Children is required']"
                 >
                 </v-text-field>
               </v-col>
@@ -132,6 +139,7 @@
               type="number"
               hide-details
               color="accent"
+              :rules="[() => !!form.phone || 'Phone is required']"
             >
             </v-text-field>
           </v-col>
@@ -142,6 +150,7 @@
               outlined
               hide-details
               color="accent"
+              :rules="[() => !!form.email || 'Email is required']"
             >
             </v-text-field>
           </v-col>
@@ -155,6 +164,7 @@
           </v-col>
           <v-col cols="12">
             <v-btn
+              :disabled="!formValid"
               text
               outlined
               color="accent"
@@ -200,6 +210,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 export default {
   data() {
     return {
@@ -209,8 +220,6 @@ export default {
       endDateMenu: false,
       startDateDialog: false,
       endDateDialog: false,
-      startDate: "",
-      endDate: "",
     };
   },
   computed: {
@@ -221,14 +230,50 @@ export default {
   },
   methods: {
     submitForm() {
-      window.location = "mailto:nandhusmart456@gmail.com";
-      // const url =
-      //   "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=linuxcodelove@gmail.com";
-      // const a = document.createElement("a");
-      // a.href = url;
-      // a.innerHTML = "Link";
-      // document.body.appendChild(a);
-      // a.click();
+      if (!this.$refs.form.validate()) {
+        return;
+      }
+      localStorage.setItem("user", JSON.stringify(this.form));
+      this.sendEmail();
+    },
+    sendEmail() {
+      emailjs
+        .send(
+          "service_7zit69u",
+          "template_oxnjled",
+          {
+            name: this.form.name,
+            message: `Dear Kodaikanal Trip Advisor\n
+            I would like to reserve a cottage from (${
+              this.form.startDate || ""
+            }) to (${this.form.endDate || ""}) for ${
+              this.form.adults || 0
+            } adults & ${this.form.children || 0} children. \n
+            Please could you confirm the booking? Let me know if you need any further information on ${
+              this.form.email
+            }\n
+            cottage: ${this.cottage || ""}\n
+            Mobile: ${this.form.phone}\n
+            comments: ${this.form.comments || ""}`,
+          },
+          "W2_xDyn07cep4duwG"
+        )
+        .then(
+          () => {
+            this.form = {};
+            this.$emit(
+              "close",
+              "Your message has been submitted!. We will get back you asap!",
+              "green"
+            );
+            setTimeout(() => {
+              location.reload();
+            }, 500);
+          },
+          (error) => {
+            console.log(error.text, "failed");
+          }
+        );
     },
   },
 };

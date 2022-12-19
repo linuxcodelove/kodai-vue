@@ -2,7 +2,7 @@
   <div class="secondary">
     <v-row class="py-8 mx-6 text-center">
       <v-col :cols="columns">
-        <v-form v-model="formValid" class="mx-auto">
+        <v-form ref="form" v-model="formValid" class="mx-auto">
           <v-col cols="12" class="my-2 py-0"><h2>Contact Us</h2></v-col>
           <v-col cols="12" class="my-2 py-0"
             ><p>Drop us your message and we'll get back to you asap</p></v-col
@@ -14,6 +14,7 @@
               outlined
               hide-details
               color="accent"
+              :rules="[() => !!form.name || 'Name is required']"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -23,6 +24,7 @@
               outlined
               hide-details
               color="accent"
+              :rules="[() => !!form.email || 'Email is required']"
             >
             </v-text-field>
           </v-col>
@@ -34,6 +36,7 @@
               type="number"
               hide-details
               color="accent"
+              :rules="[() => !!form.phone || 'Phone is required']"
             >
             </v-text-field>
           </v-col>
@@ -47,6 +50,7 @@
           </v-col>
           <v-col cols="12">
             <v-btn
+              :disabled="!this.formValid"
               text
               outlined
               color="accent"
@@ -85,6 +89,7 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 export default {
   data() {
     return {
@@ -100,9 +105,50 @@ export default {
   },
   methods: {
     sendMail() {
-      window.open(
-        `mailto:linuxcodelove@gmail.com?subject=subject&body=${this.form}`
-      );
+      if (!this.$refs.form.validate()) {
+        return;
+      }
+      localStorage.setItem("user", JSON.stringify(this.form));
+      this.sendEmail();
+    },
+    sendEmail() {
+      emailjs
+        .send(
+          "service_7zit69u",
+          "template_oxnjled",
+          {
+            name: this.form.name,
+            message: `Dear Kodaikanal Trip Advisor\n
+            I would like to reserve a cottage from (${
+              this.form.startDate || ""
+            }) to (${this.form.endDate || ""}) for ${
+              this.form.adults || 0
+            } adults & ${this.form.children || 0} children. \n
+            Please could you confirm the booking? Let me know if you need any further information on ${
+              this.form.email
+            }\n
+            cottage: ${this.cottage || ""}\n
+            Mobile: ${this.form.phone}\n
+            comments: ${this.form.comments || ""}`,
+          },
+          "W2_xDyn07cep4duwG"
+        )
+        .then(
+          () => {
+            this.form = {};
+            this.$emit(
+              "close",
+              "Your message has been submitted!. We will get back you asap!",
+              "green"
+            );
+            setTimeout(() => {
+              location.reload();
+            }, 500);
+          },
+          (error) => {
+            console.log(error.text, "failed");
+          }
+        );
     },
   },
 };

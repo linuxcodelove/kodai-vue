@@ -19,7 +19,7 @@
       </v-container>
     </div>
 
-    <contact-form></contact-form>
+    <contact-form @close="snackbarMessage"></contact-form>
     <GmapMap :center="center" :zoom="12" style="width: 100%; height: 400px">
       <GmapMarker
         :position="center"
@@ -28,6 +28,13 @@
     </GmapMap>
 
     <custom-footer></custom-footer>
+    <v-snackbar v-model="snackbar" timeout="2000" :color="color" top right>
+      {{ message }}
+
+      <template v-slot:action="{ attrs }">
+        <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
+      </template>
+    </v-snackbar>
   </div>
 </template>
 
@@ -48,12 +55,22 @@ export default {
     return {
       center: { lat: 10.239457, lng: 77.498056 },
       isLoaded: false,
+      snackbar: false,
+      message: "",
+      color: "red",
     };
   },
   mounted() {
     setTimeout(() => {
       this.isLoaded = true;
     }, 2000);
+  },
+  methods: {
+    snackbarMessage(msg, color) {
+      this.message = msg || "Please fill up All Fields";
+      this.color = color || "red";
+      this.snackbar = true;
+    },
   },
 };
 </script>

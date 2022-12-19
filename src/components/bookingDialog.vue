@@ -2,7 +2,7 @@
   <div>
     <v-dialog v-model="dialog" persistent max-width="600">
       <v-card style="border-radius: 8px" class="pa-4">
-        <v-form id="form" ref="form" v-model="formValid" class="mx-auto">
+        <v-form ref="form" v-model="formValid" class="mx-auto">
           <v-row class="white--text mx-6 text-center">
             <v-col cols="12" class="mt-0 mb-2 pb-0">
               <h2>Book Your Dates</h2>
@@ -201,7 +201,12 @@
 <script>
 import emailjs from "emailjs-com";
 export default {
-  props: {},
+  props: {
+    cottage: {
+      type: String,
+      default: "",
+    },
+  },
   data() {
     return {
       form: {},
@@ -225,34 +230,35 @@ export default {
         return;
       }
       localStorage.setItem("user", JSON.stringify(this.form));
-
       this.sendEmail();
-      console.log(this.form);
-      // this.form = {};
-      this.$emit(
-        "close",
-        "Your message has been submitted!. We will get back you asap!"
-      );
-      // setTimeout(() => {
-      //   location.reload();
-      // }, 500);
     },
     sendEmail() {
       emailjs
-        .sendForm(
+        .send(
           "service_7zit69u",
           "template_oxnjled",
-          "#form",
-          "W2_xDyn07cep4duwG",
-          JSON.stringify({
+          {
             name: this.form.name,
-            email: this.form.email,
-            message: { ...this.form },
-          })
+            message: `Dear Kodaikanal Trip Advisor\n
+            I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults & ${this.form.children} children. \n
+            Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
+            cottage: ${this.cottage}\n
+            Mobile: ${this.form.phone}\n
+            comments: ${this.form.comments}`,
+          },
+          "W2_xDyn07cep4duwG"
         )
         .then(
-          (result) => {
-            console.log(result, "success");
+          () => {
+            this.form = {};
+            this.$emit(
+              "close",
+              "Your message has been submitted!. We will get back you asap!",
+              "green"
+            );
+            setTimeout(() => {
+              location.reload();
+            }, 500);
           },
           (error) => {
             console.log(error.text, "failed");

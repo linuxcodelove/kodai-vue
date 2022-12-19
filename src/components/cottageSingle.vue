@@ -95,7 +95,18 @@
         class="mt-8 mt-sm-12 mb-2 mb-sm-2 mx-auto primary"
         width="200"
       ></v-divider>
-      <booking-dialog v-if="dialog" @close="dialog = false"></booking-dialog>
+      <booking-dialog
+        v-if="dialog"
+        @close="snackbarMessage"
+        :cottage="item.name"
+      ></booking-dialog>
+      <v-snackbar v-model="snackbar" timeout="2000" :color="color" top right>
+        {{ message }}
+
+        <template v-slot:action="{ attrs }">
+          <v-btn text v-bind="attrs" @click="snackbar = false"> Close </v-btn>
+        </template>
+      </v-snackbar>
     </v-container>
   </div>
 </template>
@@ -114,6 +125,10 @@ export default {
       selectedImage: "",
       listImages: [],
       dialog: false,
+      selectedCottage: "",
+      snackbar: false,
+      message: "",
+      color: "red",
     };
   },
   components: {
@@ -144,6 +159,14 @@ export default {
       const img = this.selectedImage;
       this.selectedImage = this.listImages[index];
       this.listImages[index] = img;
+    },
+    snackbarMessage(msg, color) {
+      this.dialog = false;
+      if (msg) {
+        this.message = msg || "Please fill up All Fields";
+        this.color = color || "red";
+        this.snackbar = true;
+      }
     },
 
     // deleteCottage() {

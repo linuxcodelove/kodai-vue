@@ -18,7 +18,7 @@
 
           <v-col cols="2" class="pa-0">
             <v-text-field
-              v-model="startDate"
+              v-model="form.startDate"
               label="Start Date"
               readonly
               hide-details
@@ -26,13 +26,13 @@
               light
               flat
               solo
-              :rules="[() => !!startDate || 'Start Date is required']"
+              :rules="[() => !!form.startDate || 'Start Date is required']"
               @click="(startDateDialog = true), $emit('nocycle')"
             ></v-text-field>
           </v-col>
           <v-col cols="2" class="pa-0">
             <v-text-field
-              v-model="endDate"
+              v-model="form.endDate"
               label="End Date"
               readonly
               hide-details
@@ -40,7 +40,7 @@
               light
               flat
               solo
-              :rules="[() => !!endDate || 'End Date is required']"
+              :rules="[() => !!form.endDate || 'End Date is required']"
               @click="(endDateDialog = true), $emit('nocycle')"
             ></v-text-field>
           </v-col>
@@ -187,7 +187,7 @@
               <v-col cols="6" class="pa-0">
                 <v-text-field
                   class="ma-1"
-                  v-model="startDate"
+                  v-model="form.startDate"
                   label="Start Date"
                   readonly
                   hide-details
@@ -201,7 +201,7 @@
               <v-col cols="6" class="pa-0">
                 <v-text-field
                   class="ma-1"
-                  v-model="endDate"
+                  v-model="form.endDate"
                   label="End Date"
                   readonly
                   hide-details
@@ -281,9 +281,9 @@
       width="290px"
     >
       <v-date-picker
-        v-model="startDate"
+        v-model="form.startDate"
         color="primary"
-        :return-value.sync="startDate"
+        :return-value.sync="form.startDate"
         ><v-spacer></v-spacer>
         <v-btn
           text
@@ -295,7 +295,7 @@
         <v-btn
           text
           color="primary"
-          @click="$refs.dialogStartDate.save(endDate), $emit('cycle')"
+          @click="$refs.dialogStartDate.save(form.endDate), $emit('cycle')"
         >
           OK
         </v-btn></v-date-picker
@@ -308,9 +308,9 @@
       width="290px"
     >
       <v-date-picker
-        v-model="endDate"
+        v-model="form.endDate"
         color="primary"
-        :return-value.sync="endDate"
+        :return-value.sync="form.endDate"
         ><v-spacer></v-spacer>
         <v-btn
           text
@@ -322,7 +322,7 @@
         <v-btn
           text
           color="primary"
-          @click="$refs.dialogEndDate.save(endDate), $emit('cycle')"
+          @click="$refs.dialogEndDate.save(form.endDate), $emit('cycle')"
         >
           OK
         </v-btn></v-date-picker
@@ -333,6 +333,7 @@
 
 <script>
 import BookingDialog from "../components/bookingDialog.vue";
+import emailjs from "emailjs-com";
 
 export default {
   data() {
@@ -343,8 +344,6 @@ export default {
       endDateMenu: false,
       startDateDialog: false,
       endDateDialog: false,
-      startDate: "",
-      endDate: "",
       dialog: false,
       step: 1,
       // showMobileForm: false,
@@ -361,24 +360,50 @@ export default {
   methods: {
     save() {
       if (!this.formValid) {
-        this.$emit("snackbar");
-
+        this.$emit("close");
         return;
       }
-      const payload = {
-        ...this.form,
-        startDate: this.startDate,
-        endDate: this.endDate,
-      };
-      localStorage.setItem("user", JSON.stringify(payload));
-      this.$emit(
-        "snackbar",
-        "Your Request has been sent. We will reach you asap!",
-        "green"
-      );
-      setTimeout(() => {
-        location.reload();
-      }, 500);
+      localStorage.setItem("user", JSON.stringify(this.form));
+      this.sendEmail();
+    },
+    sendEmail() {
+      emailjs
+        .send(
+          "service_7zit69u",
+          "template_oxnjled",
+          {
+            name: this.form.name,
+            message: `Dear Kodaikanal Trip Advisor\n
+            I would like to reserve a cottage from (${
+              this.form.startDate || ""
+            }) to (${this.form.endDate || ""}) for ${
+              this.form.adults || 0
+            } adults & ${this.form.children || 0} children. \n
+            Please could you confirm the booking? Let me know if you need any further information on ${
+              this.form.email
+            }\n
+            cottage: ${this.cottage || ""}\n
+            Mobile: ${this.form.phone}\n
+            comments: ${this.form.comments || ""}`,
+          },
+          "W2_xDyn07cep4duwG"
+        )
+        .then(
+          () => {
+            this.form = {};
+            this.$emit(
+              "close",
+              "Your message has been submitted!. We will get back you asap!",
+              "green"
+            );
+            setTimeout(() => {
+              location.reload();
+            }, 500);
+          },
+          (error) => {
+            console.log(error.text, "failed");
+          }
+        );
     },
     saveData(msg) {
       this.dialog = false;
@@ -387,8 +412,8 @@ export default {
     // saveMobileForm() {
     //   if (
     //     !this.form.name ||
-    //     !this.startDate ||
-    //     !this.endDate ||
+    //     !this.form.startDate ||
+    //     !this.form.endDate ||
     //     !this.form.adults ||
     //     !this.form.phone ||
     //     !this.form.email
@@ -399,8 +424,8 @@ export default {
     //   }
     //   const payload = {
     //     ...this.form,
-    //     startDate: this.startDate,
-    //     endDate: this.endDate,
+    //     form.startDate: this.form.startDate,
+    //     form.endDate: this.form.endDate,
     //   };
     //   localStorage.setItem("user", JSON.stringify(payload));
     //   // this.showMobileForm = false;

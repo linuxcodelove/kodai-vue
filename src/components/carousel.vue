@@ -17,7 +17,7 @@
         class="carouselform"
       >
         <v-container fill-height fluid class="d-flex justify-center align-end">
-          <banner-form @snackbar="snackbarMessage"></banner-form>
+          <banner-form @close="snackbarMessage"></banner-form>
         </v-container>
       </v-carousel-item>
     </v-carousel>
@@ -71,9 +71,9 @@ export default {
   },
   methods: {
     snackbarMessage(msg, color) {
-      if (!this.$vuetify.breakpoint.xs) this.snackbar = true;
       this.message = msg || "Please fill up All Fields";
       this.color = color || "red";
+      this.snackbar = true;
     },
   },
 };
