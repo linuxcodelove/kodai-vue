@@ -14,8 +14,10 @@ Vue.use(VueGoogleMaps, {
 });
 import vuetify from "./plugins/vuetify";
 import VueResource from "vue-resource";
+import LoadScript from "vue-plugin-load-script";
 
 Vue.use(VueResource);
+Vue.use(LoadScript);
 
 Vue.config.productionTip = false;
 // Vue.http.headers.common["Access-Control-Allow-Origin"] = "*";

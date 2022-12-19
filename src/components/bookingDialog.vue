@@ -206,7 +206,8 @@
 </template>
 
 <script>
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
+
 export default {
   props: {
     cottage: {
@@ -242,6 +243,7 @@ export default {
       return false;
     },
   },
+
   methods: {
     save() {
       if (!this.$refs.form.validate()) {
@@ -250,58 +252,58 @@ export default {
       localStorage.setItem("user", JSON.stringify(this.form));
       this.sendEmail();
     },
+    // sendEmail() {
+    //   emailjs
+    //     .send(
+    //       "service_7zit69u",
+    //       "template_oxnjled",
+    //       {
+    //         name: this.form.name,
+    //         message: `Dear Kodaikanal Trip Advisor\n
+    //         I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults & ${this.form.children} children. \n
+    //         Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
+    //         cottage: ${this.cottage}\n
+    //         Mobile: ${this.form.phone}\n
+    //         comments: ${this.form.comments}`,
+    //       },
+    //       "W2_xDyn07cep4duwG"
+    //     )
+    //     .then(
+    //       () => {
+    //         this.form = {};
+    //         this.$emit(
+    //           "close",
+    //           "Your message has been submitted!. We will get back you asap!",
+    //           "green"
+    //         );
+    //         setTimeout(() => {
+    //           location.reload();
+    //         }, 500);
+    //       },
+    //       (error) => {
+    //         console.log(error.text, "failed");
+    //       }
+    //     );
+    // },
     sendEmail() {
-      emailjs
-        .send(
-          "service_7zit69u",
-          "template_oxnjled",
-          {
-            name: this.form.name,
-            message: `Dear Kodaikanal Trip Advisor\n
-            I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults & ${this.form.children} children. \n
-            Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
-            cottage: ${this.cottage}\n
-            Mobile: ${this.form.phone}\n
-            comments: ${this.form.comments}`,
-          },
-          "W2_xDyn07cep4duwG"
-        )
-        .then(
-          () => {
-            this.form = {};
-            this.$emit(
-              "close",
-              "Your message has been submitted!. We will get back you asap!",
-              "green"
-            );
-            setTimeout(() => {
-              location.reload();
-            }, 500);
-          },
-          (error) => {
-            console.log(error.text, "failed");
-          }
-        );
+      this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
+        Window.Email.send({
+          Host: "smtp.gmail.com",
+          Username: "service@kodaiguide.in",
+          Password: "M0hammed@91",
+          To: "linuxcodelove@gmail.com",
+          From: this.form.email,
+          Subject: "Booking Cottage",
+          Body: `Dear Kodaikanal Trip Advisor\n
+             I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults & ${this.form.children} children. \n
+             Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
+             cottage: ${this.cottage}\n
+             Mobile: ${this.form.phone}\n
+             comments: ${this.form.comments}`,
+        }).then((message) => alert(message));
+      });
     },
   },
-  // sendEmail() {
-  //   try {
-  //     emailjs.sendForm(
-  //       "service_7zit69u",
-  //       "template_oxnjled",
-  //       "#form",
-  //       "W2_xDyn07cep4duwG",
-  //       {
-  //         name: this.form.name,
-  //         email: this.form.email,
-  //         message: { ...this.form },
-  //       }
-  //     );
-  //     console.log("message sent");
-  //   } catch (error) {
-  //     console.log(error, "error");
-  //   }
-  // },
 };
 </script>
 
