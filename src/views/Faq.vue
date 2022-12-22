@@ -91,22 +91,21 @@ export default {
             },
           ],
         },
-        // {
-        //   question: "What is included Kodaikanal packages",
-        //   answers: [
-        //     {
-        //       header: "",
-        //       answer:
-        //         "Kodaikanal is the best tourist spot where you can rest for a few days from your busy city life. The great thing about this Kodaikanal which will make you connect with the beautiful nature and hill station. Are you want to enjoy the top-rated Kodaikanal tour packages? We offer the best range of personalized Kodaikanal tour packages at an affordable rate online. Almost, every tourist loves to go on a vacation at Kodaikanal. Because, Kodaikanal is the most popular destination for mountain sightseeing, waterfalls, lakes, and historical monuments. Many tourists used to book Kodaikanal vacation packages from every part of the world to have an amazing tour trip in Kodaikanal. Our Kodaikanal tour package starts from Rs:999/-,",
-        //     },
-        //     {
-        //       header: "Inclusions",
-
-        //       answer:
-        //         "Kodaikanal is the best tourist spot where you can rest for a few days from your busy city life. The great thing about this Kodaikanal which will make you connect with the beautiful nature and hill station. Are you want to enjoy the top-rated Kodaikanal tour packages? We offer the best range of personalized Kodaikanal tour packages at an affordable rate online. Almost, every tourist loves to go on a vacation at Kodaikanal. Because, Kodaikanal is the most popular destination for mountain sightseeing, waterfalls, lakes, and historical monuments. Many tourists used to book Kodaikanal vacation packages from every part of the world to have an amazing tour trip in Kodaikanal. Our Kodaikanal tour package starts from Rs:999/-,",
-        //     },
-        //   ],
-        // },
+        {
+          question: "What is included Kodaikanal packages",
+          answers: [
+            {
+              header: "",
+              answer:
+                "Kodaikanal is the best tourist spot where you can rest for a few days from your busy city life. The great thing about this Kodaikanal which will make you connect with the beautiful nature and hill station. Are you want to enjoy the top-rated Kodaikanal tour packages? We offer the best range of personalized Kodaikanal tour packages at an affordable rate online. Almost, every tourist loves to go on a vacation at Kodaikanal. Because, Kodaikanal is the most popular destination for mountain sightseeing, waterfalls, lakes, and historical monuments. Many tourists used to book Kodaikanal vacation packages from every part of the world to have an amazing tour trip in Kodaikanal. Our Kodaikanal tour package starts from Rs:999/-,",
+            },
+            {
+              header: "Inclusions",
+              answer:
+                "Kodaikanal is the best tourist spot where you can rest for a few days from your busy city life. The great thing about this Kodaikanal which will make you connect with the beautiful nature and hill station. Are you want to enjoy the top-rated Kodaikanal tour packages? We offer the best range of personalized Kodaikanal tour packages at an affordable rate online. Almost, every tourist loves to go on a vacation at Kodaikanal. Because, Kodaikanal is the most popular destination for mountain sightseeing, waterfalls, lakes, and historical monuments. Many tourists used to book Kodaikanal vacation packages from every part of the world to have an amazing tour trip in Kodaikanal. Our Kodaikanal tour package starts from Rs:999/-,",
+            },
+          ],
+        },
         {
           question: "Packages for couples in Kodaikanal",
           answers: [

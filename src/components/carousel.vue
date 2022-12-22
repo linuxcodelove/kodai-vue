@@ -6,8 +6,8 @@
       interval="4000"
       :height="imageHeight"
       show-arrows-on-hover
+      :cycle="cycle"
     >
-      <!-- :cycle="cycle" -->
       <v-carousel-item
         v-for="(item, i) in items"
         :key="i"

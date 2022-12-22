@@ -132,8 +132,7 @@ export default {
       this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
         window.Email.send({
           SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
-          // To: "enquiry@kodaiguide.in",
-          To: "linuxcodelove@gmail.com",
+          To: "enquiry@kodaiguide.in",
           From: "service@kodaiguide.in",
           Subject: "Booking Cottage",
           Body: `Dear Kodaikanal Trip Advisor,

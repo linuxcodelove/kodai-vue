@@ -68,11 +68,6 @@ export default {
     };
   },
   mounted() {
-    // document.onreadystatechange = () => {
-    //   if (document.readyState === "complete") {
-    //     this.isLoaded = true;
-    //   }
-    // };
     setTimeout(() => {
       this.isLoaded = true;
     }, 2000);

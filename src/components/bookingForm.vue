@@ -45,7 +45,10 @@
                       ]"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="form.startDate" color="primary"
+                  <v-date-picker
+                    v-model="form.startDate"
+                    color="primary"
+                    :min="new Date().toISOString()"
                     ><v-spacer></v-spacer>
                     <v-btn
                       text
@@ -74,6 +77,7 @@
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
+                      :disabled="!form.startDate"
                       v-model="form.endDate"
                       label="End Date"
                       append-icon="mdi-calendar"
@@ -86,7 +90,10 @@
                       :rules="[() => !!form.endDate || 'End Date is required']"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="form.endDate" color="primary"
+                  <v-date-picker
+                    v-model="form.endDate"
+                    color="primary"
+                    :min="getEndDate()"
                     ><v-spacer></v-spacer>
                     <v-btn text color="primary" @click="endDateDialog = false">
                       Cancel
@@ -247,6 +254,13 @@ export default {
     },
   },
   methods: {
+    getEndDate() {
+      if (this.form.startDate > this.form.endDate) {
+        this.form.endDate = null;
+        return;
+      }
+      return this.form.startDate;
+    },
     submitForm() {
       if (!this.$refs.form.validate()) {
         return;
@@ -258,8 +272,7 @@ export default {
       this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
         window.Email.send({
           SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
-          // To: "enquiry@kodaiguide.in",
-          To: "linuxcodelove@gmail.com",
+          To: "enquiry@kodaiguide.in",
           From: "service@kodaiguide.in",
           Subject: "Booking Cottage",
           Body: `Dear Kodaikanal Trip Advisor,

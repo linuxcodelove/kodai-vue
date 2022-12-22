@@ -32,6 +32,7 @@
           </v-col>
           <v-col cols="2" class="pa-0">
             <v-text-field
+              :disabled="!form.startDate"
               v-model="form.endDate"
               label="End Date"
               readonly
@@ -291,6 +292,7 @@
         v-model="form.startDate"
         color="primary"
         :return-value.sync="form.startDate"
+        :min="new Date().toISOString()"
         ><v-spacer></v-spacer>
         <v-btn
           text
@@ -315,6 +317,7 @@
       width="290px"
     >
       <v-date-picker
+        :min="getEndDate()"
         v-model="form.endDate"
         color="primary"
         :return-value.sync="form.endDate"
@@ -376,6 +379,13 @@ export default {
     },
   },
   methods: {
+    getEndDate() {
+      if (this.form.startDate > this.form.endDate) {
+        this.form.endDate = null;
+        return;
+      }
+      return this.form.startDate;
+    },
     save() {
       if (!this.formValid) {
         this.$emit("close");
@@ -388,8 +398,7 @@ export default {
       this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
         window.Email.send({
           SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
-          // To: "enquiry@kodaiguide.in",
-          To: "linuxcodelove@gmail.com",
+          To: "enquiry@kodaiguide.in",
           From: "service@kodaiguide.in",
           Subject: "Booking Cottage",
           Body: `Dear Kodaikanal Trip Advisor,
