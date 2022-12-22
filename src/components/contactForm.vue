@@ -96,7 +96,6 @@
 </template>
 
 <script>
-import emailjs from "emailjs-com";
 export default {
   data() {
     return {
@@ -130,28 +129,20 @@ export default {
       this.sendEmail();
     },
     sendEmail() {
-      emailjs
-        .send(
-          "service_7zit69u",
-          "template_oxnjled",
-          {
-            name: this.form.name,
-            message: `Dear Kodaikanal Trip Advisor\n
-            I would like to reserve a cottage from (${
-              this.form.startDate || ""
-            }) to (${this.form.endDate || ""}) for ${
-              this.form.adults || 0
-            } adults & ${this.form.children || 0} children. \n
-            Please could you confirm the booking? Let me know if you need any further information on ${
-              this.form.email
-            }\n
-            cottage: ${this.cottage || ""}\n
-            Mobile: ${this.form.phone}\n
-            comments: ${this.form.comments || ""}`,
-          },
-          "W2_xDyn07cep4duwG"
-        )
-        .then(
+      this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
+        window.Email.send({
+          SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
+          // To: "enquiry@kodaiguide.in",
+          To: "linuxcodelove@gmail.com",
+          From: "service@kodaiguide.in",
+          Subject: "Booking Cottage",
+          Body: `Dear Kodaikanal Trip Advisor,
+            This is ${this.form.name} and
+             I would like to reserve a cottage. \n
+             Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
+             Mobile: ${this.form.phone}\n
+             comments: ${this.form.comments}`,
+        }).then(
           () => {
             this.form = {};
             this.$emit(
@@ -167,6 +158,7 @@ export default {
             console.log(error.text, "failed");
           }
         );
+      });
     },
   },
 };

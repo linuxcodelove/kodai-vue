@@ -287,20 +287,39 @@ export default {
     // },
     sendEmail() {
       this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
-        Window.Email.send({
-          Host: "smtp.gmail.com",
-          Username: "service@kodaiguide.in",
-          Password: "M0hammed@91",
+        window.Email.send({
+          // Host: "smtp.gmail.com",
+          // UseDefaultCredentials: false,
+          // Username: "service@kodaiguide.in",
+          // Password: "M0hammed@91",
+          SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
+          // To: "enquiry@kodaiguide.in",
           To: "linuxcodelove@gmail.com",
-          From: this.form.email,
+          From: "service@kodaiguide.in",
           Subject: "Booking Cottage",
-          Body: `Dear Kodaikanal Trip Advisor\n
+          Body: `Dear Kodaikanal Trip Advisor,
+            This is ${this.form.name} and
              I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults & ${this.form.children} children. \n
              Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
              cottage: ${this.cottage}\n
              Mobile: ${this.form.phone}\n
              comments: ${this.form.comments}`,
-        }).then((message) => alert(message));
+        }).then(
+          () => {
+            this.form = {};
+            this.$emit(
+              "close",
+              "Your message has been submitted!. We will get back you asap!",
+              "green"
+            );
+            setTimeout(() => {
+              location.reload();
+            }, 500);
+          },
+          (error) => {
+            console.log(error.text, "failed");
+          }
+        );
       });
     },
   },

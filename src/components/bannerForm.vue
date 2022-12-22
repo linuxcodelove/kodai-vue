@@ -340,7 +340,6 @@
 
 <script>
 import BookingDialog from "../components/bookingDialog.vue";
-import emailjs from "emailjs-com";
 
 export default {
   data() {
@@ -386,28 +385,19 @@ export default {
       this.sendEmail();
     },
     sendEmail() {
-      emailjs
-        .send(
-          "service_7zit69u",
-          "template_oxnjled",
-          {
-            name: this.form.name,
-            message: `Dear Kodaikanal Trip Advisor\n
-            I would like to reserve a cottage from (${
-              this.form.startDate || ""
-            }) to (${this.form.endDate || ""}) for ${
-              this.form.adults || 0
-            } adults & ${this.form.children || 0} children. \n
-            Please could you confirm the booking? Let me know if you need any further information on ${
-              this.form.email
-            }\n
-            cottage: ${this.cottage || ""}\n
-            Mobile: ${this.form.phone}\n
-            comments: ${this.form.comments || ""}`,
-          },
-          "W2_xDyn07cep4duwG"
-        )
-        .then(
+      this.$loadScript("https://smtpjs.com/v3/smtp.js").then(() => {
+        window.Email.send({
+          SecureToken: "6c71e80d-9c63-4bce-9c58-52cb8b662cfc",
+          // To: "enquiry@kodaiguide.in",
+          To: "linuxcodelove@gmail.com",
+          From: "service@kodaiguide.in",
+          Subject: "Booking Cottage",
+          Body: `Dear Kodaikanal Trip Advisor,
+            This is ${this.form.name} and
+             I would like to reserve a cottage from (${this.form.startDate}) to (${this.form.endDate}) for ${this.form.adults} adults. \n
+             Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
+             Mobile: ${this.form.phone}\n`,
+        }).then(
           () => {
             this.form = {};
             this.$emit(
@@ -423,41 +413,42 @@ export default {
             console.log(error.text, "failed");
           }
         );
+      });
     },
     saveData(msg) {
       this.dialog = false;
       this.$emit("snackbar", msg, "green");
     },
-    // saveMobileForm() {
-    //   if (
-    //     !this.form.name ||
-    //     !this.form.startDate ||
-    //     !this.form.endDate ||
-    //     !this.form.adults ||
-    //     !this.form.phone ||
-    //     !this.form.email
-    //   ) {
-    //     this.$emit("snackbar");
-
-    //     return;
-    //   }
-    //   const payload = {
-    //     ...this.form,
-    //     form.startDate: this.form.startDate,
-    //     form.endDate: this.form.endDate,
-    //   };
-    //   localStorage.setItem("user", JSON.stringify(payload));
-    //   // this.showMobileForm = false;
-    //   this.$emit(
-    //     "snackbar",
-    //     "Your Request has been sent. We will reach you asap!",
-    //     "green"
-    //   );
-    //   setTimeout(() => {
-    //     location.reload();
-    //   }, 500);
-    // },
   },
+  // saveMobileForm() {
+  //   if (
+  //     !this.form.name ||
+  //     !this.form.startDate ||
+  //     !this.form.endDate ||
+  //     !this.form.adults ||
+  //     !this.form.phone ||
+  //     !this.form.email
+  //   ) {
+  //     this.$emit("snackbar");
+
+  //     return;
+  //   }
+  //   const payload = {
+  //     ...this.form,
+  //     form.startDate: this.form.startDate,
+  //     form.endDate: this.form.endDate,
+  //   };
+  //   localStorage.setItem("user", JSON.stringify(payload));
+  //   // this.showMobileForm = false;
+  //   this.$emit(
+  //     "snackbar",
+  //     "Your Request has been sent. We will reach you asap!",
+  //     "green"
+  //   );
+  //   setTimeout(() => {
+  //     location.reload();
+  //   }, 500);
+  // },
 };
 </script>
 
