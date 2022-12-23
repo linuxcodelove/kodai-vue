@@ -135,12 +135,13 @@ export default {
           To: "enquiry@kodaiguide.in",
           From: "service@kodaiguide.in",
           Subject: "Booking Cottage",
-          Body: `Dear Kodaikanal Trip Advisor,
-            This is ${this.form.name} and
-             I would like to reserve a cottage. \n
-             Please could you confirm the booking? Let me know if you need any further information on ${this.form.email}\n
-             Mobile: ${this.form.phone}\n
-             comments: ${this.form.comments}`,
+          Body: `Hi Team<br/>
+          Name: ${this.form.name},<br/>
+          Mobile: ${this.form.phone},<br/>
+          Email: ${this.form.email},<br/>
+          Comments: ${this.form.comments},<br/>
+          Thanks<br/>
+          Team Kodai Guide`,
         }).then(
           () => {
             this.form = {};

@@ -11,7 +11,7 @@
             service@kodaiguide.in
           </h4>
           <h4 class="subtitle-2 mb-2 mb-sm-5">+91-9840666992</h4>
-          <h4 class="subtitle-2 mb-2 mb-sm-5">+91-9840666992</h4>
+          <h4 class="subtitle-2 mb-2 mb-sm-5">+91-8754236533</h4>
           <div class="mt-2 mt-sm-8">
             <v-btn fab small class="mr-1 mr-sm-2" @click="openTwitter"
               ><v-icon>mdi-twitter</v-icon></v-btn
