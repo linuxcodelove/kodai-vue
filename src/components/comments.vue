@@ -10,6 +10,11 @@
                 class="rounded-sm mx-12 px-6 comments caption text-sm-body-1"
                 color="transparent"
               >
+                <h2
+                  class="headline text-sm-h4 font-weight-bold text-center grey--text text--lighten-1 pb-6 pb-sm-10 pb-md-12"
+                >
+                  What People Tell About Us
+                </h2>
                 <v-avatar size="80" class="mb-8">
                   <v-img
                     :src="require(`../assets/home/comments/${comment.img}.jpg`)"

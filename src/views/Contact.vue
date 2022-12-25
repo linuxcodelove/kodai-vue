@@ -5,11 +5,6 @@
     <div class="accent">
       <v-container>
         <div class="grey--text text--darken-3 my-4 mb-8 mb-md-8">
-          <h4
-            class="text-h5 text-sm-h4 text-xl-h2 my-3 my-sm-6 my-xl-10 grey--text text--darken-3 text-center"
-          >
-            What People Tell About us?
-          </h4>
           <v-row>
             <v-col cols="12 px-12" class="py-4">
               <div
