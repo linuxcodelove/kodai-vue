@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import VueMeta from "vue-meta";
 // import AOS from "aos";
 import "aos/dist/aos.css";
 import * as VueGoogleMaps from "vue2-google-maps";
@@ -18,6 +19,7 @@ import LoadScript from "vue-plugin-load-script";
 
 Vue.use(VueResource);
 Vue.use(LoadScript);
+Vue.use(VueMeta);
 
 Vue.config.productionTip = false;
 // Vue.http.headers.common["Access-Control-Allow-Origin"] = "*";
